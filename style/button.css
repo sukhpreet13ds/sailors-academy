@@ -1,0 +1,123 @@
+/* Button Effect Styles - Enhancement Only */
+
+.button-effect {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  cursor: pointer;
+  text-decoration: none !important;
+  transition: all 0.3s ease;
+}
+
+.button-effect .button-bg {
+  overflow: hidden;
+  border-radius: inherit; /* Matches parent border-radius */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: scale(1);
+  transition: transform 1.8s cubic-bezier(0.19, 1, 0.22, 1);
+  z-index: 1; /* Above background, below text */
+}
+
+.button-inner,
+.button-inner-hover,
+.button-inner-static {
+  pointer-events: none;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.button-inner {
+  position: relative;
+  z-index: 2; /* Above layers */
+  width: 100%;
+  height: 100%;
+}
+
+.button-inner-static {
+  transition: transform 1.4s cubic-bezier(0.19, 1, 0.22, 1), opacity 0.3s linear;
+}
+
+.button-inner-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transform: translateY(100%); /* Slide from below */
+  width: 100%;
+  height: 100%;
+}
+
+.button-bg-layers {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  top: -60%;
+  aspect-ratio: 1 / 1;
+  width: max(200%, 20rem);
+  display: block;
+}
+
+.button-bg-layer {
+  border-radius: 9999px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: scale(0);
+  display: block;
+  opacity: 0;
+  transition: transform 1.3s cubic-bezier(0.19, 1, 0.22, 1), opacity 0.3s linear;
+}
+
+.button-bg-layer.-purple {
+  background-color: rgba(163, 116, 255, 0.8);
+}
+
+.button-bg-layer.-turquoise {
+  background-color: rgba(23, 241, 209, 0.8);
+}
+
+.button-bg-layer.-yellow {
+  background-color: var(--accent-yellow, #ffd074);
+}
+
+/* Hover States */
+.button-effect:hover .button-inner-static {
+  opacity: 0;
+  transform: translateY(-100%);
+}
+
+.button-effect:hover .button-inner-hover {
+  opacity: 1;
+  transform: translateY(0);
+  transition:
+    transform 1.4s cubic-bezier(0.19, 1, 0.22, 1),
+    opacity 1s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.button-effect:hover .button-bg-layer {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+.button-effect:hover .button-bg-layer-1 {
+  transition-delay: 0s;
+}
+
+.button-effect:hover .button-bg-layer-2 {
+  transition-delay: 0.1s;
+}
+
+.button-effect:hover .button-bg-layer-3 {
+  transition-delay: 0.2s;
+}
+
