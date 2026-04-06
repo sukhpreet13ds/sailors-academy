@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sailor Academy</title>
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -188,12 +189,15 @@
           </span>
         </span>
         <span class="button-inner">
-          <span class="button-inner-static">Application Form <i class="fa-solid fa-arrow-right"></i></span>
-          <span class="button-inner-hover">Application Form <i class="fa-solid fa-arrow-right"></i></span>
+          <span class="button-inner-static">Consent Form <i class="fa-solid fa-arrow-right"></i></span>
+          <span class="button-inner-hover">Consent Form <i class="fa-solid fa-arrow-right"></i></span>
         </span>
       </a>
       <div class="burger-menu">
         <i class="fa-solid fa-bars-staggered fa-flip-both" style="color: rgb(255, 255, 255);"></i>
+      </div>
+      <div class="burger-mobile">
+        <i class="fa-solid fa-bars-staggered"></i>
       </div>
     </div>
   </nav>
@@ -229,10 +233,6 @@
               500+ Sailors students selected at packages <br> of <strong>₹30,000/per Month</strong>
             </p>
           </div>
-
-          <!-- <div class="hero-center">
-            <img src="assets/hero-girl.png" alt="Student Success" class="hero-girl-img">
-          </div> -->
 
           <div class="hero-right">
             <div class="form-card">
@@ -347,8 +347,361 @@
 
 
 
-<script src="script/script.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
+  <div class="mobile-menu-panel" id="mobileMenu">
+    <div class="panel-header">
+      <div class="panel-logo">
+        <img src="assets/logo.png" alt="Sailor Academy Logo">
+      </div>
+      <button class="close-mobile" id="closeMobile">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <div class="panel-search">
+      <div class="search-box-mobile">
+        <input type="text" placeholder="Search for courses...">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </div>
+    </div>
+
+    <div class="panel-content">
+      <div class="mobile-accordion">
+        <!-- Products Section -->
+        <div class="accordion-item">
+          <div class="accordion-header">
+            <span>Courses</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="accordion-body">
+            <div class="sub-accordion">
+              <!-- SEO -->
+              <div class="sub-accordion-header">
+                <span>SEO</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </div>
+              <div class="sub-accordion-body">
+                <ul>
+                  <li>Keyword Research</li>
+                  <li>On-Page SEO</li>
+                  <li>Technical SEO</li>
+                </ul>
+              </div>
+
+              <!-- UI/UX -->
+              <div class="sub-accordion-header">
+                <span>UI/UX</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </div>
+              <div class="sub-accordion-body">
+                <ul>
+                  <li>Adobe XD</li>
+                  <li>Figma Design</li>
+                  <li>Prototyping</li>
+                </ul>
+              </div>
+
+              <!-- PHP Development -->
+              <div class="sub-accordion-header">
+                <span>PHP Development</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </div>
+              <div class="sub-accordion-body">
+                <ul>
+                  <li>Backend Logic</li>
+                  <li>Database (MySQL)</li>
+                  <li>APIs</li>
+                </ul>
+              </div>
+
+              <!-- Digital Marketing -->
+              <div class="sub-accordion-header">
+                <span>Digital Marketing</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </div>
+              <div class="sub-accordion-body">
+                <ul>
+                  <li>Social Media</li>
+                  <li>Email Marketing</li>
+                  <li>Content Strategy</li>
+                </ul>
+              </div>
+
+              <!-- Wordpress Development -->
+              <div class="sub-accordion-header">
+                <span>Wordpress Development</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </div>
+              <div class="sub-accordion-body">
+                <ul>
+                  <li>Theme Customization</li>
+                  <li>Elementor</li>
+                  <li>E-commerce Setup</li>
+                </ul>
+              </div>
+
+              <!-- Entrepreneurship -->
+              <div class="sub-accordion-header">
+                <span>IT Courses for Entrepreneurship</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </div>
+              <div class="sub-accordion-body">
+                <ul>
+                  <li>Business Ops</li>
+                  <li>Tech Strategy</li>
+                  <li>Growth Hacking</li>
+                </ul>
+              </div>
+
+              <!-- Shopify Development -->
+              <div class="sub-accordion-header">
+                <span>Shopify Development</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </div>
+              <div class="sub-accordion-body">
+                <ul>
+                  <li>Store Setup</li>
+                  <li>Liquid Code</li>
+                  <li>App Integration</li>
+                </ul>
+              </div>
+
+              <!-- Graphics Design -->
+              <div class="sub-accordion-header">
+                <span>Graphics Design</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </div>
+              <div class="sub-accordion-body">
+                <ul>
+                  <li>Illustrator</li>
+                  <li>Photoshop</li>
+                  <li>Brand Identity</li>
+                </ul>
+              </div>
+
+              <!-- Video Editing -->
+              <div class="sub-accordion-header">
+                <span>Video Editing</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </div>
+              <div class="sub-accordion-body">
+                <ul>
+                  <li>Premiere Pro</li>
+                  <li>After Effects</li>
+                  <li>Color Grading</li>
+                </ul>
+              </div>
+
+              <!-- Quick Books -->
+              <div class="sub-accordion-header">
+                <span>Quick Books</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </div>
+              <div class="sub-accordion-body">
+                <ul>
+                  <li>Bookkeeping</li>
+                  <li>Invoicing</li>
+                  <li>Financial Reports</li>
+                </ul>
+              </div>
+
+              <!-- Fresh Books -->
+              <div class="sub-accordion-header">
+                <span>Fresh Books</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </div>
+              <div class="sub-accordion-body">
+                <ul>
+                  <li>Project Management</li>
+                  <li>Expense Tracking</li>
+                  <li>Client Portals</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Resources Section -->
+        <div class="accordion-item">
+          <div class="accordion-header">
+            <span>Resources</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="accordion-body">
+            <ul>
+              <li><a href="#">Documentation</a></li>
+              <li><a href="#">Support</a></li>
+              <li><a href="#">Blog</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Company Section -->
+        <div class="accordion-item">
+          <div class="accordion-header">
+            <span>Company</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="accordion-body">
+            <ul>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Careers</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Pricing Section -->
+        <div class="accordion-item">
+          <div class="accordion-header no-chevron">
+            <a href="#">Pricing</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel-footer">
+      <h4>Trending Courses</h4>
+      <div class="trending-images">
+        <div class="trending-item">
+          <img src="assets/cyber.jpg" alt="Cyber Security">
+          <span>Cyber Security</span>
+        </div>
+        <div class="trending-item">
+          <img src="assets/blog-26.jpg" alt="Web Development">
+          <span>Web Development</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="autoDemoModal" tabindex="-1" aria-labelledby="autoDemoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content custom-modal-content">
+        <div class="modal-header border-0">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-0">
+          <div class="modal-form-container">
+            <div class="form-card modal-form-card">
+              <h3>Book A Free Demo</h3>
+              <form id="modalDemoForm">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="input-group">
+                      <input type="text" placeholder="Name" required>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="input-group">
+                      <input type="email" placeholder="Email" required>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="input-group">
+                      <input type="tel" placeholder="Phone" required>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="input-group">
+                      <select required>
+                        <option value="" disabled selected>Select Course</option>
+                        <option value="maritime">SEO</option>
+                        <option value="navigation">UI/UX</option>
+                        <option value="PHP Development">PHP Development</option>
+                        <option value="Digital Marketing">Digital Marketing</option>
+                        <option value="Wordpress Development">Wordpress Development</option>
+                        <option value="IT Courses for Entrepreneurs">IT Courses for Entrepreneurs</option>
+                        <option value="Shopify Development">Shopify Development</option>
+                        <option value="Graphics Design">Graphics Design</option>
+                        <option value="Video Editing">Video Editing</option>
+                        <option value="Quick Books">Quick Books</option>
+                        <option value="Fresh Books">Fresh Books</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="input-group">
+                      <select required>
+                        <option value="" disabled selected>Are you a College Student?</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="recaptcha-box" style="padding: 0;">
+                  <div class="recaptcha-mock">
+                    <div class="g-recaptcha" data-sitekey="6LeFKaksAAAAAOL7YoOb9mdxqG4XkPVzEgimnByK"></div>
+                  </div>
+                </div>
+
+                <button type="submit" class="button-effect btn-book-demo">
+                  Book Free Demo Class <i class="fa-solid fa-chevron-right"></i>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Desktop Sidebar -->
+  <div class="desktop-sidebar" id="desktopSidebar">
+    <div class="sidebar-inner">
+      <button class="close-sidebar" id="closeSidebar">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="sidebar-logo">
+        <img src="assets/side-logo.png" alt="Sailor Academy Logo">
+      </div>
+
+      <div class="sidebar-content">
+        <div class="contact-info-block">
+          <h3>Get In Touch</h3>
+          
+          <div class="info-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <div>
+              <p>123 Maritime Plaza, Port View</p>
+              <p>New Delhi, India 110001</p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <i class="fa-solid fa-envelope"></i>
+            <div>
+              <p>admission@sailoracademy.in</p>
+              <p>support@sailoracademy.in</p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <i class="fa-solid fa-phone-volume"></i>
+            <div>
+              <p>+91 98765 43210</p>
+              <p>+91 011 2345 6789</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="sidebar-social">
+          <h4>Follow Us</h4>
+          <div class="social-links">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -111,4 +111,94 @@ document.addEventListener('DOMContentLoaded', () => {
             </span>
         `;
     });
+
+    // --- Mobile Menu Toggle ---
+    const burgerMobile = document.querySelector('.burger-mobile');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const closeMobile = document.getElementById('closeMobile');
+
+    if (burgerMobile) {
+        burgerMobile.addEventListener('click', () => {
+            mobileMenu.classList.add('active');
+            document.body.style.overflow = 'hidden'; 
+        });
+    }
+
+    if (closeMobile) {
+        closeMobile.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+            document.body.style.overflow = ''; 
+        });
+    }
+
+    // --- Mobile Accordion Logic ---
+    const accordionHeaders = document.querySelectorAll('.accordion-header:not(.no-chevron)');
+    accordionHeaders.forEach(header => {
+        header.addEventListener('click', () => {
+            const body = header.nextElementSibling;
+            const isActive = header.classList.toggle('active');
+            
+            if (isActive) {
+                body.classList.add('show');
+            } else {
+                body.classList.remove('show');
+            }
+        });
+    });
+
+    const subAccordionHeaders = document.querySelectorAll('.sub-accordion-header');
+    subAccordionHeaders.forEach(header => {
+        header.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const body = header.nextElementSibling;
+            const isActive = body.classList.toggle('show');
+            
+            const icon = header.querySelector('i');
+            if (isActive) {
+                icon.style.transform = 'rotate(90deg)';
+                header.style.background = 'rgba(255, 255, 255, 0.1)';
+            } else {
+                icon.style.transform = '';
+                header.style.background = '';
+            }
+        });
+    });
+
+    // --- Auto Opening Modal After 5 Seconds ---
+    const autoModal = document.getElementById('autoDemoModal');
+    if (autoModal) {
+        setTimeout(() => {
+            const bootstrapModal = new bootstrap.Modal(autoModal);
+            bootstrapModal.show();
+        }, 5000);
+    }
+
+    // --- Desktop Sidebar Toggle ---
+    const burgerDesktop = document.querySelector('.burger-menu');
+    const desktopSidebar = document.getElementById('desktopSidebar');
+    const closeSidebar = document.getElementById('closeSidebar');
+
+    if (burgerDesktop) {
+        burgerDesktop.addEventListener('click', (e) => {
+            e.stopPropagation();
+            desktopSidebar.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+    }
+
+    if (closeSidebar) {
+        closeSidebar.addEventListener('click', () => {
+            desktopSidebar.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+    }
+
+    document.addEventListener('click', (e) => {
+        if (desktopSidebar && desktopSidebar.classList.contains('active')) {
+            if (!desktopSidebar.contains(e.target)) {
+                desktopSidebar.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        }
+    });
 });
