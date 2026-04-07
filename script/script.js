@@ -201,4 +201,85 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     });
+
+    // --- Course Hover Video Logic ---
+    const courseBoxes = document.querySelectorAll('.course-box');
+    courseBoxes.forEach(box => {
+        const video = box.querySelector('.course-hover-video');
+        if (video) {
+            box.addEventListener('mouseenter', () => {
+                video.play().catch(e => console.log('Video play error:', e));
+            });
+            box.addEventListener('mouseleave', () => {
+                video.pause();
+                // Optionally reset video time to 0
+                // video.currentTime = 0; 
+            });
+        }
+    });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    // --- Rank Section Scroll Animations & Counter ---
+    const rankSection = document.querySelector('.rank-section');
+    if (rankSection) {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    rankSection.classList.add('is-visible');
+                    
+                    const rankCounters = rankSection.querySelectorAll('.rank-counter');
+                    const rankAnimDuration = 2000;
+                    
+                    rankCounters.forEach(counter => {
+                        // Prevent re-animation if already done
+                        if (counter.classList.contains('counted')) return;
+                        counter.classList.add('counted');
+
+                        const target = parseFloat(counter.getAttribute('data-target'));
+                        const startTime = performance.now();
+                        
+                        const updateCount = (currentTime) => {
+                            const elapsed = currentTime - startTime;
+                            const progress = Math.min(elapsed / rankAnimDuration, 1);
+                            
+                            const easeProgress = progress * (2 - progress); // easeOutQuad
+                            const currentCount = easeProgress * target;
+                            
+                            counter.innerText = Math.floor(currentCount);
+                            
+                            if (progress < 1) {
+                                requestAnimationFrame(updateCount);
+                            } else {
+                                counter.innerText = target;
+                            }
+                        };
+                        
+                        requestAnimationFrame(updateCount);
+                    });
+                    
+                    observer.unobserve(rankSection);
+                }
+            });
+        }, { threshold: 0.2 }); // Triggers when 20% of section is visible
+        
+        observer.observe(rankSection);
+    }
+});
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    // --- Deep Zoom Animations Generic Observer ---
+    const genericAnimSections = document.querySelectorAll('.has-scroll-anim');
+    const genericObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                genericObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.15 });
+
+    genericAnimSections.forEach(sec => genericObserver.observe(sec));
+});
+
