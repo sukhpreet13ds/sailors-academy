@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     searchBtn.addEventListener('click', (e) => {
         // e.preventDefault();
         const isActive = searchContainerElement.classList.toggle('active');
-        
+
         if (isActive) {
             navLinksElement.classList.add('fade-out');
             searchInput.focus();
@@ -25,27 +25,41 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // Restore trigger logic for side-panel mega menus
     const triggers = document.querySelectorAll('.dropdown-item-trigger');
     const grandSubPanes = document.querySelectorAll('.grand-subitems');
 
+    // --- HIGH-STABILITY LUXURY MEGA MENU ENGINE (Multi-Instance Support) ---
+    document.querySelectorAll('.luxury-mega').forEach(luxuryMega => {
+        const parentLi = luxuryMega.parentElement;
+        if (!parentLi) return;
+
+        let menuTimeout;
+        
+        const showMenu = () => {
+            clearTimeout(menuTimeout);
+            luxuryMega.classList.add('is-active');
+            document.body.classList.add('no-scroll');
+        };
+
+        const hideMenu = () => {
+            // A tiny 100ms buffer bridges any physical gaps without feeling like a delay
+            menuTimeout = setTimeout(() => {
+                luxuryMega.classList.remove('is-active');
+                document.body.classList.remove('no-scroll');
+            }, 100); 
+        };
+
+        parentLi.addEventListener('mouseenter', showMenu);
+        parentLi.addEventListener('mouseleave', hideMenu);
+
+        // Keep menu open when hovering the panel itself
+        luxuryMega.addEventListener('mouseenter', showMenu);
+        luxuryMega.addEventListener('mouseleave', hideMenu);
+    });
+
     triggers.forEach(trigger => {
-        trigger.addEventListener('click', (e) => {
-            e.stopPropagation(); 
-            
-            const targetId = trigger.getAttribute('data-target');
-            
-            grandSubPanes.forEach(pane => pane.classList.remove('active'));
-            
-            const targetPane = document.getElementById(targetId);
-            if (targetPane) {
-                targetPane.classList.add('active');
-            }
-
-            triggers.forEach(t => t.style.backgroundColor = 'transparent');
-            trigger.style.backgroundColor = '#f5f5f5';
-        });
-
-        trigger.addEventListener('mouseenter', () => {
+        const handleInteraction = () => {
             const targetId = trigger.getAttribute('data-target');
             grandSubPanes.forEach(pane => pane.classList.remove('active'));
             const targetPane = document.getElementById(targetId);
@@ -54,7 +68,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 triggers.forEach(t => t.style.backgroundColor = 'transparent');
                 trigger.style.backgroundColor = '#f5f5f5';
             }
+        };
+
+        trigger.addEventListener('click', (e) => {
+            e.stopPropagation();
+            handleInteraction();
         });
+
+        trigger.addEventListener('mouseenter', handleInteraction);
     });
 
     // --- Counter Animation ---
@@ -64,34 +85,34 @@ document.addEventListener('DOMContentLoaded', () => {
     counters.forEach(counter => {
         const target = parseFloat(counter.getAttribute('data-target'));
         const startTime = performance.now();
-        
+
         const updateCount = (currentTime) => {
             const elapsed = currentTime - startTime;
             const progress = Math.min(elapsed / animationDuration, 1);
-            
+
             // Easing function (easeOutQuad)
             const easeProgress = progress * (2 - progress);
-            
+
             const currentCount = easeProgress * target;
-            
+
             // Format to 1 decimal place if it's not a whole number
-            counter.innerText = target % 1 === 0 
-                ? Math.floor(currentCount) 
+            counter.innerText = target % 1 === 0
+                ? Math.floor(currentCount)
                 : currentCount.toFixed(1);
-            
+
             if (progress < 1) {
                 requestAnimationFrame(updateCount);
             } else {
                 counter.innerText = target;
             }
         };
-        
+
         requestAnimationFrame(updateCount);
     });
 
     // --- Button Effect Auto-Injection ---
     const effectButtons = document.querySelectorAll('.button-effect');
-    
+
     effectButtons.forEach(btn => {
         // Prevent double injection
         if (btn.querySelector('.button-inner')) return;
@@ -120,14 +141,14 @@ document.addEventListener('DOMContentLoaded', () => {
     if (burgerMobile) {
         burgerMobile.addEventListener('click', () => {
             mobileMenu.classList.add('active');
-            document.body.style.overflow = 'hidden'; 
+            document.body.style.overflow = 'hidden';
         });
     }
 
     if (closeMobile) {
         closeMobile.addEventListener('click', () => {
             mobileMenu.classList.remove('active');
-            document.body.style.overflow = ''; 
+            document.body.style.overflow = '';
         });
     }
 
@@ -137,7 +158,7 @@ document.addEventListener('DOMContentLoaded', () => {
         header.addEventListener('click', () => {
             const body = header.nextElementSibling;
             const isActive = header.classList.toggle('active');
-            
+
             if (isActive) {
                 body.classList.add('show');
             } else {
@@ -152,7 +173,7 @@ document.addEventListener('DOMContentLoaded', () => {
             e.stopPropagation();
             const body = header.nextElementSibling;
             const isActive = body.classList.toggle('show');
-            
+
             const icon = header.querySelector('i');
             if (isActive) {
                 icon.style.transform = 'rotate(90deg)';
@@ -227,10 +248,10 @@ document.addEventListener('DOMContentLoaded', () => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     rankSection.classList.add('is-visible');
-                    
+
                     const rankCounters = rankSection.querySelectorAll('.rank-counter');
                     const rankAnimDuration = 2000;
-                    
+
                     rankCounters.forEach(counter => {
                         // Prevent re-animation if already done
                         if (counter.classList.contains('counted')) return;
@@ -238,31 +259,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
                         const target = parseFloat(counter.getAttribute('data-target'));
                         const startTime = performance.now();
-                        
+
                         const updateCount = (currentTime) => {
                             const elapsed = currentTime - startTime;
                             const progress = Math.min(elapsed / rankAnimDuration, 1);
-                            
+
                             const easeProgress = progress * (2 - progress); // easeOutQuad
                             const currentCount = easeProgress * target;
-                            
+
                             counter.innerText = Math.floor(currentCount);
-                            
+
                             if (progress < 1) {
                                 requestAnimationFrame(updateCount);
                             } else {
                                 counter.innerText = target;
                             }
                         };
-                        
+
                         requestAnimationFrame(updateCount);
                     });
-                    
+
                     observer.unobserve(rankSection);
                 }
             });
         }, { threshold: 0.2 }); // Triggers when 20% of section is visible
-        
+
         observer.observe(rankSection);
     }
 });
@@ -283,3 +304,38 @@ document.addEventListener('DOMContentLoaded', () => {
     genericAnimSections.forEach(sec => genericObserver.observe(sec));
 });
 
+(function () {
+    // Intersection Observer for fade-scroll animation
+    const fadeElements = document.querySelectorAll('.fade-scroll');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.2, rootMargin: "0px 0px -40px 0px" });
+    fadeElements.forEach(el => observer.observe(el));
+
+    // also make mission-card visible manually, they are fade-scroll
+    // additional: ensure team members already have cardGlideUp no extra needed
+    // CTA button interactive alert (simple)
+    const ctaBtn = document.getElementById('ctaJoinBtn');
+    if (ctaBtn) {
+        ctaBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            alert("🚀 Thank you for your interest! Sailor’s Academy welcomes you. Contact us for enrollment details or visit our campus in Ludhiana.");
+        });
+    }
+
+    // Add a small hover parallax effect for team images? Already included
+    // ensure images placeholder note: if assets missing, fallback to placeholder (inline onerror already there)
+    // preload any additional smoothness: console free
+    // Add floating animation to value icons - optional for extra life
+    const valueIcons = document.querySelectorAll('.value-icon i');
+    if (valueIcons.length) {
+        // simple pulse subtle on hover handled in css
+    }
+    // optional additional animation: give team cards extra entrance + shadow dynamic
+    console.log("About Us Section Loaded with high-end animations & responsive layout");
+})();

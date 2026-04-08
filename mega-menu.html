@@ -1,0 +1,1159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sailors Academy — Course Mega Menu</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy: #0a0f1e;
+    --navy2: #111827;
+    --navy3: #1a2236;
+    --teal: #00d4aa;
+    --teal2: #00b894;
+    --gold: #f5c842;
+    --coral: #ff6b6b;
+    --purple: #a78bfa;
+    --blue: #60a5fa;
+    --green: #4ade80;
+    --orange: #fb923c;
+    --pink: #f472b6;
+    --text: #e2e8f0;
+    --muted: #8892a4;
+    --border: rgba(255,255,255,0.07);
+    --glass: rgba(255,255,255,0.04);
+    --glass2: rgba(255,255,255,0.08);
+    --nav-h: 68px;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--navy);
+    color: var(--text);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* ─── NAVBAR ─────────────────────────────────────────── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+    height: var(--nav-h);
+    background: rgba(10, 15, 30, 0.92);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
+    display: flex; align-items: center;
+    padding: 0 2rem;
+    gap: 2rem;
+  }
+
+  .nav-logo {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: 1.3rem;
+    color: #fff;
+    text-decoration: none;
+    white-space: nowrap;
+    display: flex; align-items: center; gap: 0.5rem;
+    letter-spacing: -0.02em;
+  }
+  .nav-logo span { color: var(--teal); }
+  .nav-logo .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--teal); display: inline-block; animation: pulse 2s infinite; }
+
+  @keyframes pulse {
+    0%,100% { opacity:1; transform:scale(1); }
+    50% { opacity:0.5; transform:scale(1.4); }
+  }
+
+  .nav-items {
+    display: flex; align-items: center; gap: 0;
+    list-style: none;
+    flex: 1;
+  }
+
+  .nav-item { position: relative; }
+
+  .nav-link {
+    display: flex; align-items: center; gap: 6px;
+    padding: 0 1.1rem;
+    height: var(--nav-h);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--muted);
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.2s;
+    white-space: nowrap;
+    border: none; background: none;
+    letter-spacing: 0.01em;
+  }
+  .nav-link:hover, .nav-item:hover > .nav-link { color: #fff; }
+
+  .nav-link .arrow {
+    width: 14px; height: 14px;
+    transition: transform 0.3s cubic-bezier(.34,1.56,.64,1);
+    opacity: 0.5;
+  }
+  .nav-item:hover > .nav-link .arrow { transform: rotate(180deg); opacity: 1; }
+
+  .nav-link-badge {
+    font-size: 9px; font-weight: 700;
+    background: var(--teal); color: var(--navy);
+    padding: 2px 5px; border-radius: 3px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  .nav-indicator {
+    position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);
+    width: 0; height: 2px;
+    background: var(--teal);
+    border-radius: 2px 2px 0 0;
+    transition: width 0.3s ease;
+  }
+  .nav-item:hover > .nav-link .nav-indicator { width: 60%; }
+
+  .nav-right { display: flex; align-items: center; gap: 0.75rem; margin-left: auto; }
+
+  .btn-enroll {
+    padding: 0.5rem 1.25rem;
+    background: var(--teal);
+    color: var(--navy);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.85rem; font-weight: 700;
+    border: none; border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s;
+    white-space: nowrap;
+    letter-spacing: 0.02em;
+  }
+  .btn-enroll:hover { background: var(--teal2); transform: translateY(-1px); box-shadow: 0 4px 20px rgba(0,212,170,0.35); }
+
+  /* ─── MEGA MENU PANEL ────────────────────────────────── */
+  .mega-menu {
+    position: fixed;
+    top: var(--nav-h);
+    left: 0; right: 0;
+    background: var(--navy2);
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 24px 60px rgba(0,0,0,0.6);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-12px);
+    transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
+    z-index: 999;
+    max-height: calc(100vh - var(--nav-h));
+    overflow-y: auto;
+  }
+
+  .mega-menu::-webkit-scrollbar { width: 4px; }
+  .mega-menu::-webkit-scrollbar-track { background: var(--navy2); }
+  .mega-menu::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+
+  .nav-item:hover .mega-menu,
+  .mega-menu:hover {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .mega-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem 2.5rem;
+    display: grid;
+    gap: 0;
+  }
+
+  /* Category header in mega menu */
+  .mega-section-label {
+    font-family: 'Syne', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--muted);
+    padding: 0 0 1rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 1.25rem;
+    display: flex; align-items: center; gap: 0.5rem;
+  }
+  .mega-section-label::after {
+    content: '';
+    flex: 1; height: 1px;
+    background: var(--border);
+  }
+
+  /* ─── INTERNSHIP GRID ────────────────────────────────── */
+  .internship-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0.75rem;
+  }
+
+  .course-card {
+    position: relative;
+    background: var(--glass);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1rem 1rem 0.875rem;
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(.34,1.2,.64,1);
+    overflow: hidden;
+    text-decoration: none;
+    display: block;
+  }
+
+  .course-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--card-accent, var(--teal));
+    opacity: 0;
+    transition: opacity 0.25s;
+  }
+
+  .course-card:hover {
+    border-color: var(--card-accent, var(--teal));
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 12px 32px rgba(0,0,0,0.4), 0 0 0 1px var(--card-accent, var(--teal));
+    background: rgba(255,255,255,0.06);
+  }
+
+  .course-card:hover::before { opacity: 0.06; }
+
+  .course-card .glow {
+    position: absolute;
+    top: -20px; right: -20px;
+    width: 80px; height: 80px;
+    background: var(--card-accent, var(--teal));
+    border-radius: 50%;
+    opacity: 0;
+    filter: blur(30px);
+    transition: opacity 0.3s;
+    pointer-events: none;
+  }
+  .course-card:hover .glow { opacity: 0.15; }
+
+  .card-icon {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    display: block;
+    line-height: 1;
+  }
+
+  .card-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.3;
+    margin-bottom: 0.3rem;
+    position: relative;
+  }
+
+  .card-tag {
+    font-size: 0.68rem;
+    font-weight: 500;
+    color: var(--card-accent, var(--teal));
+    display: flex; align-items: center; gap: 3px;
+    position: relative;
+  }
+
+  .card-tag .fire { font-size: 0.7rem; }
+
+  .card-duration {
+    font-size: 0.65rem;
+    color: var(--muted);
+    margin-top: 0.4rem;
+    position: relative;
+    font-weight: 500;
+  }
+
+  /* ─── ADVANCED INTERNSHIP (2-col large cards) ────────── */
+  .advanced-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.75rem;
+  }
+
+  .adv-card {
+    background: var(--glass);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1.1rem;
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(.34,1.2,.64,1);
+    text-decoration: none;
+    display: block;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .adv-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 2px;
+    background: var(--card-accent, var(--teal));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+  }
+
+  .adv-card:hover::after { transform: scaleX(1); }
+
+  .adv-card:hover {
+    border-color: var(--card-accent, var(--teal));
+    transform: translateY(-3px);
+    background: rgba(255,255,255,0.06);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.4);
+  }
+
+  .adv-header {
+    display: flex; align-items: flex-start; justify-content: space-between;
+    margin-bottom: 0.75rem;
+  }
+
+  .adv-icon { font-size: 1.6rem; line-height: 1; }
+
+  .adv-badge {
+    font-size: 0.62rem; font-weight: 700;
+    background: rgba(245,200,66,0.15);
+    color: var(--gold);
+    padding: 2px 7px; border-radius: 3px;
+    letter-spacing: 0.04em;
+    border: 1px solid rgba(245,200,66,0.2);
+  }
+
+  .adv-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+  }
+
+  .adv-topics {
+    list-style: none;
+    display: flex; flex-direction: column; gap: 3px;
+  }
+
+  .adv-topics li {
+    font-size: 0.68rem;
+    color: var(--muted);
+    display: flex; align-items: center; gap: 5px;
+    line-height: 1.4;
+  }
+
+  .adv-topics li::before {
+    content: '';
+    width: 4px; height: 4px;
+    border-radius: 50%;
+    background: var(--card-accent, var(--teal));
+    flex-shrink: 0;
+    opacity: 0.7;
+  }
+
+  /* ─── CERTIFICATION GRID ─────────────────────────────── */
+  .cert-cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .cert-col-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 0.75rem;
+    display: flex; align-items: center; gap: 6px;
+  }
+
+  .cert-list { display: flex; flex-direction: column; gap: 0.4rem; }
+
+  .cert-item {
+    display: flex; align-items: center; gap: 0.75rem;
+    padding: 0.6rem 0.75rem;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-decoration: none;
+  }
+
+  .cert-item:hover {
+    background: var(--glass2);
+    border-color: var(--card-accent, var(--teal));
+    transform: translateX(4px);
+  }
+
+  .cert-icon { font-size: 1.1rem; flex-shrink: 0; }
+
+  .cert-info { flex: 1; min-width: 0; }
+
+  .cert-name {
+    font-size: 0.78rem; font-weight: 600;
+    color: #fff; line-height: 1.3;
+  }
+
+  .cert-weeks {
+    font-size: 0.65rem; color: var(--muted); font-weight: 500;
+  }
+
+  .cert-arrow {
+    font-size: 0.7rem; color: var(--muted);
+    transition: all 0.2s;
+    opacity: 0;
+  }
+  .cert-item:hover .cert-arrow {
+    opacity: 1;
+    color: var(--card-accent, var(--teal));
+    transform: translateX(2px);
+  }
+
+  /* ─── FLAGSHIP PROGRAMS ──────────────────────────────── */
+  .flagship-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0.75rem;
+  }
+
+  .flagship-card {
+    background: var(--glass);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1.1rem;
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(.34,1.2,.64,1);
+    text-decoration: none;
+    display: block;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .flagship-card .stripe {
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: var(--card-accent, var(--teal));
+    transform: scaleX(0.3);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+  }
+
+  .flagship-card:hover .stripe { transform: scaleX(1); }
+
+  .flagship-card:hover {
+    border-color: var(--card-accent, var(--teal));
+    transform: translateY(-4px);
+    background: rgba(255,255,255,0.07);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5), 0 0 0 1px var(--card-accent, var(--teal));
+  }
+
+  .flagship-icon { font-size: 1.8rem; margin-bottom: 0.6rem; line-height: 1; display: block; }
+
+  .flagship-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 0.8rem; font-weight: 800;
+    color: #fff; line-height: 1.3;
+    margin-bottom: 0.5rem;
+  }
+
+  .flagship-duration {
+    display: inline-flex; align-items: center; gap: 4px;
+    font-size: 0.65rem; font-weight: 600;
+    background: rgba(255,255,255,0.06);
+    color: var(--muted);
+    padding: 2px 7px; border-radius: 4px;
+    margin-bottom: 0.6rem;
+    border: 1px solid var(--border);
+  }
+
+  .flagship-features {
+    list-style: none;
+    display: flex; flex-direction: column; gap: 3px;
+  }
+
+  .flagship-features li {
+    font-size: 0.67rem; color: var(--muted); line-height: 1.4;
+    display: flex; align-items: center; gap: 5px;
+  }
+
+  .flagship-features li::before {
+    content: '';
+    width: 3px; height: 3px;
+    border-radius: 50%;
+    background: var(--card-accent, var(--teal));
+    flex-shrink: 0;
+  }
+
+  .flagship-cta {
+    margin-top: 0.75rem;
+    font-size: 0.7rem; font-weight: 700;
+    color: var(--card-accent, var(--teal));
+    display: flex; align-items: center; gap: 4px;
+    opacity: 0;
+    transform: translateY(4px);
+    transition: all 0.2s;
+  }
+
+  .flagship-card:hover .flagship-cta { opacity: 1; transform: translateY(0); }
+
+  /* ─── HERO SECTION (below nav) ───────────────────────── */
+  .hero {
+    margin-top: var(--nav-h);
+    min-height: calc(100vh - var(--nav-h));
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    text-align: center;
+    padding: 4rem 2rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-bg {
+    position: absolute; inset: 0; z-index: 0;
+    background:
+      radial-gradient(ellipse 70% 50% at 50% 0%, rgba(0,212,170,0.08) 0%, transparent 70%),
+      radial-gradient(ellipse 40% 40% at 80% 80%, rgba(96,165,250,0.06) 0%, transparent 60%),
+      radial-gradient(ellipse 30% 30% at 20% 60%, rgba(167,139,250,0.05) 0%, transparent 60%);
+  }
+
+  .hero-grid {
+    position: absolute; inset: 0; z-index: 0;
+    background-image:
+      linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+    background-size: 60px 60px;
+    mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
+  }
+
+  .hero-content { position: relative; z-index: 1; max-width: 700px; }
+
+  .hero-tag {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-size: 0.75rem; font-weight: 600;
+    color: var(--teal);
+    border: 1px solid rgba(0,212,170,0.25);
+    background: rgba(0,212,170,0.08);
+    padding: 5px 14px; border-radius: 20px;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  .hero-title {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 800;
+    color: #fff;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    margin-bottom: 1.25rem;
+  }
+
+  .hero-title em {
+    font-style: normal;
+    background: linear-gradient(135deg, var(--teal), var(--blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .hero-sub {
+    font-size: 1rem; color: var(--muted);
+    line-height: 1.7; margin-bottom: 2rem;
+  }
+
+  .hero-stats {
+    display: flex; align-items: center; justify-content: center; gap: 2.5rem;
+    margin-top: 2.5rem;
+  }
+
+  .stat-item { text-align: center; }
+
+  .stat-num {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.75rem; font-weight: 800;
+    color: #fff; line-height: 1;
+    margin-bottom: 3px;
+  }
+
+  .stat-label { font-size: 0.72rem; color: var(--muted); font-weight: 500; }
+
+  .stat-divider { width: 1px; height: 40px; background: var(--border); }
+
+  .hero-arrow {
+    position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%);
+    font-size: 1.2rem; color: var(--muted);
+    animation: bounce 2s infinite;
+  }
+
+  @keyframes bounce {
+    0%,100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(8px); }
+  }
+
+  /* ─── MEGA MENU FOOTER BAR ───────────────────────────── */
+  .mega-footer {
+    border-top: 1px solid var(--border);
+    padding: 0.875rem 2.5rem;
+    display: flex; align-items: center; justify-content: space-between;
+    background: rgba(0,0,0,0.2);
+  }
+
+  .mega-footer-left {
+    font-size: 0.72rem; color: var(--muted);
+    display: flex; align-items: center; gap: 1rem;
+  }
+
+  .mega-footer-link {
+    color: var(--teal); text-decoration: none; font-weight: 500;
+    font-size: 0.72rem;
+    display: flex; align-items: center; gap: 4px;
+    transition: color 0.2s;
+  }
+  .mega-footer-link:hover { color: #fff; }
+
+  .mega-footer-badges {
+    display: flex; gap: 0.5rem;
+  }
+
+  .badge-pill {
+    font-size: 0.65rem; font-weight: 600;
+    padding: 3px 8px; border-radius: 20px;
+    border: 1px solid;
+  }
+
+  .badge-pill.teal { color: var(--teal); border-color: rgba(0,212,170,0.3); background: rgba(0,212,170,0.07); }
+  .badge-pill.gold { color: var(--gold); border-color: rgba(245,200,66,0.3); background: rgba(245,200,66,0.07); }
+  .badge-pill.coral { color: var(--coral); border-color: rgba(255,107,107,0.3); background: rgba(255,107,107,0.07); }
+
+  /* ─── SEARCH IN NAV ──────────────────────────────────── */
+  .nav-search {
+    display: flex; align-items: center; gap: 6px;
+    background: var(--glass);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 0 10px;
+    height: 34px;
+    cursor: pointer;
+    transition: border-color 0.2s;
+  }
+  .nav-search:hover { border-color: rgba(255,255,255,0.15); }
+  .nav-search span { font-size: 0.75rem; color: var(--muted); }
+  .nav-search svg { color: var(--muted); }
+</style>
+</head>
+<body>
+
+<!-- ─── NAVBAR ─────────────────────────────────────────── -->
+<nav>
+  <a href="#" class="nav-logo">
+    <div class="dot"></div>
+    Sailors<span>Academy</span>
+  </a>
+
+  <ul class="nav-items">
+
+    <!-- INTERNSHIPS -->
+    <li class="nav-item">
+      <button class="nav-link">
+        Internships
+        <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        <div class="nav-indicator"></div>
+      </button>
+
+      <div class="mega-menu" style="--panel-accent: #00d4aa">
+        <div class="mega-inner" style="grid-template-rows: auto auto auto">
+
+          <div class="mega-section-label">🌐 Core Internships — Most Popular</div>
+
+          <div class="internship-grid">
+
+            <a href="#" class="course-card" style="--card-accent: #00d4aa">
+              <div class="glow"></div>
+              <span class="card-icon">💻</span>
+              <div class="card-title">Web Development</div>
+              <div class="card-tag"><span class="fire">🔥</span> #1 Demand — BCA/B.Tech</div>
+              <div class="card-duration">45 / 60 Days · HTML5, CSS3, React.js</div>
+            </a>
+
+            <a href="#" class="course-card" style="--card-accent: #60a5fa">
+              <div class="glow"></div>
+              <span class="card-icon">🔩</span>
+              <div class="card-title">Full Stack Development</div>
+              <div class="card-tag"><span class="fire">🏆</span> Highest Placement</div>
+              <div class="card-duration">45 / 60 Days · MERN, REST APIs</div>
+            </a>
+
+            <a href="#" class="course-card" style="--card-accent: #fb923c">
+              <div class="glow"></div>
+              <span class="card-icon">📣</span>
+              <div class="card-title">Digital Marketing</div>
+              <div class="card-tag"><span class="fire">📍</span> HUGE Demand in Punjab</div>
+              <div class="card-duration">45 / 60 Days · SEO, Google Ads, Meta</div>
+            </a>
+
+            <a href="#" class="course-card" style="--card-accent: #4ade80">
+              <div class="glow"></div>
+              <span class="card-icon">📊</span>
+              <div class="card-title">Data Analytics</div>
+              <div class="card-tag"><span class="fire">📈</span> Fast Growing</div>
+              <div class="card-duration">45 / 60 Days · Power BI, Python, SQL</div>
+            </a>
+
+            <a href="#" class="course-card" style="--card-accent: #a78bfa">
+              <div class="glow"></div>
+              <span class="card-icon">🐍</span>
+              <div class="card-title">Python + AI</div>
+              <div class="card-tag"><span class="fire">🤖</span> Future-Ready</div>
+              <div class="card-duration">45 / 60 Days · ChatGPT API, ML</div>
+            </a>
+
+            <a href="#" class="course-card" style="--card-accent: #ff6b6b">
+              <div class="glow"></div>
+              <span class="card-icon">🔐</span>
+              <div class="card-title">Cybersecurity</div>
+              <div class="card-tag"><span class="fire">🛡️</span> PTU Supported</div>
+              <div class="card-duration">45 / 60 Days · Kali Linux, OWASP</div>
+            </a>
+
+            <a href="#" class="course-card" style="--card-accent: #f472b6">
+              <div class="glow"></div>
+              <span class="card-icon">📱</span>
+              <div class="card-title">Mobile App Dev</div>
+              <div class="card-tag"><span class="fire">📲</span> Startups & Freelance</div>
+              <div class="card-duration">45 / 60 Days · Flutter, Firebase</div>
+            </a>
+
+            <a href="#" class="course-card" style="--card-accent: #f5c842">
+              <div class="glow"></div>
+              <span class="card-icon">🎨</span>
+              <div class="card-title">UI/UX Design</div>
+              <div class="card-tag"><span class="fire">🎯</span> Product & Startup Roles</div>
+              <div class="card-duration">45 / 60 Days · Figma, Prototypes</div>
+            </a>
+
+            <a href="#" class="course-card" style="--card-accent: #fb923c">
+              <div class="glow"></div>
+              <span class="card-icon">📹</span>
+              <div class="card-title">Video & Reels Editing</div>
+              <div class="card-tag"><span class="fire">🎬</span> Trending in Punjab</div>
+              <div class="card-duration">45 / 60 Days · Premiere Pro, CapCut</div>
+            </a>
+
+            <a href="#" class="course-card" style="--card-accent: #60a5fa">
+              <div class="glow"></div>
+              <span class="card-icon">🖌️</span>
+              <div class="card-title">Graphic Design</div>
+              <div class="card-tag"><span class="fire">🎨</span> Always in Demand</div>
+              <div class="card-duration">45 / 60 Days · Photoshop, Illustrator</div>
+            </a>
+
+          </div>
+
+          <div class="mega-footer">
+            <div class="mega-footer-left">
+              <span>All internships include live projects + certificate + placement support</span>
+            </div>
+            <div class="mega-footer-badges">
+              <span class="badge-pill teal">45-Day Track</span>
+              <span class="badge-pill gold">60-Day Track</span>
+              <span class="badge-pill coral">Placement Support</span>
+            </div>
+            <a href="#" class="mega-footer-link">View all internships →</a>
+          </div>
+
+        </div>
+      </div>
+    </li>
+
+    <!-- ADVANCED -->
+    <li class="nav-item">
+      <button class="nav-link">
+        Advanced
+        <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        <div class="nav-indicator"></div>
+      </button>
+
+      <div class="mega-menu">
+        <div class="mega-inner">
+
+          <div class="mega-section-label">🧠 Advanced Specialization Internships</div>
+
+          <div class="advanced-grid">
+
+            <a href="#" class="adv-card" style="--card-accent: #a78bfa">
+              <div class="adv-header">
+                <span class="adv-icon">🤖</span>
+                <span class="adv-badge">🚀 FASTEST 2025</span>
+              </div>
+              <div class="adv-title">Generative AI & Prompt Engineering</div>
+              <ul class="adv-topics">
+                <li>ChatGPT, Claude & Gemini deep dives</li>
+                <li>Advanced prompt engineering</li>
+                <li>AI automation: Zapier & Make.com</li>
+                <li>Building GPT-powered micro-tools</li>
+                <li>Midjourney, DALL-E, Stable Diffusion</li>
+              </ul>
+            </a>
+
+            <a href="#" class="adv-card" style="--card-accent: #00d4aa">
+              <div class="adv-header">
+                <span class="adv-icon">⚡</span>
+                <span class="adv-badge">🤝 Freelance</span>
+              </div>
+              <div class="adv-title">AI Agent & Automation</div>
+              <ul class="adv-topics">
+                <li>WhatsApp automation (Twilio, WATI)</li>
+                <li>Chatbot dev (Dialogflow, Botpress)</li>
+                <li>n8n & Make.com workflow automation</li>
+                <li>Agentic AI with LangChain / AutoGPT</li>
+                <li>RPA basics & AI product building</li>
+              </ul>
+            </a>
+
+            <a href="#" class="adv-card" style="--card-accent: #60a5fa">
+              <div class="adv-header">
+                <span class="adv-icon">☁️</span>
+                <span class="adv-badge">☁️ AWS Path</span>
+              </div>
+              <div class="adv-title">Cloud & DevOps (AWS)</div>
+              <ul class="adv-topics">
+                <li>AWS fundamentals: EC2, S3, Lambda, RDS</li>
+                <li>Linux server setup & management</li>
+                <li>Docker & container basics</li>
+                <li>CI/CD pipelines (GitHub Actions)</li>
+                <li>Domain, hosting & SSL + Kubernetes</li>
+              </ul>
+            </a>
+
+            <a href="#" class="adv-card" style="--card-accent: #ff6b6b">
+              <div class="adv-header">
+                <span class="adv-icon">🔍</span>
+                <span class="adv-badge">🔐 Govt Demand</span>
+              </div>
+              <div class="adv-title">Advanced Cybersecurity</div>
+              <ul class="adv-topics">
+                <li>Digital forensics & incident response</li>
+                <li>Malware analysis basics</li>
+                <li>Penetration testing: Burp Suite, Metasploit</li>
+                <li>Bug bounty fundamentals</li>
+                <li>CEH / CompTIA Security+ exam prep</li>
+              </ul>
+            </a>
+
+          </div>
+
+          <div class="mega-footer">
+            <span class="mega-footer-left">Next-gen programs for cutting-edge career advantage · 60-Day tracks</span>
+            <div class="mega-footer-badges">
+              <span class="badge-pill gold">60-Day Tracks</span>
+              <span class="badge-pill teal">Industry Certificates</span>
+            </div>
+            <a href="#" class="mega-footer-link">Explore advanced programs →</a>
+          </div>
+
+        </div>
+      </div>
+    </li>
+
+    <!-- CERTIFICATIONS -->
+    <li class="nav-item">
+      <button class="nav-link">
+        Certifications
+        <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        <div class="nav-indicator"></div>
+      </button>
+
+      <div class="mega-menu">
+        <div class="mega-inner">
+
+          <div class="mega-section-label">🏅 Short Certification Programs — 2 to 6 Weeks</div>
+
+          <div class="cert-cols">
+
+            <div>
+              <div class="cert-col-title">💻 Tech Certifications</div>
+              <div class="cert-list">
+
+                <a href="#" class="cert-item" style="--card-accent: #a78bfa">
+                  <span class="cert-icon">⚡</span>
+                  <div class="cert-info">
+                    <div class="cert-name">Prompt Engineering</div>
+                    <div class="cert-weeks">3 Weeks · ChatGPT, Claude, Gemini · 🔥🔥🔥🔥🔥</div>
+                  </div>
+                  <span class="cert-arrow">→</span>
+                </a>
+
+                <a href="#" class="cert-item" style="--card-accent: #00d4aa">
+                  <span class="cert-icon">🤝</span>
+                  <div class="cert-info">
+                    <div class="cert-name">ChatGPT for Business</div>
+                    <div class="cert-weeks">2 Weeks · Entrepreneurs & Professionals · 🔥🔥🔥🔥</div>
+                  </div>
+                  <span class="cert-arrow">→</span>
+                </a>
+
+                <a href="#" class="cert-item" style="--card-accent: #f5c842">
+                  <span class="cert-icon">🎨</span>
+                  <div class="cert-info">
+                    <div class="cert-name">UI/UX with Figma</div>
+                    <div class="cert-weeks">4 Weeks · Components, Prototypes · 🔥🔥🔥</div>
+                  </div>
+                  <span class="cert-arrow">→</span>
+                </a>
+
+              </div>
+            </div>
+
+            <div>
+              <div class="cert-col-title">📣 Digital Marketing Certifications</div>
+              <div class="cert-list">
+
+                <a href="#" class="cert-item" style="--card-accent: #4ade80">
+                  <span class="cert-icon">🔍</span>
+                  <div class="cert-info">
+                    <div class="cert-name">SEO Specialist</div>
+                    <div class="cert-weeks">4 Weeks · Ahrefs, Semrush, Local SEO · 🔥🔥🔥🔥</div>
+                  </div>
+                  <span class="cert-arrow">→</span>
+                </a>
+
+                <a href="#" class="cert-item" style="--card-accent: #60a5fa">
+                  <span class="cert-icon">📢</span>
+                  <div class="cert-info">
+                    <div class="cert-name">Google Ads Specialist</div>
+                    <div class="cert-weeks">4 Weeks · Google Partner Path · 🔥🔥🔥🔥</div>
+                  </div>
+                  <span class="cert-arrow">→</span>
+                </a>
+
+                <a href="#" class="cert-item" style="--card-accent: #fb923c">
+                  <span class="cert-icon">📘</span>
+                  <div class="cert-info">
+                    <div class="cert-name">Meta Ads & Social Media Marketing</div>
+                    <div class="cert-weeks">4 Weeks · Facebook, Instagram · 🔥🔥🔥🔥</div>
+                  </div>
+                  <span class="cert-arrow">→</span>
+                </a>
+
+                <a href="#" class="cert-item" style="--card-accent: #f472b6">
+                  <span class="cert-icon">🎬</span>
+                  <div class="cert-info">
+                    <div class="cert-name">Content Creation & Reels Marketing</div>
+                    <div class="cert-weeks">3 Weeks · Creator Economy · 🔥🔥🔥🔥</div>
+                  </div>
+                  <span class="cert-arrow">→</span>
+                </a>
+
+              </div>
+            </div>
+
+          </div>
+
+          <div class="mega-footer" style="margin-top:1.25rem">
+            <span class="mega-footer-left">Fast-track certifications ideal for working professionals & graduates</span>
+            <div class="mega-footer-badges">
+              <span class="badge-pill teal">2–6 Weeks</span>
+              <span class="badge-pill gold">Globally Recognised</span>
+            </div>
+            <a href="#" class="mega-footer-link">All certifications →</a>
+          </div>
+
+        </div>
+      </div>
+    </li>
+
+    <!-- FLAGSHIP -->
+    <li class="nav-item">
+      <button class="nav-link">
+        Flagship Programs
+        <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        <span class="nav-link-badge">NEW</span>
+        <div class="nav-indicator"></div>
+      </button>
+
+      <div class="mega-menu">
+        <div class="mega-inner">
+
+          <div class="mega-section-label">🏆 Flagship Professional Programs — 3 to 6 Months</div>
+
+          <div class="flagship-grid">
+
+            <a href="#" class="flagship-card" style="--card-accent: #fb923c">
+              <div class="stripe"></div>
+              <span class="flagship-icon">📣</span>
+              <div class="flagship-title">Digital Marketing & Performance Ads</div>
+              <span class="flagship-duration">⏱ 3–4 Months</span>
+              <ul class="flagship-features">
+                <li>Complete SEO + Google Ads + Meta Ads</li>
+                <li>Email marketing + WhatsApp Business</li>
+                <li>E-commerce: Shopify, Amazon</li>
+                <li>Analytics: GA4, Hotjar, Meta Pixel</li>
+                <li>Agency-style live projects</li>
+              </ul>
+              <div class="flagship-cta">Most Enrolled Flagship ↗</div>
+            </a>
+
+            <a href="#" class="flagship-card" style="--card-accent: #60a5fa">
+              <div class="stripe"></div>
+              <span class="flagship-icon">🔩</span>
+              <div class="flagship-title">Full Stack Web Development</div>
+              <span class="flagship-duration">⏱ 4–5 Months</span>
+              <ul class="flagship-features">
+                <li>HTML, CSS, JS + React.js</li>
+                <li>Node.js + Express + MongoDB (MERN)</li>
+                <li>REST API development & integration</li>
+                <li>DevOps: GitHub, CI/CD, Vercel/AWS</li>
+                <li>Portfolio of 3+ live projects</li>
+              </ul>
+              <div class="flagship-cta">#1 Placement Track 80%+ ↗</div>
+            </a>
+
+            <a href="#" class="flagship-card" style="--card-accent: #4ade80">
+              <div class="stripe"></div>
+              <span class="flagship-icon">📊</span>
+              <div class="flagship-title">Data Analytics Professional</div>
+              <span class="flagship-duration">⏱ 3–4 Months</span>
+              <ul class="flagship-features">
+                <li>Excel + SQL + Power BI + Tableau</li>
+                <li>Python for data: Pandas, Seaborn</li>
+                <li>Statistics & business intelligence</li>
+                <li>3 dashboard capstone projects</li>
+                <li>Data storytelling & presentation</li>
+              </ul>
+              <div class="flagship-cta">MNCs & Startups Hiring ↗</div>
+            </a>
+
+            <a href="#" class="flagship-card" style="--card-accent: #a78bfa">
+              <div class="stripe"></div>
+              <span class="flagship-icon">🤖</span>
+              <div class="flagship-title">AI & Automation Professional</div>
+              <span class="flagship-duration">⏱ 4–5 Months</span>
+              <ul class="flagship-features">
+                <li>Generative AI: ChatGPT, Claude, Gemini</li>
+                <li>Prompt engineering + AI agent building</li>
+                <li>Automation: n8n, Make.com, Zapier</li>
+                <li>Python + LangChain AI development</li>
+                <li>AI product building & monetization</li>
+              </ul>
+              <div class="flagship-cta">Most Futuristic — 2025 ↗</div>
+            </a>
+
+            <a href="#" class="flagship-card" style="--card-accent: #f5c842">
+              <div class="stripe"></div>
+              <span class="flagship-icon">🧠</span>
+              <div class="flagship-title">Generative AI + Agentic AI Track</div>
+              <span class="flagship-duration">⏱ 5–6 Months</span>
+              <ul class="flagship-features">
+                <li>Foundation models & LLM understanding</li>
+                <li>Prompt design + RAG systems</li>
+                <li>AI agents with AutoGPT & CrewAI</li>
+                <li>Fine-tuning & custom GPT creation</li>
+                <li>AI SaaS micro-product development</li>
+              </ul>
+              <div class="flagship-cta">Elite AI Developer Track ↗</div>
+            </a>
+
+          </div>
+
+          <div class="mega-footer" style="margin-top:1.25rem">
+            <span class="mega-footer-left">Comprehensive programs for serious career changers targeting placements</span>
+            <div class="mega-footer-badges">
+              <span class="badge-pill teal">3–6 Months</span>
+              <span class="badge-pill gold">Certificate</span>
+              <span class="badge-pill coral">Placement Guarantee</span>
+            </div>
+            <a href="#" class="mega-footer-link">Compare flagship programs →</a>
+          </div>
+
+        </div>
+      </div>
+    </li>
+
+    <li class="nav-item">
+      <a href="#" class="nav-link">About</a>
+    </li>
+
+    <li class="nav-item">
+      <a href="#" class="nav-link">Placements</a>
+    </li>
+
+  </ul>
+
+  <div class="nav-right">
+    <div class="nav-search">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      <span>Search courses...</span>
+    </div>
+    <button class="btn-enroll">Enroll Now</button>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <div class="hero-tag">
+      <span>⚡</span>
+      Punjab's #1 Tech Training Institute
+    </div>
+    <h1 class="hero-title">
+      Master <em>Tech & AI</em><br>Launch Your Career
+    </h1>
+    <p class="hero-sub">
+      Industry-ready programs in Web Dev, AI, Digital Marketing, Data Analytics & more.<br>
+      Live projects · Certificates · Placement support.
+    </p>
+    <button class="btn-enroll" style="padding:0.75rem 2rem; font-size:0.95rem;">Explore All Courses</button>
+
+    <div class="hero-stats">
+      <div class="stat-item">
+        <div class="stat-num">25+</div>
+        <div class="stat-label">Programs</div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <div class="stat-num">80%+</div>
+        <div class="stat-label">Placement Rate</div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <div class="stat-num">45-180</div>
+        <div class="stat-label">Days Duration</div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <div class="stat-num">2025</div>
+        <div class="stat-label">Fresh Curriculum</div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-arrow">↓</div>
+</section>
+
+<script>
+  // Keep mega menu open when hovering between nav-link and mega-menu
+  document.querySelectorAll('.nav-item').forEach(item => {
+    let timeout;
+    item.addEventListener('mouseenter', () => {
+      clearTimeout(timeout);
+    });
+    item.addEventListener('mouseleave', () => {
+      timeout = setTimeout(() => {}, 100);
+    });
+  });
+</script>
+</body>
+</html>
