@@ -409,7 +409,9 @@ nav {
   padding: 60px 0;
   border-radius: 0 !important;
 }
-
+.digital-grid{
+  padding: 20px 0 !important;
+}
 .mega-grid-container {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -419,16 +421,17 @@ nav {
 }
 
 .internship-category-item {
-  padding: 30px;
+  padding: 20px;
   border-radius: 0 !important;
   /* Forces 0 radius */
   border: 1px solid #e0e0e0;
+  border-radius: 10px !important;
   transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
   cursor: pointer;
   position: relative;
   overflow: hidden;
   background: #fff;
-  min-height: 250px;
+  min-height: 180px;
   /* Larger cards */
 }
 
@@ -532,7 +535,7 @@ nav {
 
 /* 3. Footer Action */
 .mega-footer-action {
-  padding: 40px 0;
+  padding: 20px 0;
   background: #111;
   /* Matching header */
   border-top: 1px solid #333;
@@ -609,12 +612,41 @@ nav {
   .mega-grid-container {
     grid-template-columns: repeat(4, 1fr);
   }
+  .nav-links>li>a{
+    padding: 0 5px;
+    font-size: 12px !important;
+  }
+  .btn-application{
+    font-size: 12px !important;
+    padding: 8px 15px !important;
+  }
+  .search-btn{
+    font-size: 15px !important;
+  }
 }
-
+@media (min-width: 1201px) {
+  .luxury-mega {
+    width: 100vw !important;
+  }
+  .mega-grid-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .nav-links>li>a{
+    padding: 0 5px;
+  }
+   .btn-application{
+    font-size: 18px !important;
+    padding: 8px 15px !important;
+  }
+  .search-btn{
+    font-size: 15px !important;
+  }
+}
 @media (max-width: 1000px) {
   .luxury-mega {
     width: 100vw !important;
   }
+
 }
 
 
@@ -4906,4 +4938,230 @@ nav {
 .fade-scroll.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* Quick Reference Modal Styles */
+.quick-modal {
+    display: none;
+    position: fixed;
+    z-index: 10000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(8px);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.quick-modal.show {
+    display: flex;
+    opacity: 1;
+}
+
+.quick-modal-content {
+    background: #fff;
+    width: 95%;
+    max-width: 1300px;
+    max-height: 90vh;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+    transform: translateY(30px) scale(0.95);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    display: flex;
+    flex-direction: column;
+}
+
+.quick-modal.show .quick-modal-content {
+    transform: translateY(0) scale(1);
+}
+
+.quick-modal-header {
+    background: #ffffff; 
+    color: #000000;
+    padding: 25px 40px 10px 40px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.quick-modal-header h2 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 800;
+    font-family: 'Outfit', sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.quick-modal-close {
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    font-size: 35px;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    line-height: 1;
+    z-index: 10;
+}
+
+.quick-modal-close:hover {
+    transform: rotate(90deg) scale(1.2);
+    color: var(--accent-yellow);
+}
+
+.quick-modal-body {
+    padding: 10px 10px 10px 10px;
+    overflow-y: auto;
+    background: #fdfdfd;
+}
+
+.quick-ref-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    font-family: 'Inter', sans-serif;
+    border: 1px solid #e2e8f0;
+}
+
+.quick-ref-table thead {
+    background: #e8e8eb;
+    color: rgb(12, 12, 12);
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+.quick-ref-table th {
+    padding: 14px 20px;
+    text-align: left;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.quick-ref-table td {
+    padding: 8px 20px;
+    border-bottom: 1px solid #e2e8f0;
+    font-size: 15px;
+    color: #1e293b;
+    vertical-align: middle;
+}
+
+.quick-ref-table tr:nth-child(even) {
+    background-color: #f1f5f9;
+}
+
+.quick-ref-table tr:hover {
+    background-color: #e2e8f0;
+}
+
+.demand-bolt {
+    color: var(--accent-yellow); 
+    font-size: 12px;
+    margin-right: 3px;
+    opacity: 0.8;
+}
+
+.enroll-btn {
+    background: #1e3a8a;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 10px;
+    font-weight: 700;
+    transition: all 0.3s;
+    display: inline-block;
+    text-align: center;
+    border: none;
+    text-transform: uppercase;
+}
+
+.enroll-btn:hover {
+    background: #2A4D31;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    color: white !important;
+}
+
+/* Link in Mega Menu */
+.quick-ref-link {
+    position: relative;
+    color: transparent !important; /* hide normal color */
+    font-weight: 800 !important;
+    font-size: 16px;
+
+    background: linear-gradient(
+        90deg,
+        #2A4D31,
+        #FFC53A,
+        #2A4D31
+    );
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    animation: gradientFlow 3s linear infinite;
+}
+
+/* Gradient animation */
+@keyframes gradientFlow {
+    0% {
+        background-position: 0% center;
+    }
+    100% {
+        background-position: 200% center;
+    }
+}
+
+.quick-ref-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #1e3a8a;
+    transition: width 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.quick-ref-link:hover::after {
+    width: 100%;
+}
+
+
+.quick-ref-link i {
+    font-size: 18px;
+}
+
+@media (max-width: 991px) {
+    .quick-modal-content {
+        width: 100%;
+        max-height: 100vh;
+        border-radius: 0;
+    }
+    .quick-modal-body {
+        padding: 20px;
+    }
+    .quick-ref-table th, .quick-ref-table td {
+        padding: 12px 10px;
+        font-size: 12px;
+    }
+    .quick-modal-header {
+        padding: 20px;
+    }
+    .quick-modal-header h2 {
+        font-size: 18px;
+    }
 }

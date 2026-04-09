@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!parentLi) return;
 
         let menuTimeout;
-        
+
         const showMenu = () => {
             clearTimeout(menuTimeout);
             luxuryMega.classList.add('is-active');
@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
             menuTimeout = setTimeout(() => {
                 luxuryMega.classList.remove('is-active');
                 document.body.classList.remove('no-scroll');
-            }, 100); 
+            }, 100);
         };
 
         parentLi.addEventListener('mouseenter', showMenu);
@@ -236,6 +236,36 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Optionally reset video time to 0
                 // video.currentTime = 0; 
             });
+        }
+    });
+
+    // --- Quick Reference Modal Logic ---
+    const quickModal = document.getElementById('quickReferenceModal');
+    const openQuickRef = document.querySelectorAll('#openQuickRef, #openQuickRef1, #openQuickRef2, #openQuickRef3');
+    const closeQuickRef = document.getElementById('closeQuickRef');
+
+    if (openQuickRef && quickModal) {
+    openQuickRef.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            quickModal.classList.add('show');
+            document.body.classList.add('no-scroll');
+        });
+    });
+}
+
+    if (closeQuickRef && quickModal) {
+        closeQuickRef.addEventListener('click', () => {
+            quickModal.classList.remove('show');
+            document.body.classList.remove('no-scroll');
+        });
+    }
+
+    // Close modal on click outside content
+    window.addEventListener('click', (e) => {
+        if (e.target === quickModal) {
+            quickModal.classList.remove('show');
+            document.body.classList.remove('no-scroll');
         }
     });
 });
