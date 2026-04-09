@@ -30,6 +30,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const grandSubPanes = document.querySelectorAll('.grand-subitems');
 
     // --- HIGH-STABILITY LUXURY MEGA MENU ENGINE (Multi-Instance Support) ---
+    // Inject Mega Menu Overlay
+    if (!document.querySelector('.mega-menu-overlay')) {
+        const overlay = document.createElement('div');
+        overlay.className = 'mega-menu-overlay';
+        document.body.appendChild(overlay);
+    }
+
     document.querySelectorAll('.luxury-mega').forEach(luxuryMega => {
         const parentLi = luxuryMega.parentElement;
         if (!parentLi) return;
@@ -40,6 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
             clearTimeout(menuTimeout);
             luxuryMega.classList.add('is-active');
             document.body.classList.add('no-scroll');
+            document.body.classList.add('mega-menu-active');
         };
 
         const hideMenu = () => {
@@ -47,6 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
             menuTimeout = setTimeout(() => {
                 luxuryMega.classList.remove('is-active');
                 document.body.classList.remove('no-scroll');
+                document.body.classList.remove('mega-menu-active');
             }, 100);
         };
 
@@ -369,3 +378,19 @@ document.addEventListener('DOMContentLoaded', () => {
     // optional additional animation: give team cards extra entrance + shadow dynamic
     console.log("About Us Section Loaded with high-end animations & responsive layout");
 })();
+
+/* E-Certificate Form Submission Logic */
+document.addEventListener('DOMContentLoaded', () => {
+    const eCertificateForm = document.getElementById('eCertificateForm');
+    if (eCertificateForm) {
+        eCertificateForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const submitBtn = eCertificateForm.querySelector('.btn-generate .button-inner-static');
+            const submitBtnHover = eCertificateForm.querySelector('.btn-generate .button-inner-hover');
+            
+            if (submitBtn) submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Generating...';
+            if (submitBtnHover) submitBtnHover.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Generating...';
+        });
+    }
+});

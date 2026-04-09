@@ -278,9 +278,7 @@ nav {
   color: var(--accent-yellow);
 }
 
-/* ================================================
-   NEXT-LEVEL LUXURY MEGA MENU STYLES
-   ================================================ */
+
 
 .luxury-mega {
   position: fixed; /* True 100vw Edge-to-Edge */
@@ -288,12 +286,12 @@ nav {
   left: 0;
   width: 100vw !important;
   max-width: 100vw;
-  height: 65vh !important;
+  height: auto !important;
+  max-height: 65vh !important;
   overflow-y: auto;
   background: #fff;
   border-radius: 0 !important;
   border: none;
-  border-bottom: 3px solid var(--accent-yellow);
   box-shadow: 0 50px 100px rgba(0,0,0,0.5);
   opacity: 0;
   visibility: hidden;
@@ -301,6 +299,26 @@ nav {
   transition: opacity 0.3s ease, visibility 0.3s ease; 
   pointer-events: none;
   z-index: 1001;
+}
+
+/* Mega Menu Overlay */
+.mega-menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 999; /* Below navigation but above content */
+  pointer-events: none;
+}
+
+body.mega-menu-active .mega-menu-overlay {
+  opacity: 1;
+  visibility: visible;
 }
 
 /* JS Engine Visibility Class */
@@ -364,7 +382,7 @@ nav {
 
 .track-info h4 {
   font-family: 'Outfit', sans-serif;
-  font-size: 32px;
+  font-size: 22px;
   font-weight: 700;
   margin-bottom: 15px;
   color: #2b2a2a;
@@ -390,9 +408,9 @@ nav {
 }
 
 .track-info p {
-  font-size: 15px;
+  font-size: 13px;
   opacity: 0.9;
-  max-width: 600px;
+  max-width: 800px;
   line-height: 1.5;
   margin: 0;
 }
@@ -406,7 +424,7 @@ nav {
 /* 2. Categories Grid */
 .mega-grid-wrapper {
   background: #fff;
-  padding: 60px 0;
+  padding: 20px 0 20px 0;
   border-radius: 0 !important;
 }
 .digital-grid{
@@ -418,10 +436,11 @@ nav {
   gap: 30px;
   /* Increased gap for better spacing on large screens */
   width: 100%;
+  align-items: start;
 }
 
 .internship-category-item {
-  padding: 20px;
+  padding: 10px 15px;
   border-radius: 0 !important;
   /* Forces 0 radius */
   border: 1px solid #e0e0e0;
@@ -431,7 +450,7 @@ nav {
   position: relative;
   overflow: hidden;
   background: #fff;
-  min-height: 180px;
+  min-height: auto;
   /* Larger cards */
 }
 
@@ -485,12 +504,12 @@ nav {
 .cat-icon {
   font-size: 24px;
   color: var(--primary-green);
-  margin-bottom: 12px;
+  margin-bottom: 8px;
   transition: transform 0.3s ease;
 }
 
 .internship-category-item:hover .cat-icon {
-  transform: scale(1.1) rotate(5deg);
+  /* transform: scale(1.1) rotate(5deg); */
   color: var(--accent-yellow);
 }
 
@@ -515,6 +534,16 @@ nav {
   list-style: none;
   padding: 0;
   margin: 0;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.internship-category-item:hover .cat-details {
+  max-height: 500px;
+  opacity: 1;
+  margin-top: 15px;
 }
 
 .cat-details li {
@@ -535,12 +564,13 @@ nav {
 
 /* 3. Footer Action */
 .mega-footer-action {
-  padding: 20px 0;
+  padding: 12px 0;
   background: #111;
   /* Matching header */
   border-top: 1px solid #333;
   color: #fff;
   border-radius: 0 !important;
+
 }
 
 .mega-footer-container {
@@ -641,6 +671,7 @@ nav {
   .search-btn{
     font-size: 15px !important;
   }
+  
 }
 @media (max-width: 1000px) {
   .luxury-mega {
@@ -795,17 +826,39 @@ nav {
 
 .hero-left h1 {
   font-family: 'Outfit', sans-serif;
-  font-size: 96px;
+  font-size: 116px;
   font-weight: 100;
-  line-height: .8;
+  line-height: .9;
   margin-bottom: 40px;
 }
-
+/* .o-title{
+  font-size: 196px;
+} */
 .hero-left h1 .lower-h1 {
   font-weight: 700;
-  font-size: 70px;
+  font-size: 60px;
+}
+/* Big shared O */
+.hero-left h1 .big-o {
+  position: absolute;
+  font-size: 196px;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.08); /* light faded look */
+  z-index: 0;
+  line-height: 1;
 }
 
+/* Keep text above O */
+.hero-left h1 {
+  position: relative;
+  z-index: 1;
+}
+
+/* Align "Obtain" properly */
+.hero-left h1 .o-word {
+  position: relative;
+  z-index: 1;
+}
 .stats-row {
   display: flex;
   align-items: center;
@@ -1270,9 +1323,9 @@ nav {
 
 /* --- Responsive Layout Adjustments --- */
 @media (max-width: 1100px) {
-  nav {
+  /* nav {
     padding: 0 20px;
-  }
+  } */
 
   .nav-links,
   .search-container,
@@ -1517,6 +1570,12 @@ nav {
   .book-now-section {
     padding: 250px 0 100px 0 !important;
   }
+.cat-info h5{
+    font-size: 14px !important;
+  }
+  .cat-details li{
+    font-size: 12px !important;
+  }
 }
 
 /* --- Modal Form Styling --- */
@@ -1737,6 +1796,10 @@ nav {
 
 /* Responsive */
 @media (max-width: 768px) {
+  nav {
+    padding: 0 20px;
+  }
+
   .about-title {
     font-size: 28px;
   }
@@ -5093,7 +5156,28 @@ nav {
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
     color: white !important;
 }
+/* Enable horizontal scroll */
+.table-responsive {
+    overflow-x: auto;
 
+    /* Firefox */
+    scrollbar-width: thin;
+    scrollbar-color: #000 transparent;
+}
+
+/* Chrome, Edge, Safari */
+.table-responsive::-webkit-scrollbar {
+    height: 3px; /* very thin */
+}
+
+.table-responsive::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.table-responsive::-webkit-scrollbar-thumb {
+    background: #000;
+    border-radius: 50px;
+}
 /* Link in Mega Menu */
 .quick-ref-link {
     position: relative;
@@ -5144,7 +5228,13 @@ nav {
 .quick-ref-link i {
     font-size: 18px;
 }
-
+.mobile-side{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
 @media (max-width: 991px) {
     .quick-modal-content {
         width: 100%;
@@ -5164,4 +5254,147 @@ nav {
     .quick-modal-header h2 {
         font-size: 18px;
     }
+    .quick-ref-link::after {
+      display: none;
+    }
 }
+
+/* E-Certificate Section Styles */
+.e-certificate-section {
+    padding: 100px 0;
+    background: #fdfdfd;
+}
+
+.certificate-form-wrapper {
+    background: white;
+    padding: 80px;
+    border-radius: 20px;
+    box-shadow: 0 40px 100px rgba(0, 0, 0, 0.05);
+    border: 1px solid #eee;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.certification-header {
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.section-title-premium {
+    font-family: 'Outfit', sans-serif;
+    font-size: 48px;
+    font-weight: 800;
+    color: #1a1a1a;
+    margin-bottom: 15px;
+    letter-spacing: -1px;
+}
+
+.certification-header p {
+    color: #777;
+    font-size: 18px;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Premium Input Styles */
+.input-field {
+    position: relative;
+    width: 100%;
+}
+
+.input-field input,
+.input-field select,
+.input-field textarea {
+    width: 100%;
+    padding: 15px 0;
+    font-size: 17px;
+    color: #1a1a1a;
+    border: none;
+    border-bottom: 2px solid #e0e0e0;
+    background: transparent;
+    transition: all 0.3s ease;
+    outline: none;
+    font-family: 'Inter', sans-serif;
+}
+
+.input-field label {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    color: #999;
+    font-size: 17px;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    font-weight: 500;
+}
+
+/* Float Label Effect */
+.input-field input:focus ~ label,
+.input-field input:not(:placeholder-shown) ~ label,
+.input-field textarea:focus ~ label,
+.input-field textarea:not(:placeholder-shown) ~ label,
+.input-field select:focus ~ label,
+.input-field select:not([value=""]):valid ~ label {
+    top: -20px;
+    font-size: 13px;
+    color: #1e3a8a;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.focus-border {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #1e3a8a;
+    transition: width 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.input-field input:focus ~ .focus-border,
+.input-field select:focus ~ .focus-border,
+.input-field textarea:focus ~ .focus-border {
+    width: 100%;
+}
+
+/* Select specific styling */
+.input-field select {
+    cursor: pointer;
+    appearance: none;
+}
+
+.input-field select:invalid {
+    color: transparent;
+}
+
+.input-field select option {
+    color: #1a1a1a;
+}
+
+.form-action {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.btn-generate {
+    padding: 20px 60px !important;
+    font-size: 20px !important;
+    border-radius: 50px !important;
+}
+
+@media (max-width: 991px) {
+    .certificate-form-wrapper {
+        padding: 50px 30px;
+    }
+    .section-title-premium {
+        font-size: 32px;
+    }
+    .certification-header p {
+        font-size: 16px;
+    }
+}
+
