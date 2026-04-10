@@ -254,14 +254,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const closeQuickRef = document.getElementById('closeQuickRef');
 
     if (openQuickRef && quickModal) {
-    openQuickRef.forEach(link => {
-        link.addEventListener('click', (e) => {
-            e.preventDefault();
-            quickModal.classList.add('show');
-            document.body.classList.add('no-scroll');
+        openQuickRef.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                quickModal.classList.add('show');
+                document.body.classList.add('no-scroll');
+            });
         });
-    });
-}
+    }
 
     if (closeQuickRef && quickModal) {
         closeQuickRef.addEventListener('click', () => {
@@ -277,7 +277,76 @@ document.addEventListener('DOMContentLoaded', () => {
             document.body.classList.remove('no-scroll');
         }
     });
+
+    // --- Offer Bar Close Functionality ---
+    const closeOffer = document.getElementById('closeOffer');
+    const offerBar = document.getElementById('offerBar');
+    const heroSection = document.querySelector('.hero-section');
+
+    if (closeOffer && offerBar) {
+        closeOffer.addEventListener('click', () => {
+            offerBar.classList.add('hide');
+            document.body.classList.add('offer-closed');
+            // Reset hero section padding when offer is closed
+            if (heroSection) {
+                heroSection.style.paddingTop = '50px';
+            }
+        });
+    }
+
+    // --- 404 & Thank You Page Extra Logic ---
+    const bookClass404 = document.getElementById('openDemoModal404');
+    if (bookClass404) {
+        bookClass404.addEventListener('click', (e) => {
+            e.preventDefault();
+            const modal = document.getElementById('autoDemoModal');
+            if (modal) {
+                const bsModal = new bootstrap.Modal(modal);
+                bsModal.show();
+            } else {
+                // If modal not on page, redirect to home with modal trigger
+                window.location.href = 'index.html?openModal=true';
+            }
+        });
+    }
+
+    // --- Performance Optimization: Video Lazy Loading ---
+    const lazyVideos = [].slice.call(document.querySelectorAll("video:not(.hero-video)"));
+    if ("IntersectionObserver" in window) {
+        const videoObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach((video) => {
+                if (video.isIntersecting) {
+                    video.target.querySelectorAll("source").forEach((source) => {
+                        if (source.dataset.src) {
+                            source.src = source.dataset.src;
+                        }
+                    });
+                    video.target.load();
+                    video.target.classList.remove("lazy-video");
+                    videoObserver.unobserve(video.target);
+                }
+            });
+        });
+
+        lazyVideos.forEach((video) => {
+            videoObserver.observe(video);
+        });
+    }
 });
+
+// Optimization: Throttle function for high-frequency events
+function throttle(func, limit) {
+    let inThrottle;
+    return function() {
+        const args = arguments;
+        const context = this;
+        if (!inThrottle) {
+            func.apply(context, args);
+            inThrottle = true;
+            setTimeout(() => inThrottle = false, limit);
+        }
+    }
+}
 
 document.addEventListener('DOMContentLoaded', () => {
     // --- Rank Section Scroll Animations & Counter ---
@@ -378,6 +447,55 @@ document.addEventListener('DOMContentLoaded', () => {
     // optional additional animation: give team cards extra entrance + shadow dynamic
     console.log("About Us Section Loaded with high-end animations & responsive layout");
 })();
+
+/* Dynamic Hero Word Cycler */
+document.addEventListener('DOMContentLoaded', () => {
+    const dynamicWord = document.querySelector('.dynamic-word');
+    if (dynamicWord) {
+        const words = ["Skills.", "Jobs.", "Income."];
+        let currentIndex = 0;
+
+        const cycleWords = () => {
+            // Start fade out
+            dynamicWord.classList.add('fade-out');
+            dynamicWord.classList.remove('fade-in');
+
+            setTimeout(() => {
+                // Change word
+                currentIndex = (currentIndex + 1) % words.length;
+                dynamicWord.textContent = words[currentIndex];
+
+                // Start fade in
+                dynamicWord.classList.remove('fade-out');
+                dynamicWord.classList.add('fade-in');
+            }, 250); // Matches CSS transition duration
+        };
+
+        // Initialize first state
+        dynamicWord.classList.add('fade-in');
+        
+        // Start interval
+        setInterval(cycleWords, 3000); // Change every 3 seconds
+    }
+
+    // --- About Section Read More Toggle ---
+    const toggleBtn = document.getElementById('toggleAboutBtn');
+    const extraContent = document.getElementById('aboutExtraContent');
+
+    if (toggleBtn && extraContent) {
+        toggleBtn.addEventListener('click', () => {
+            const isExpanded = extraContent.classList.contains('is-expanded');
+            
+            if (isExpanded) {
+                extraContent.classList.remove('is-expanded');
+                toggleBtn.textContent = 'Read more';
+            } else {
+                extraContent.classList.add('is-expanded');
+                toggleBtn.textContent = 'Show less';
+            }
+        });
+    }
+});
 
 /* E-Certificate Form Submission Logic */
 document.addEventListener('DOMContentLoaded', () => {
