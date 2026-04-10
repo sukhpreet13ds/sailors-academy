@@ -25,652 +25,642 @@
 
 <body>
 
-    <nav>
-        <div class="logo">
-            <a href="index.html">
-                <img src="assets/logo.png" alt="Sailor Academy Logo">
-            </a>
+  <nav>
+
+    <div class="logo">
+      <a href="index.html">
+        <img src="assets/logo.png" alt="Sailor Academy Logo">
+      </a>
+    </div>
+
+    <ul class="nav-links" id="navLinks">
+      <li class="has-dropdown">
+        <a href="#">Internships & Training<i class="fa-solid fa-chevron-down" style="font-size: 10px;"></i></a>
+        <div class="dropdown-mega luxury-mega">
+          <div class="mega-inner-content">
+            <!-- Top Banner: Gain Attention -->
+            <div class="mega-header-banner">
+              <div class="mega-full-width-content">
+                <div class="track-info">
+                  <h4>Core Internships</h4><span class="track-badge">Popular Programs</span>
+                  <p>Industry-ready internships with live projects, certificates & placement support. Available in
+                    45-day & 60-day tracks.</p>
+                </div>
+                <div class="track-right-action" style="display: flex; align-items: center; gap: 20px;">
+                  <a href="javascript:void(0)" class="quick-ref-link" id="openQuickRef">
+                    Quick Reference
+                  </a>
+                  <div class="track-visual" style="margin: 0; opacity: 0.1;">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Main Categories Grid - Expanded to 100vw -->
+            <div class="mega-grid-wrapper">
+              <div class="mega-full-width-content">
+                <div class="mega-grid-container">
+                  <div class="internship-category-item" data-category="web">
+                    <span class="cat-badge trending">Trending</span>
+                    <div class="cat-icon"><i class="fa-solid fa-code"></i></div>
+                    <div class="cat-info">
+                      <h5>Web Development</h5>
+                      <p>#1 Demand — BCA/B.Tech</p>
+                      <ul class="cat-details">
+                        <li>React.js & MERN Stack</li>
+                        <li>Live Project + GitHub</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="internship-category-item" data-category="fullstack">
+                    <span class="cat-badge demanded">Most Demanded</span>
+                    <div class="cat-icon"><i class="fa-solid fa-layer-group"></i></div>
+                    <div class="cat-info">
+                      <h5>Full Stack Development</h5>
+                      <p>Highest Placement Conversion</p>
+                      <ul class="cat-details">
+                        <li>Frontend + Backend</li>
+                        <li>REST APIs & Databases</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="internship-category-item" data-category="digital">
+                    <div class="cat-icon"><i class="fa-solid fa-bullhorn"></i></div>
+                    <div class="cat-info">
+                      <h5>Digital Marketing</h5>
+                      <p>HUGE Demand in Punjab</p>
+                      <ul class="cat-details">
+                        <li>SEO & Meta Ads</li>
+                        <li>Real Client Case Studies</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="internship-category-item" data-category="data">
+                    <span class="cat-badge demanded">Most Demanded</span>
+                    <div class="cat-icon"><i class="fa-solid fa-chart-line"></i></div>
+                    <div class="cat-info">
+                      <h5>Data Analytics</h5>
+                      <p>Fast Growing — Less Competition</p>
+                      <ul class="cat-details">
+                        <li>Power BI & Tableau</li>
+                        <li>Python for Data Science</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="internship-category-item" data-category="python">
+                    <span class="cat-badge trending">Trending</span>
+                    <div class="cat-icon"><i class="fa-brands fa-python"></i></div>
+                    <div class="cat-info">
+                      <h5>Python + AI</h5>
+                      <p>New-Age — Future-Ready</p>
+                      <ul class="cat-details">
+                        <li>ChatGPT API & ML</li>
+                        <li>Data Automation Tools</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="internship-category-item" data-category="cyber">
+                    <span class="cat-badge trending">Trending</span>
+                    <div class="cat-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                    <div class="cat-info">
+                      <h5>Cybersecurity</h5>
+                      <p>Growing Demand — PTU Supported</p>
+                      <ul class="cat-details">
+                        <li>Ethical Hacking Basics</li>
+                        <li>Kali Linux & Nmap</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="internship-category-item" data-category="mobile">
+                    <div class="cat-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+                    <div class="cat-info">
+                      <h5>Mobile App Development</h5>
+                      <p>Startups & Freelance Focus</p>
+                      <ul class="cat-details">
+                        <li>Flutter & Firebase</li>
+                        <li>Play Store Publishing</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="internship-category-item" data-category="uiux">
+                    <span class="cat-badge demanded">Most Demanded</span>
+                    <div class="cat-icon"><i class="fa-solid fa-pen-nib"></i></div>
+                    <div class="cat-info">
+                      <h5>UI/UX Design</h5>
+                      <p>Product & Startup Roles</p>
+                      <ul class="cat-details">
+                        <li>Figma & Prototyping</li>
+                        <li>Design Systems (Tokens)</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="internship-category-item" data-category="video">
+                    <div class="cat-icon"><i class="fa-solid fa-clapperboard"></i></div>
+                    <div class="cat-info">
+                      <h5>Video & Reels Editing</h5>
+                      <p>Trending — Agency Ready</p>
+                      <ul class="cat-details">
+                        <li>Premiere Pro & After Effects</li>
+                        <li>Social Media Algorithm</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="internship-category-item" data-category="graphic">
+                    <span class="cat-badge trending">Trending</span>
+                    <div class="cat-icon"><i class="fa-solid fa-palette"></i></div>
+                    <div class="cat-info">
+                      <h5>Graphic Design</h5>
+                      <p>Always in Demand — Agencies</p>
+                      <ul class="cat-details">
+                        <li>Photoshop & Illustrator</li>
+                        <li>Brand Identity Design</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+
+            <!-- Footer: Final Punch -->
+            <div class="mega-footer-action">
+              <div class="mega-full-width-content">
+                <div class="mega-footer-container">
+                  <div class="footer-note">
+                    <i class="fa-solid fa-circle-check"></i> 100% Practical Training | Placement Assistance
+                  </div>
+                  <a href="contact-us.html" class="mega-cta-btn">Enroll Now <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <li class="has-dropdown">
+        <a href="#">Courses <span
+            style="color: var(--accent-yellow); background-color: #000; padding: 2px 5px; border-radius: 50px; font-size: 8px;">New</span><i
+            class="fa-solid fa-chevron-down" style="font-size: 10px;"></i></a>
+        <div class="dropdown-mega luxury-mega">
+          <div class="mega-inner-content">
+            <!-- Top Banner: Gain Attention -->
+            <div class="mega-header-banner">
+              <div class="mega-full-width-content">
+                <div class="track-info">
+                  <h4>Advanced Internships</h4><span class="track-badge">Demanded Programs</span>
+                  <p>Next-gen programs for students who want to stand out in the job market with cutting-edge skills.
+                  </p>
+                </div>
+                <div class="track-right-action" style="display: flex; align-items: center; gap: 20px;">
+                  <a href="javascript:void(0)" class="quick-ref-link" id="openQuickRef1">
+                    Quick Reference
+                  </a>
+                  <div class="track-visual" style="margin: 0; opacity: 0.1;">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Main Categories Grid - Expanded to 100vw -->
+            <div class="mega-grid-wrapper">
+              <div class="mega-full-width-content">
+                <div class="mega-grid-container">
+                  <div class="internship-category-item" data-category="web">
+                    <span class="cat-badge trending">Trending</span>
+                    <div class="cat-icon"><i class="fa-brands fa-openai"></i></div>
+                    <div class="cat-info">
+                      <h5>Generative AI & Prompt Engineering</h5>
+                      <p>FASTEST Growing Demand — 2026 </p>
+                      <ul class="cat-details">
+                        <li>ChatGPT, Claude & Gemini deep dives</li>
+                        <li>Advanced prompt engineering techniques</li>
+                        <li>AI automation with Zapier & Make.com
+                        </li>
+                        <li>AI tools for business & productivity
+                        </li>
+                        <li>Building GPT-powered micro-tools
+                        </li>
+                        <li>Image generation: Midjourney, DALL-E, Stable Diffusion
+
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="internship-category-item" data-category="fullstack">
+                    <span class="cat-badge demanded">Most Demanded</span>
+                    <div class="cat-icon"><i class="fa-solid fa-gears"></i></div>
+                    <div class="cat-info">
+                      <h5>AI Agent & Automation</h5>
+                      <p>Perfect for AI Product & Freelance Business</p>
+                      <ul class="cat-details">
+                        <li>WhatsApp automation (Twilio, WATI)</li>
+                        <li>Chatbot development (Dialogflow, Botpress)</li>
+                        <li>n8n & Make.com workflow automation</li>
+                        <li>Agentic AI with LangChain / AutoGPT</li>
+                        <li>RPA (Robotic Process Automation) basics</li>
+                        <li>AI product building for small businesses</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="internship-category-item" data-category="digital">
+                    <div class="cat-icon"><i class="fa-solid fa-cloud-arrow-down"></i></div>
+                    <div class="cat-info">
+                      <h5>Cloud & DevOps</h5>
+                      <p>Cloud Jobs Booming — AWS Certified Path</p>
+                      <ul class="cat-details">
+                        <li>AWS fundamentals (EC2, S3, Lambda, RDS)</li>
+                        <li>Linux server setup & management</li>
+                        <li>Docker & container basics</li>
+                        <li>CI/CD pipelines (GitHub Actions)</li>
+                        <li>Domain, hosting & SSL deployment</li>
+                        <li>Intro to Kubernetes</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="internship-category-item" data-category="data">
+                    <span class="cat-badge demanded">Most Demanded</span>
+                    <div class="cat-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                    <div class="cat-info">
+                      <h5>Advanced Cybersecurity</h5>
+                      <p>Govt & Corporate Demand Rising</p>
+                      <ul class="cat-details">
+                        <li>Digital forensics & incident response</li>
+                        <li>Malware analysis basics</li>
+                        <li>Penetration testing (Burp Suite, Metasploit)</li>
+                        <li>Bug bounty fundamentals</li>
+                        <li>CEH / CompTIA Security+ exam prep</li>
+                        <li>Capture the Flag (CTF) practice</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+
+            <!-- Footer: Final Punch -->
+            <div class="mega-footer-action">
+              <div class="mega-full-width-content">
+                <div class="mega-footer-container">
+                  <div class="footer-note">
+                    <i class="fa-solid fa-circle-check"></i> 100% Practical Training | Placement Assistance
+                  </div>
+                  <a href="contact-us.html" class="mega-cta-btn">Enroll Now <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="has-dropdown">
+        <a href="#">Fast-Track Programs <i class="fa-solid fa-chevron-down" style="font-size: 10px;"></i></a>
+        <div class="dropdown-mega luxury-mega">
+          <div class="mega-inner-content">
+            <div class="mega-header-banner">
+              <div class="mega-full-width-content">
+                <div class="track-info">
+                  <h4>Digital Marketing Certifications</h4>
+                  <!-- <span class="track-badge">Popular Programs</span> -->
+                  <p>Fast-track certifications — 2 to 6 weeks. Ideal for working professionals, graduates & skill
+                    upgrades.</p>
+
+                </div>
+                <div class="track-right-action" style="display: flex; align-items: center; gap: 20px;">
+                  <a href="javascript:void(0)" class="quick-ref-link" id="openQuickRef2">
+                    Quick Reference
+                  </a>
+                  <div class="track-visual" style="margin: 0; opacity: 0.1;">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="mega-grid-wrapper digital-grid">
+              <div class="mega-full-width-content">
+                <div class="mega-grid-container">
+                  <div class="internship-category-item" data-category="web">
+                    <span class="cat-badge trending">Trending</span>
+                    <div class="cat-icon"><i class="fa-brands fa-searchengin"></i></div>
+                    <div class="cat-info">
+                      <h5>SEO Specialist</h5>
+                      <p>Huge Local Demand — Agencies & Freelance</p>
+                      <ul class="cat-details">
+                        <li>On-page & off-page SEO</li>
+                        <li>Keyword research (Ahrefs, Semrush, Ubersuggest)</li>
+                        <li>Technical SEO & Core Web Vitals</li>
+                        <li>Local SEO for Punjab businesses</li>
+                        <li>Google Search Console mastery</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="internship-category-item" data-category="fullstack">
+                    <span class="cat-badge demanded">Most Demanded</span>
+                    <div class="cat-icon"><i class="fa-brands fa-google"></i></div>
+                    <div class="cat-info">
+                      <h5>Google Ads Specialist</h5>
+                      <p>Google Partner Certification Path</p>
+                      <ul class="cat-details">
+                        <li>Search, Display & YouTube ad campaigns</li>
+                        <li>Keyword bidding strategies</li>
+                        <li>Conversion tracking & ROAS optimization</li>
+                        <li>Google Ads certification prep</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="internship-category-item" data-category="digital">
+                    <div class="cat-icon"><i class="fa-solid fa-share-nodes"></i></div>
+                    <div class="cat-info">
+                      <h5>Meta Ads & Social Media Marketing</h5>
+                      <p>Entry to Product Design Career</p>
+                      <ul class="cat-details">
+                        <li>Facebook & Instagram ad campaigns</li>
+                        <li>Audience targeting & lookalike audiences</li>
+                        <li>Retargeting & funnel strategy</li>
+                        <li>Content calendar & management</li>
+                        <li>Meta Business Suite mastery</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="internship-category-item" data-category="digital">
+                    <div class="cat-icon"><i class="fa-solid fa-pen-clip"></i></div>
+                    <div class="cat-info">
+                      <h5>Content Creation & Reels Marketing</h5>
+                      <p>Trending — Freelance & Creator Economy</p>
+                      <ul class="cat-details">
+                        <li>Instagram & YouTube growth strategy</li>
+                        <li>Reels scripting, shooting & editing</li>
+                        <li>Viral hook formulas</li>
+                        <li>Brand storytelling & influencer basics</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Top Banner: Gain Attention -->
+            <div class="mega-header-banner">
+              <div class="mega-full-width-content">
+                <div class="track-info">
+                  <h4>Tech Certifications</h4>
+                  <!-- <span class="track-badge">Popular Programs</span> -->
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Main Categories Grid - Expanded to 100vw -->
+            <div class="mega-grid-wrapper digital-grid">
+              <div class="mega-full-width-content">
+                <div class="mega-grid-container">
+                  <div class="internship-category-item" data-category="web">
+                    <span class="cat-badge trending">Trending</span>
+                    <div class="cat-icon"><i class="fa-solid fa-terminal"></i></div>
+                    <div class="cat-info">
+                      <h5>Prompt Engineering</h5>
+                      <p>Globally Recognised Skill — 2026</p>
+                      <ul class="cat-details">
+                        <li>ChatGPT, Claude & Gemini mastery</li>
+                        <li>Chain-of-thought & few-shot prompting</li>
+                        <li>Prompt templates for business use cases</li>
+                        <li>AI workflow design</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="internship-category-item" data-category="fullstack">
+                    <span class="cat-badge demanded">Most Demanded</span>
+                    <div class="cat-icon"><i class="fa-brands fa-openai"></i></div>
+                    <div class="cat-info">
+                      <h5>ChatGPT for Business</h5>
+                      <p>Ideal for Entrepreneurs & Working Professionals</p>
+                      <ul class="cat-details">
+                        <li>Automate emails, reports & content</li>
+                        <li>ChatGPT plugins & GPT-4o features</li>
+                        <li>AI tools for HR, sales & marketing teams</li>
+                        <li>Business SOP & SOW with AI</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="internship-category-item" data-category="digital">
+                    <div class="cat-icon"><i class="fa-brands fa-figma"></i></div>
+                    <div class="cat-info">
+                      <h5>UI/UX with Figma</h5>
+                      <p>Entry to Product Design Career</p>
+                      <ul class="cat-details">
+                        <li>Figma basics to advanced</li>
+                        <li>Component libraries & auto-layout</li>
+                        <li>Prototype & user testing</li>
+                        <li>Portfolio project</li>
+                      </ul>
+                    </div>
+                  </div>
+
+
+                </div>
+
+              </div>
+
+            </div>
+
+            <!-- Footer: Final Punch -->
+            <div class="mega-footer-action">
+              <div class="mega-full-width-content">
+                <div class="mega-footer-container">
+                  <div class="footer-note">
+                    <i class="fa-solid fa-circle-check"></i> 100% Practical Training | Placement Assistance
+                  </div>
+                  <a href="contact-us.html" class="mega-cta-btn">Enroll Now <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
 
-        <ul class="nav-links" id="navLinks">
-            <li class="has-dropdown">
-                <a href="#">Internships & Training<i class="fa-solid fa-chevron-down" style="font-size: 10px;"></i></a>
-                <div class="dropdown-mega luxury-mega">
-                    <div class="mega-inner-content">
-                        <!-- Top Banner: Gain Attention -->
-                        <div class="mega-header-banner">
-                            <div class="mega-full-width-content">
-                                <div class="track-info">
-                                    <h4>Core Internships</h4><span class="track-badge">Popular Programs</span>
-                                    <p>Industry-ready internships with live projects, certificates & placement support.
-                                        Available in
-                                        45-day & 60-day tracks.</p>
-                                </div>
-                                <div class="track-right-action" style="display: flex; align-items: center; gap: 20px;">
-                                    <a href="javascript:void(0)" class="quick-ref-link" id="openQuickRef">
-                                        Quick Reference
-                                    </a>
-                                    <div class="track-visual" style="margin: 0; opacity: 0.1;">
-                                        <i class="fa-solid fa-graduation-cap"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+      </li>
 
-                        <!-- Main Categories Grid - Expanded to 100vw -->
-                        <div class="mega-grid-wrapper">
-                            <div class="mega-full-width-content">
-                                <div class="mega-grid-container">
-                                    <div class="internship-category-item" data-category="web">
-                                        <span class="cat-badge trending">Trending</span>
-                                        <div class="cat-icon"><i class="fa-solid fa-code"></i></div>
-                                        <div class="cat-info">
-                                            <h5>Web Development</h5>
-                                            <p>#1 Demand — BCA/B.Tech</p>
-                                            <ul class="cat-details">
-                                                <li>React.js & MERN Stack</li>
-                                                <li>Live Project + GitHub</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-
-                                    <div class="internship-category-item" data-category="fullstack">
-                                        <span class="cat-badge demanded">Most Demanded</span>
-                                        <div class="cat-icon"><i class="fa-solid fa-layer-group"></i></div>
-                                        <div class="cat-info">
-                                            <h5>Full Stack Development</h5>
-                                            <p>Highest Placement Conversion</p>
-                                            <ul class="cat-details">
-                                                <li>Frontend + Backend</li>
-                                                <li>REST APIs & Databases</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-
-                                    <div class="internship-category-item" data-category="digital">
-                                        <div class="cat-icon"><i class="fa-solid fa-bullhorn"></i></div>
-                                        <div class="cat-info">
-                                            <h5>Digital Marketing</h5>
-                                            <p>HUGE Demand in Punjab</p>
-                                            <ul class="cat-details">
-                                                <li>SEO & Meta Ads</li>
-                                                <li>Real Client Case Studies</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-
-                                    <div class="internship-category-item" data-category="data">
-                                        <span class="cat-badge demanded">Most Demanded</span>
-                                        <div class="cat-icon"><i class="fa-solid fa-chart-line"></i></div>
-                                        <div class="cat-info">
-                                            <h5>Data Analytics</h5>
-                                            <p>Fast Growing — Less Competition</p>
-                                            <ul class="cat-details">
-                                                <li>Power BI & Tableau</li>
-                                                <li>Python for Data Science</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-
-                                    <div class="internship-category-item" data-category="python">
-                                        <span class="cat-badge trending">Trending</span>
-                                        <div class="cat-icon"><i class="fa-solid fa-robot"></i></div>
-                                        <div class="cat-info">
-                                            <h5>Python + AI</h5>
-                                            <p>New-Age — Future-Ready</p>
-                                            <ul class="cat-details">
-                                                <li>ChatGPT API & ML</li>
-                                                <li>Data Automation Tools</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-
-                                    <div class="internship-category-item" data-category="cyber">
-                                        <span class="cat-badge trending">Trending</span>
-                                        <div class="cat-icon"><i class="fa-solid fa-shield-halved"></i></div>
-                                        <div class="cat-info">
-                                            <h5>Cybersecurity</h5>
-                                            <p>Growing Demand — PTU Supported</p>
-                                            <ul class="cat-details">
-                                                <li>Ethical Hacking Basics</li>
-                                                <li>Kali Linux & Nmap</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-
-                                    <div class="internship-category-item" data-category="mobile">
-                                        <div class="cat-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
-                                        <div class="cat-info">
-                                            <h5>Mobile App Development</h5>
-                                            <p>Startups & Freelance Focus</p>
-                                            <ul class="cat-details">
-                                                <li>Flutter & Firebase</li>
-                                                <li>Play Store Publishing</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-
-                                    <div class="internship-category-item" data-category="uiux">
-                                        <span class="cat-badge demanded">Most Demanded</span>
-                                        <div class="cat-icon"><i class="fa-solid fa-pen-nib"></i></div>
-                                        <div class="cat-info">
-                                            <h5>UI/UX Design</h5>
-                                            <p>Product & Startup Roles</p>
-                                            <ul class="cat-details">
-                                                <li>Figma & Prototyping</li>
-                                                <li>Design Systems (Tokens)</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-
-                                    <div class="internship-category-item" data-category="video">
-                                        <div class="cat-icon"><i class="fa-solid fa-clapperboard"></i></div>
-                                        <div class="cat-info">
-                                            <h5>Video & Reels Editing</h5>
-                                            <p>Trending — Agency Ready</p>
-                                            <ul class="cat-details">
-                                                <li>Premiere Pro & After Effects</li>
-                                                <li>Social Media Algorithm</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-
-                                    <div class="internship-category-item" data-category="graphic">
-                                        <span class="cat-badge trending">Trending</span>
-                                        <div class="cat-icon"><i class="fa-solid fa-palette"></i></div>
-                                        <div class="cat-info">
-                                            <h5>Graphic Design</h5>
-                                            <p>Always in Demand — Agencies</p>
-                                            <ul class="cat-details">
-                                                <li>Photoshop & Illustrator</li>
-                                                <li>Brand Identity Design</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                        <!-- Footer: Final Punch -->
-                        <div class="mega-footer-action">
-                            <div class="mega-full-width-content">
-                                <div class="mega-footer-container">
-                                    <div class="footer-note">
-                                        <i class="fa-solid fa-circle-check"></i> 100% Practical Training | Placement
-                                        Assistance
-                                    </div>
-                                    <a href="contact-us.html" class="mega-cta-btn">Enroll Now <i
-                                            class="fa-solid fa-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+      <li class="has-dropdown">
+        <a href="#">Flagship Programs <i class="fa-solid fa-chevron-down" style="font-size: 10px;"></i></a>
+        <div class="dropdown-mega luxury-mega">
+          <div class="mega-inner-content">
+            <!-- Top Banner: Gain Attention -->
+            <div class="mega-header-banner">
+              <div class="mega-full-width-content">
+                <div class="track-info">
+                  <h4>Flagship Professional Programs</h4><span class="track-badge">Demanded Programs</span>
+                  <p>Comprehensive 3–6 month programs combining multiple skills. Best for serious career changers &
+                    freshers targeting placements.
+                  </p>
                 </div>
-            </li>
-
-            <li class="has-dropdown">
-                <a href="#">Courses <i class="fa-solid fa-chevron-down" style="font-size: 10px;"></i></a>
-                <div class="dropdown-mega luxury-mega">
-                    <div class="mega-inner-content">
-                        <!-- Top Banner: Gain Attention -->
-                        <div class="mega-header-banner">
-                            <div class="mega-full-width-content">
-                                <div class="track-info">
-                                    <h4>Advanced Internships</h4><span class="track-badge">Demanded Programs</span>
-                                    <p>Next-gen programs for students who want to stand out in the job market with
-                                        cutting-edge skills.
-                                    </p>
-                                </div>
-                                <div class="track-right-action" style="display: flex; align-items: center; gap: 20px;">
-                                    <a href="javascript:void(0)" class="quick-ref-link" id="openQuickRef1">
-                                        Quick Reference
-                                    </a>
-                                    <div class="track-visual" style="margin: 0; opacity: 0.1;">
-                                        <i class="fa-solid fa-graduation-cap"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Main Categories Grid - Expanded to 100vw -->
-                        <div class="mega-grid-wrapper">
-                            <div class="mega-full-width-content">
-                                <div class="mega-grid-container">
-                                    <div class="internship-category-item" data-category="web">
-                                        <span class="cat-badge trending">Trending</span>
-                                        <div class="cat-icon"><i class="fa-solid fa-code"></i></div>
-                                        <div class="cat-info">
-                                            <h5>Generative AI & Prompt Engineering</h5>
-                                            <p>FASTEST Growing Demand — 2026 </p>
-                                            <ul class="cat-details">
-                                                <li>ChatGPT, Claude & Gemini deep dives</li>
-                                                <li>Advanced prompt engineering techniques</li>
-                                                <li>AI automation with Zapier & Make.com
-                                                </li>
-                                                <li>AI tools for business & productivity
-                                                </li>
-                                                <li>Building GPT-powered micro-tools
-                                                </li>
-                                                <li>Image generation: Midjourney, DALL-E, Stable Diffusion
-
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-
-                                    <div class="internship-category-item" data-category="fullstack">
-                                        <span class="cat-badge demanded">Most Demanded</span>
-                                        <div class="cat-icon"><i class="fa-solid fa-layer-group"></i></div>
-                                        <div class="cat-info">
-                                            <h5>AI Agent & Automation</h5>
-                                            <p>Perfect for AI Product & Freelance Business</p>
-                                            <ul class="cat-details">
-                                                <li>WhatsApp automation (Twilio, WATI)</li>
-                                                <li>Chatbot development (Dialogflow, Botpress)</li>
-                                                <li>n8n & Make.com workflow automation</li>
-                                                <li>Agentic AI with LangChain / AutoGPT</li>
-                                                <li>RPA (Robotic Process Automation) basics</li>
-                                                <li>AI product building for small businesses</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-
-                                    <div class="internship-category-item" data-category="digital">
-                                        <div class="cat-icon"><i class="fa-solid fa-bullhorn"></i></div>
-                                        <div class="cat-info">
-                                            <h5>Cloud & DevOps</h5>
-                                            <p>Cloud Jobs Booming — AWS Certified Path</p>
-                                            <ul class="cat-details">
-                                                <li>AWS fundamentals (EC2, S3, Lambda, RDS)</li>
-                                                <li>Linux server setup & management</li>
-                                                <li>Docker & container basics</li>
-                                                <li>CI/CD pipelines (GitHub Actions)</li>
-                                                <li>Domain, hosting & SSL deployment</li>
-                                                <li>Intro to Kubernetes</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-
-                                    <div class="internship-category-item" data-category="data">
-                                        <span class="cat-badge demanded">Most Demanded</span>
-                                        <div class="cat-icon"><i class="fa-solid fa-chart-line"></i></div>
-                                        <div class="cat-info">
-                                            <h5>Advanced Cybersecurity</h5>
-                                            <p>Govt & Corporate Demand Rising</p>
-                                            <ul class="cat-details">
-                                                <li>Digital forensics & incident response</li>
-                                                <li>Malware analysis basics</li>
-                                                <li>Penetration testing (Burp Suite, Metasploit)</li>
-                                                <li>Bug bounty fundamentals</li>
-                                                <li>CEH / CompTIA Security+ exam prep</li>
-                                                <li>Capture the Flag (CTF) practice</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                        <!-- Footer: Final Punch -->
-                        <div class="mega-footer-action">
-                            <div class="mega-full-width-content">
-                                <div class="mega-footer-container">
-                                    <div class="footer-note">
-                                        <i class="fa-solid fa-circle-check"></i> 100% Practical Training | Placement
-                                        Assistance
-                                    </div>
-                                    <a href="contact-us.html" class="mega-cta-btn">Enroll Now <i
-                                            class="fa-solid fa-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="track-right-action" style="display: flex; align-items: center; gap: 20px;">
+                  <a href="javascript:void(0)" class="quick-ref-link" id="openQuickRef3">
+                    Quick Reference
+                  </a>
+                  <div class="track-visual" style="margin: 0; opacity: 0.1;">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                  </div>
                 </div>
-            </li>
-            <li class="has-dropdown">
-                <a href="#">Fast-Track Programs <i class="fa-solid fa-chevron-down" style="font-size: 10px;"></i></a>
-                <div class="dropdown-mega luxury-mega">
-                    <div class="mega-inner-content">
-                        <div class="mega-header-banner">
-                            <div class="mega-full-width-content">
-                                <div class="track-info">
-                                    <h4>Digital Marketing Certifications</h4>
-                                    <!-- <span class="track-badge">Popular Programs</span> -->
-                                    <p>Fast-track certifications — 2 to 6 weeks. Ideal for working professionals,
-                                        graduates & skill
-                                        upgrades.</p>
-
-                                </div>
-                                <div class="track-right-action" style="display: flex; align-items: center; gap: 20px;">
-                                    <a href="javascript:void(0)" class="quick-ref-link" id="openQuickRef2">
-                                        Quick Reference
-                                    </a>
-                                    <div class="track-visual" style="margin: 0; opacity: 0.1;">
-                                        <i class="fa-solid fa-graduation-cap"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="mega-grid-wrapper digital-grid">
-                            <div class="mega-full-width-content">
-                                <div class="mega-grid-container">
-                                    <div class="internship-category-item" data-category="web">
-                                        <span class="cat-badge trending">Trending</span>
-                                        <div class="cat-icon"><i class="fa-solid fa-code"></i></div>
-                                        <div class="cat-info">
-                                            <h5>SEO Specialist</h5>
-                                            <p>Huge Local Demand — Agencies & Freelance</p>
-                                            <ul class="cat-details">
-                                                <li>On-page & off-page SEO</li>
-                                                <li>Keyword research (Ahrefs, Semrush, Ubersuggest)</li>
-                                                <li>Technical SEO & Core Web Vitals</li>
-                                                <li>Local SEO for Punjab businesses</li>
-                                                <li>Google Search Console mastery</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-
-                                    <div class="internship-category-item" data-category="fullstack">
-                                        <span class="cat-badge demanded">Most Demanded</span>
-                                        <div class="cat-icon"><i class="fa-solid fa-layer-group"></i></div>
-                                        <div class="cat-info">
-                                            <h5>Google Ads Specialist</h5>
-                                            <p>Google Partner Certification Path</p>
-                                            <ul class="cat-details">
-                                                <li>Search, Display & YouTube ad campaigns</li>
-                                                <li>Keyword bidding strategies</li>
-                                                <li>Conversion tracking & ROAS optimization</li>
-                                                <li>Google Ads certification prep</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-
-                                    <div class="internship-category-item" data-category="digital">
-                                        <div class="cat-icon"><i class="fa-solid fa-bullhorn"></i></div>
-                                        <div class="cat-info">
-                                            <h5>Meta Ads & Social Media Marketing</h5>
-                                            <p>Entry to Product Design Career</p>
-                                            <ul class="cat-details">
-                                                <li>Facebook & Instagram ad campaigns</li>
-                                                <li>Audience targeting & lookalike audiences</li>
-                                                <li>Retargeting & funnel strategy</li>
-                                                <li>Content calendar & management</li>
-                                                <li>Meta Business Suite mastery</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="internship-category-item" data-category="digital">
-                                        <div class="cat-icon"><i class="fa-solid fa-pen-clip"></i></div>
-                                        <div class="cat-info">
-                                            <h5>Content Creation & Reels Marketing</h5>
-                                            <p>Trending — Freelance & Creator Economy</p>
-                                            <ul class="cat-details">
-                                                <li>Instagram & YouTube growth strategy</li>
-                                                <li>Reels scripting, shooting & editing</li>
-                                                <li>Viral hook formulas</li>
-                                                <li>Brand storytelling & influencer basics</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Top Banner: Gain Attention -->
-                        <div class="mega-header-banner">
-                            <div class="mega-full-width-content">
-                                <div class="track-info">
-                                    <h4>Tech Certifications</h4>
-                                    <!-- <span class="track-badge">Popular Programs</span> -->
-                                </div>
-
-                            </div>
-                        </div>
-
-                        <!-- Main Categories Grid - Expanded to 100vw -->
-                        <div class="mega-grid-wrapper digital-grid">
-                            <div class="mega-full-width-content">
-                                <div class="mega-grid-container">
-                                    <div class="internship-category-item" data-category="web">
-                                        <span class="cat-badge trending">Trending</span>
-                                        <div class="cat-icon"><i class="fa-solid fa-code"></i></div>
-                                        <div class="cat-info">
-                                            <h5>Prompt Engineering</h5>
-                                            <p>Globally Recognised Skill — 2026</p>
-                                            <ul class="cat-details">
-                                                <li>ChatGPT, Claude & Gemini mastery</li>
-                                                <li>Chain-of-thought & few-shot prompting</li>
-                                                <li>Prompt templates for business use cases</li>
-                                                <li>AI workflow design</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-
-                                    <div class="internship-category-item" data-category="fullstack">
-                                        <span class="cat-badge demanded">Most Demanded</span>
-                                        <div class="cat-icon"><i class="fa-solid fa-layer-group"></i></div>
-                                        <div class="cat-info">
-                                            <h5>ChatGPT for Business</h5>
-                                            <p>Ideal for Entrepreneurs & Working Professionals</p>
-                                            <ul class="cat-details">
-                                                <li>Automate emails, reports & content</li>
-                                                <li>ChatGPT plugins & GPT-4o features</li>
-                                                <li>AI tools for HR, sales & marketing teams</li>
-                                                <li>Business SOP & SOW with AI</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-
-                                    <div class="internship-category-item" data-category="digital">
-                                        <div class="cat-icon"><i class="fa-solid fa-bullhorn"></i></div>
-                                        <div class="cat-info">
-                                            <h5>UI/UX with Figma</h5>
-                                            <p>Entry to Product Design Career</p>
-                                            <ul class="cat-details">
-                                                <li>Figma basics to advanced</li>
-                                                <li>Component libraries & auto-layout</li>
-                                                <li>Prototype & user testing</li>
-                                                <li>Portfolio project</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                        <!-- Footer: Final Punch -->
-                        <div class="mega-footer-action">
-                            <div class="mega-full-width-content">
-                                <div class="mega-footer-container">
-                                    <div class="footer-note">
-                                        <i class="fa-solid fa-circle-check"></i> 100% Practical Training | Placement
-                                        Assistance
-                                    </div>
-                                    <a href="contact-us.html" class="mega-cta-btn">Enroll Now <i
-                                            class="fa-solid fa-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-            </li>
-
-            <li class="has-dropdown">
-                <a href="#">Flagship Programs <i class="fa-solid fa-chevron-down" style="font-size: 10px;"></i></a>
-                <div class="dropdown-mega luxury-mega">
-                    <div class="mega-inner-content">
-                        <!-- Top Banner: Gain Attention -->
-                        <div class="mega-header-banner">
-                            <div class="mega-full-width-content">
-                                <div class="track-info">
-                                    <h4>Flagship Professional Programs</h4><span class="track-badge">Demanded
-                                        Programs</span>
-                                    <p>Comprehensive 3–6 month programs combining multiple skills. Best for serious
-                                        career changers &
-                                        freshers targeting placements.
-                                    </p>
-                                </div>
-                                <div class="track-right-action" style="display: flex; align-items: center; gap: 20px;">
-                                    <a href="javascript:void(0)" class="quick-ref-link" id="openQuickRef3">
-                                        Quick Reference
-                                    </a>
-                                    <div class="track-visual" style="margin: 0; opacity: 0.1;">
-                                        <i class="fa-solid fa-graduation-cap"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Main Categories Grid - Expanded to 100vw -->
-                        <div class="mega-grid-wrapper">
-                            <div class="mega-full-width-content">
-                                <div class="mega-grid-container">
-                                    <div class="internship-category-item" data-category="web">
-                                        <span class="cat-badge trending">Trending</span>
-                                        <div class="cat-icon"><i class="fa-solid fa-code"></i></div>
-                                        <div class="cat-info">
-                                            <h5>Digital Marketing & Performance Ads</h5>
-                                            <p>Most Enrolled Flagship — Punjab Market Leader</p>
-                                            <ul class="cat-details">
-                                                <li>Complete SEO + Google Ads + Meta Ads</li>
-                                                <li>Email marketing + WhatsApp Business</li>
-                                                <li>E-commerce marketing (Shopify, Amazon)
-                                                </li>
-                                                <li>Analytics: GA4, Hotjar, Meta Pixel
-                                                </li>
-                                                <li>Agency-style live projects
-                                                </li>
-                                                <li>Placement preparation
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-
-                                    <div class="internship-category-item" data-category="fullstack">
-                                        <span class="cat-badge demanded">Most Demanded</span>
-                                        <div class="cat-icon"><i class="fa-solid fa-layer-group"></i></div>
-                                        <div class="cat-info">
-                                            <h5>Full Stack Web Development</h5>
-                                            <p>#1 Placement Track — 80%+ Conversion</p>
-                                            <ul class="cat-details">
-                                                <li>HTML, CSS, JavaScript + React.js</li>
-                                                <li>Node.js + Express + MongoDB (MERN)</li>
-                                                <li>REST API development & integration</li>
-                                                <li>DevOps: GitHub, CI/CD, Vercel/AWS</li>
-                                                <li>Portfolio of 3+ live projects</li>
-                                                <li>Interview preparation & mock tests</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-
-                                    <div class="internship-category-item" data-category="digital">
-                                        <div class="cat-icon"><i class="fa-solid fa-bullhorn"></i></div>
-                                        <div class="cat-info">
-                                            <h5>Data Analytics Professional</h5>
-                                            <p>Fastest Growing — MNCs & Startups Hiring</p>
-                                            <ul class="cat-details">
-                                                <li>Excel + SQL + Power BI + Tableau</li>
-                                                <li>Python for data (Pandas, Seaborn)</li>
-                                                <li>Statistics & business intelligence</li>
-                                                <li>3 dashboard capstone projects</li>
-                                                <li>Data storytelling & presentation</li>
-                                                <li>Internship + certificate</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-
-                                    <div class="internship-category-item" data-category="data">
-                                        <span class="cat-badge demanded">Most Demanded</span>
-                                        <div class="cat-icon"><i class="fa-solid fa-chart-line"></i></div>
-                                        <div class="cat-info">
-                                            <h5>AI & Automation Professional Program</h5>
-                                            <p>Most Futuristic Program — 2025 Top Pick</p>
-                                            <ul class="cat-details">
-                                                <li>Generative AI deep dive (ChatGPT, Claude, Gemini)</li>
-                                                <li>Prompt engineering + AI agent building</li>
-                                                <li>Automation: n8n, Make.com, Zapier</li>
-                                                <li>Python + LangChain AI development</li>
-                                                <li>AI product building & monetization</li>
-                                                <li>Agentic AI & multi-agent systems</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="internship-category-item" data-category="data">
-                                        <span class="cat-badge demanded">Most Demanded</span>
-                                        <div class="cat-icon"><i class="fa-solid fa-chart-line"></i></div>
-                                        <div class="cat-info">
-                                            <h5>Generative AI + Agentic AI Track</h5>
-                                            <p>Elite Track — AI Developer / AI Consultant</p>
-                                            <ul class="cat-details">
-                                                <li>Foundation models & LLM understanding</li>
-                                                <li>Prompt design + RAG systems</li>
-                                                <li>AI agents with AutoGPT & CrewAI</li>
-                                                <li>Fine-tuning & custom GPT creation</li>
-                                                <li>AI SaaS micro-product development</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                        <!-- Footer: Final Punch -->
-                        <div class="mega-footer-action">
-                            <div class="mega-full-width-content">
-                                <div class="mega-footer-container">
-                                    <div class="footer-note">
-                                        <i class="fa-solid fa-circle-check"></i> 100% Practical Training | Placement
-                                        Assistance
-                                    </div>
-                                    <a href="contact-us.html" class="mega-cta-btn">Enroll Now <i
-                                            class="fa-solid fa-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </li>
-        </ul>
-
-        <div class="nav-right">
-            <div class="search-container" id="searchContainer">
-                <input type="text" class="search-input" placeholder="Search for courses...">
-                <button class="search-btn" id="searchBtn">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </button>
+              </div>
             </div>
-            <a href="#" class="button-effect btn-application">
-                <span class="button-bg">
-                    <span class="button-bg-layers">
-                        <span class="button-bg-layer button-bg-layer-1 -purple"></span>
-                        <span class="button-bg-layer button-bg-layer-2 -turquoise"></span>
-                        <span class="button-bg-layer button-bg-layer-3 -yellow"></span>
-                    </span>
-                </span>
-                <span class="button-inner">
-                    <span class="button-inner-static">Book Now <i class="fa-solid fa-arrow-right"></i></span>
-                    <span class="button-inner-hover">Book Now <i class="fa-solid fa-arrow-right"></i></span>
-                </span>
-            </a>
-            <div class="burger-menu">
-                <i class="fa-solid fa-bars-staggered fa-flip-both" style="color: rgb(255, 255, 255);"></i>
+
+            <!-- Main Categories Grid - Expanded to 100vw -->
+            <div class="mega-grid-wrapper">
+              <div class="mega-full-width-content">
+                <div class="mega-grid-container">
+                  <div class="internship-category-item" data-category="web">
+                    <span class="cat-badge trending">Trending</span>
+                    <div class="cat-icon"><i class="fa-solid fa-bullhorn"></i></div>
+                    <div class="cat-info">
+                      <h5>Digital Marketing & Performance Ads</h5>
+                      <p>Most Enrolled Flagship — Punjab Market Leader</p>
+                      <ul class="cat-details">
+                        <li>Complete SEO + Google Ads + Meta Ads</li>
+                        <li>Email marketing + WhatsApp Business</li>
+                        <li>E-commerce marketing (Shopify, Amazon)
+                        </li>
+                        <li>Analytics: GA4, Hotjar, Meta Pixel
+                        </li>
+                        <li>Agency-style live projects
+                        </li>
+                        <li>Placement preparation
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="internship-category-item" data-category="fullstack">
+                    <span class="cat-badge demanded">Most Demanded</span>
+                    <div class="cat-icon"><i class="fa-solid fa-layer-group"></i></div>
+                    <div class="cat-info">
+                      <h5>Full Stack Web Development</h5>
+                      <p>#1 Placement Track — 80%+ Conversion</p>
+                      <ul class="cat-details">
+                        <li>HTML, CSS, JavaScript + React.js</li>
+                        <li>Node.js + Express + MongoDB (MERN)</li>
+                        <li>REST API development & integration</li>
+                        <li>DevOps: GitHub, CI/CD, Vercel/AWS</li>
+                        <li>Portfolio of 3+ live projects</li>
+                        <li>Interview preparation & mock tests</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="internship-category-item" data-category="digital">
+                    <div class="cat-icon"><i class="fa-solid fa-chart-line"></i></div>
+                    <div class="cat-info">
+                      <h5>Data Analytics Professional</h5>
+                      <p>Fastest Growing — MNCs & Startups Hiring</p>
+                      <ul class="cat-details">
+                        <li>Excel + SQL + Power BI + Tableau</li>
+                        <li>Python for data (Pandas, Seaborn)</li>
+                        <li>Statistics & business intelligence</li>
+                        <li>3 dashboard capstone projects</li>
+                        <li>Data storytelling & presentation</li>
+                        <li>Internship + certificate</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="internship-category-item" data-category="data">
+                    <span class="cat-badge demanded">Most Demanded</span>
+                    <div class="cat-icon"><i class="fa-solid fa-gears"></i></div>
+                    <div class="cat-info">
+                      <h5>AI & Automation Professional Program</h5>
+                      <p>Most Futuristic Program — 2025 Top Pick</p>
+                      <ul class="cat-details">
+                        <li>Generative AI deep dive (ChatGPT, Claude, Gemini)</li>
+                        <li>Prompt engineering + AI agent building</li>
+                        <li>Automation: n8n, Make.com, Zapier</li>
+                        <li>Python + LangChain AI development</li>
+                        <li>AI product building & monetization</li>
+                        <li>Agentic AI & multi-agent systems</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="internship-category-item" data-category="data">
+                    <span class="cat-badge demanded">Most Demanded</span>
+                    <div class="cat-icon"><i class="fa-brands fa-openai"></i></div>
+                    <div class="cat-info">
+                      <h5>Generative AI + Agentic AI Track</h5>
+                      <p>Elite Track — AI Developer / AI Consultant</p>
+                      <ul class="cat-details">
+                        <li>Foundation models & LLM understanding</li>
+                        <li>Prompt design + RAG systems</li>
+                        <li>AI agents with AutoGPT & CrewAI</li>
+                        <li>Fine-tuning & custom GPT creation</li>
+                        <li>AI SaaS micro-product development</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
             </div>
-            <div class="burger-mobile">
-                <i class="fa-solid fa-bars-staggered"></i>
+
+            <!-- Footer: Final Punch -->
+            <div class="mega-footer-action">
+              <div class="mega-full-width-content">
+                <div class="mega-footer-container">
+                  <div class="footer-note">
+                    <i class="fa-solid fa-circle-check"></i> 100% Practical Training | Placement Assistance
+                  </div>
+                  <a href="contact-us.html" class="mega-cta-btn">Enroll Now <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
-    </nav>
+      </li>
+    </ul>
+
+    <div class="nav-right">
+      <div class="search-container" id="searchContainer">
+        <input type="text" class="search-input" placeholder="Search for courses...">
+        <button class="search-btn" id="searchBtn">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </div>
+      <a href="#" class="button-effect btn-application">
+        <span class="button-bg">
+          <span class="button-bg-layers">
+            <span class="button-bg-layer button-bg-layer-1 -purple"></span>
+            <span class="button-bg-layer button-bg-layer-2 -turquoise"></span>
+            <span class="button-bg-layer button-bg-layer-3 -yellow"></span>
+          </span>
+        </span>
+        <span class="button-inner">
+          <span class="button-inner-static">Book Now <i class="fa-solid fa-arrow-right"></i></span>
+          <span class="button-inner-hover">Book Now <i class="fa-solid fa-arrow-right"></i></span>
+        </span>
+      </a>
+      <div class="burger-menu">
+        <i class="fa-solid fa-bars-staggered fa-flip-both" style="color: rgb(255, 255, 255);"></i>
+      </div>
+      <div class="burger-mobile">
+        <i class="fa-solid fa-bars-staggered"></i>
+      </div>
+    </div>
+  </nav>
 
 
     <main>
@@ -850,448 +840,436 @@
 
 
     <div class="mobile-menu-panel" id="mobileMenu">
-        <div class="panel-header">
-            <div class="panel-logo">
-                <a href="index.html">
-                    <img src="assets/logo.png" alt="Sailor Academy Logo">
-                </a>
-            </div>
-            <button class="close-mobile" id="closeMobile">
-                <i class="fa-solid fa-xmark"></i>
-            </button>
-        </div>
-
-        <div class="panel-search">
-            <div class="search-box-mobile">
-                <input type="text" placeholder="Search for courses...">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </div>
-            <a href="javascript:void(0)" class="quick-ref-link mobile-side" id="openQuickRef">
-                Quick Reference
-            </a>
-        </div>
-
-        <div class="panel-content">
-            <div class="mobile-accordion">
-                <div class="accordion-item">
-                    <div class="accordion-header">
-                        <span>Internship & Training</span>
-                        <i class="fa-solid fa-chevron-down"></i>
-                    </div>
-                    <div class="accordion-body">
-                        <div class="sub-accordion">
-                            <!-- SEO -->
-                            <div class="sub-accordion-header">
-                                <span>Web Development</span>
-                                <i class="fa-solid fa-arrow-right"></i>
-                            </div>
-                            <div class="sub-accordion-body">
-                                <ul>
-                                    <li>React.js & MERN Stack</li>
-                                    <li>Live Project + GitHub</li>
-                                </ul>
-                            </div>
-
-                            <!-- UI/UX -->
-                            <div class="sub-accordion-header">
-                                <span>Full Stack Development</span>
-                                <i class="fa-solid fa-arrow-right"></i>
-                            </div>
-                            <div class="sub-accordion-body">
-                                <ul>
-                                    <li>Frontend + Backend</li>
-                                    <li>REST APIs & Databases</li>
-                                </ul>
-                            </div>
-
-                            <!-- PHP Development -->
-                            <div class="sub-accordion-header">
-                                <span>Digital Marketing</span>
-                                <i class="fa-solid fa-arrow-right"></i>
-                            </div>
-                            <div class="sub-accordion-body">
-                                <ul>
-                                    <li>SEO & Meta Ads</li>
-                                    <li>Real Client Case Studies</li>
-                                </ul>
-                            </div>
-
-                            <!-- Digital Marketing -->
-                            <div class="sub-accordion-header">
-                                <span>Data Analytics</span>
-                                <i class="fa-solid fa-arrow-right"></i>
-                            </div>
-                            <div class="sub-accordion-body">
-                                <ul>
-                                    <li>Power BI & Tableau</li>
-                                    <li>Python for Data Science</li>
-                                </ul>
-                            </div>
-
-                            <!-- Wordpress Development -->
-                            <div class="sub-accordion-header">
-                                <span>Python + AI</span>
-                                <i class="fa-solid fa-arrow-right"></i>
-                            </div>
-                            <div class="sub-accordion-body">
-                                <ul>
-                                    <li>ChatGPT API & ML</li>
-                                    <li>Data Automation Tools</li>
-                                </ul>
-                            </div>
-
-                            <!-- Entrepreneurship -->
-                            <div class="sub-accordion-header">
-                                <span>Cybersecurity</span>
-                                <i class="fa-solid fa-arrow-right"></i>
-                            </div>
-                            <div class="sub-accordion-body">
-                                <ul>
-                                    <li>Ethical Hacking Basics</li>
-                                    <li>Kali Linux & Nmap</li>
-                                </ul>
-                            </div>
-
-                            <!-- Shopify Development -->
-                            <div class="sub-accordion-header">
-                                <span>Mobile App Development</span>
-                                <i class="fa-solid fa-arrow-right"></i>
-                            </div>
-                            <div class="sub-accordion-body">
-                                <ul>
-                                    <li>Flutter & Firebase</li>
-                                    <li>Play Store Publishing</li>
-                                </ul>
-                            </div>
-
-                            <!-- Graphics Design -->
-                            <div class="sub-accordion-header">
-                                <span>UI/UX Design</span>
-                                <i class="fa-solid fa-arrow-right"></i>
-                            </div>
-                            <div class="sub-accordion-body">
-                                <ul>
-                                    <li>Figma & Prototyping</li>
-                                    <li>Design Systems (Tokens)</li>
-                                </ul>
-                            </div>
-
-                            <!-- Video Editing -->
-                            <div class="sub-accordion-header">
-                                <span>Video & Reels Editing</span>
-                                <i class="fa-solid fa-arrow-right"></i>
-                            </div>
-                            <div class="sub-accordion-body">
-                                <ul>
-                                    <li>Premiere Pro & After Effects</li>
-                                    <li>Social Media Algorithm</li>
-                                </ul>
-                            </div>
-
-                            <!-- Quick Books -->
-                            <div class="sub-accordion-header">
-                                <span>Graphic Design</span>
-                                <i class="fa-solid fa-arrow-right"></i>
-                            </div>
-                            <div class="sub-accordion-body">
-                                <ul>
-                                    <li>Photoshop & Illustrator</li>
-                                    <li>Brand Identity Design</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <div class="accordion-header">
-                        <span>Advanced Internships</span>
-                        <i class="fa-solid fa-chevron-down"></i>
-                    </div>
-                    <div class="accordion-body">
-                        <div class="sub-accordion">
-                            <!-- SEO -->
-                            <div class="sub-accordion-header">
-                                <span>Generative AI & Prompt Engineering</span>
-                                <i class="fa-solid fa-arrow-right"></i>
-                            </div>
-                            <div class="sub-accordion-body">
-                                <ul>
-                                    <li>ChatGPT, Claude & Gemini deep dives</li>
-                                    <li>Advanced prompt engineering techniques</li>
-                                    <li>AI automation with Zapier & Make.com
-                                    </li>
-                                    <li>AI tools for business & productivity
-                                    </li>
-                                    <li>Building GPT-powered micro-tools
-                                    </li>
-                                    <li>Image generation: Midjourney, DALL-E, Stable Diffusion</li>
-                                </ul>
-                            </div>
-
-                            <!-- UI/UX -->
-                            <div class="sub-accordion-header">
-                                <span>AI Agent & Automation</span>
-                                <i class="fa-solid fa-arrow-right"></i>
-                            </div>
-                            <div class="sub-accordion-body">
-                                <ul>
-                                    <li>WhatsApp automation (Twilio, WATI)</li>
-                                    <li>Chatbot development (Dialogflow, Botpress)</li>
-                                    <li>n8n & Make.com workflow automation</li>
-                                    <li>Agentic AI with LangChain / AutoGPT</li>
-                                    <li>RPA (Robotic Process Automation) basics</li>
-                                    <li>AI product building for small businesses</li>
-                                </ul>
-                            </div>
-
-                            <!-- PHP Development -->
-                            <div class="sub-accordion-header">
-                                <span>Cloud & DevOps</span>
-                                <i class="fa-solid fa-arrow-right"></i>
-                            </div>
-                            <div class="sub-accordion-body">
-                                <ul>
-                                    <li>AWS fundamentals (EC2, S3, Lambda, RDS)</li>
-                                    <li>Linux server setup & management</li>
-                                    <li>Docker & container basics</li>
-                                    <li>CI/CD pipelines (GitHub Actions)</li>
-                                    <li>Domain, hosting & SSL deployment</li>
-                                    <li>Intro to Kubernetes</li>
-                                </ul>
-                            </div>
-
-                            <!-- Digital Marketing -->
-                            <div class="sub-accordion-header">
-                                <h5>Advanced Cybersecurity</h5>
-                                <i class="fa-solid fa-arrow-right"></i>
-                            </div>
-                            <div class="sub-accordion-body">
-                                <ul>
-                                    <li>Digital forensics & incident response</li>
-                                    <li>Malware analysis basics</li>
-                                    <li>Penetration testing (Burp Suite, Metasploit)</li>
-                                    <li>Bug bounty fundamentals</li>
-                                    <li>CEH / CompTIA Security+ exam prep</li>
-                                    <li>Capture the Flag (CTF) practice</li>
-                                </ul>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <div class="accordion-header">
-                        <span>Fast-Track Programs</span>
-                        <i class="fa-solid fa-chevron-down"></i>
-                    </div>
-                    <div class="accordion-body">
-                        <div class="sub-accordion">
-                            <!-- SEO -->
-                            <div class="sub-accordion-header">
-                                <span>SEO Specialist</span>
-                                <i class="fa-solid fa-arrow-right"></i>
-                            </div>
-                            <div class="sub-accordion-body">
-                                <ul>
-                                    <li>On-page & off-page SEO</li>
-                                    <li>Keyword research (Ahrefs, Semrush, Ubersuggest)</li>
-                                    <li>Technical SEO & Core Web Vitals</li>
-                                    <li>Local SEO for Punjab businesses</li>
-                                    <li>Google Search Console mastery</li>
-                                </ul>
-                            </div>
-
-                            <!-- UI/UX -->
-                            <div class="sub-accordion-header">
-                                <span>Google Ads Specialist</span>
-                                <i class="fa-solid fa-arrow-right"></i>
-                            </div>
-                            <div class="sub-accordion-body">
-                                <ul>
-                                    <li>Search, Display & YouTube ad campaigns</li>
-                                    <li>Keyword bidding strategies</li>
-                                    <li>Conversion tracking & ROAS optimization</li>
-                                    <li>Google Ads certification prep</li>
-                                </ul>
-                            </div>
-
-                            <!-- PHP Development -->
-                            <div class="sub-accordion-header">
-                                <span>Meta Ads & Social Media Marketing</span>
-                                <i class="fa-solid fa-arrow-right"></i>
-                            </div>
-                            <div class="sub-accordion-body">
-                                <ul>
-                                    <li>Facebook & Instagram ad campaigns</li>
-                                    <li>Audience targeting & lookalike audiences</li>
-                                    <li>Retargeting & funnel strategy</li>
-                                    <li>Content calendar & management</li>
-                                    <li>Meta Business Suite mastery</li>
-                                </ul>
-                            </div>
-
-                            <!-- Digital Marketing -->
-                            <div class="sub-accordion-header">
-                                <h5>Content Creation & Reels Marketing</h5>
-                                <i class="fa-solid fa-arrow-right"></i>
-                            </div>
-                            <div class="sub-accordion-body">
-                                <ul>
-                                    <li>Instagram & YouTube growth strategy</li>
-                                    <li>Reels scripting, shooting & editing</li>
-                                    <li>Viral hook formulas</li>
-                                    <li>Brand storytelling & influencer basics</li>
-                                </ul>
-                            </div>
-                            <!-- Tech Certifications same one having two -->
-                            <div class="sub-accordion-header">
-                                <h5>Prompt Engineering</h5>
-                                <i class="fa-solid fa-arrow-right"></i>
-                            </div>
-                            <div class="sub-accordion-body">
-                                <ul>
-                                    <li>ChatGPT, Claude & Gemini mastery</li>
-                                    <li>Chain-of-thought & few-shot prompting</li>
-                                    <li>Prompt templates for business use cases</li>
-                                    <li>AI workflow design</li>
-                                </ul>
-                            </div>
-                            <div class="sub-accordion-header">
-                                <h5>ChatGPT for Business</h5>
-                                <i class="fa-solid fa-arrow-right"></i>
-                            </div>
-                            <div class="sub-accordion-body">
-                                <ul>
-                                    <li>Automate emails, reports & content</li>
-                                    <li>ChatGPT plugins & GPT-4o features</li>
-                                    <li>AI tools for HR, sales & marketing teams</li>
-                                    <li>Business SOP & SOW with AI</li>
-                                </ul>
-                            </div>
-                            <div class="sub-accordion-header">
-                                <h5>UI/UX with Figma</h5>
-                                <i class="fa-solid fa-arrow-right"></i>
-                            </div>
-                            <div class="sub-accordion-body">
-                                <ul>
-                                    <li>Figma basics to advanced</li>
-                                    <li>Component libraries & auto-layout</li>
-                                    <li>Prototype & user testing</li>
-                                    <li>Portfolio project</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="accordion-item">
-                        <div class="accordion-header">
-                            <span>Flagship Programs</span>
-                            <i class="fa-solid fa-chevron-down"></i>
-                        </div>
-                        <div class="accordion-body">
-                            <div class="sub-accordion">
-                                <!-- SEO -->
-                                <div class="sub-accordion-header">
-                                    <span>Digital Marketing & Performance Ads</span>
-                                    <i class="fa-solid fa-arrow-right"></i>
-                                </div>
-                                <div class="sub-accordion-body">
-                                    <ul>
-                                        <li>Complete SEO + Google Ads + Meta Ads</li>
-                                        <li>Email marketing + WhatsApp Business</li>
-                                        <li>E-commerce marketing (Shopify, Amazon)
-                                        </li>
-                                        <li>Analytics: GA4, Hotjar, Meta Pixel
-                                        </li>
-                                        <li>Agency-style live projects
-                                        </li>
-                                        <li>Placement preparation
-                                        </li>
-                                    </ul>
-                                </div>
-
-                                <!-- UI/UX -->
-                                <div class="sub-accordion-header">
-                                    <span>Full Stack Web Development</span>
-                                    <i class="fa-solid fa-arrow-right"></i>
-                                </div>
-                                <div class="sub-accordion-body">
-                                    <ul>
-                                        <li>HTML, CSS, JavaScript + React.js</li>
-                                        <li>Node.js + Express + MongoDB (MERN)</li>
-                                        <li>REST API development & integration</li>
-                                        <li>DevOps: GitHub, CI/CD, Vercel/AWS</li>
-                                        <li>Portfolio of 3+ live projects</li>
-                                        <li>Interview preparation & mock tests</li>
-                                    </ul>
-                                </div>
-
-                                <!-- PHP Development -->
-                                <div class="sub-accordion-header">
-                                    <span>Data Analytics Professional</span>
-                                    <i class="fa-solid fa-arrow-right"></i>
-                                </div>
-                                <div class="sub-accordion-body">
-                                    <ul>
-                                        <li>Excel + SQL + Power BI + Tableau</li>
-                                        <li>Python for data (Pandas, Seaborn)</li>
-                                        <li>Statistics & business intelligence</li>
-                                        <li>3 dashboard capstone projects</li>
-                                        <li>Data storytelling & presentation</li>
-                                        <li>Internship + certificate</li>
-                                    </ul>
-                                </div>
-
-                                <!-- Digital Marketing -->
-                                <div class="sub-accordion-header">
-                                    <h5>AI & Automation Professional Program</h5>
-                                    <i class="fa-solid fa-arrow-right"></i>
-                                </div>
-                                <div class="sub-accordion-body">
-                                    <ul>
-                                        <li>Generative AI deep dive (ChatGPT, Claude, Gemini)</li>
-                                        <li>Prompt engineering + AI agent building</li>
-                                        <li>Automation: n8n, Make.com, Zapier</li>
-                                        <li>Python + LangChain AI development</li>
-                                        <li>AI product building & monetization</li>
-                                        <li>Agentic AI & multi-agent systems</li>
-                                    </ul>
-                                </div>
-                                <div class="sub-accordion-header">
-                                    <h5>Generative AI + Agentic AI Track</h5>
-                                    <i class="fa-solid fa-arrow-right"></i>
-                                </div>
-                                <div class="sub-accordion-body">
-                                    <ul>
-                                        <li>Foundation models & LLM understanding</li>
-                                        <li>Prompt design + RAG systems</li>
-                                        <li>AI agents with AutoGPT & CrewAI</li>
-                                        <li>Fine-tuning & custom GPT creation</li>
-                                        <li>AI SaaS micro-product development</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="panel-footer">
-            <h4>Trending Courses</h4>
-            <div class="trending-images">
-                <div class="trending-item">
-                    <img src="assets/cyber.jpg" alt="Cyber Security">
-                    <span>Cyber Security</span>
-                </div>
-                <div class="trending-item">
-                    <img src="assets/blog-26.jpg" alt="Web Development">
-                    <span>Web Development</span>
-                </div>
-            </div>
-        </div>
+    <div class="panel-header">
+      <div class="panel-logo">
+        <a href="index.html">
+          <img src="assets/logo.png" alt="Sailor Academy Logo" loading="lazy">
+        </a>
+      </div>
+      <button class="close-mobile" id="closeMobile">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
     </div>
+
+    <div class="panel-search">
+      <div class="search-box-mobile">
+        <input type="text" placeholder="Search for courses...">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </div>
+      <a href="javascript:void(0)" class="quick-ref-link mobile-side" id="openQuickRef">
+        Quick Reference
+      </a>
+    </div>
+
+    <div class="panel-content">
+      <div class="mobile-accordion">
+        <div class="accordion-item">
+          <div class="accordion-header">
+            <span>Internship & Training</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="accordion-body">
+            <div class="sub-accordion">
+              <!-- SEO -->
+              <div class="sub-accordion-header">
+                <span>Web Development</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </div>
+              <div class="sub-accordion-body">
+                <ul>
+                  <li>React.js & MERN Stack</li>
+                  <li>Live Project + GitHub</li>
+                </ul>
+              </div>
+
+              <!-- UI/UX -->
+              <div class="sub-accordion-header">
+                <span>Full Stack Development</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </div>
+              <div class="sub-accordion-body">
+                <ul>
+                  <li>Frontend + Backend</li>
+                  <li>REST APIs & Databases</li>
+                </ul>
+              </div>
+
+              <!-- PHP Development -->
+              <div class="sub-accordion-header">
+                <span>Digital Marketing</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </div>
+              <div class="sub-accordion-body">
+                <ul>
+                  <li>SEO & Meta Ads</li>
+                  <li>Real Client Case Studies</li>
+                </ul>
+              </div>
+
+              <!-- Digital Marketing -->
+              <div class="sub-accordion-header">
+                <span>Data Analytics</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </div>
+              <div class="sub-accordion-body">
+                <ul>
+                  <li>Power BI & Tableau</li>
+                  <li>Python for Data Science</li>
+                </ul>
+              </div>
+
+              <!-- Wordpress Development -->
+              <div class="sub-accordion-header">
+                <span>Python + AI</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </div>
+              <div class="sub-accordion-body">
+                <ul>
+                  <li>ChatGPT API & ML</li>
+                  <li>Data Automation Tools</li>
+                </ul>
+              </div>
+
+              <!-- Entrepreneurship -->
+              <div class="sub-accordion-header">
+                <span>Cybersecurity</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </div>
+              <div class="sub-accordion-body">
+                <ul>
+                  <li>Ethical Hacking Basics</li>
+                  <li>Kali Linux & Nmap</li>
+                </ul>
+              </div>
+
+              <!-- Shopify Development -->
+              <div class="sub-accordion-header">
+                <span>Mobile App Development</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </div>
+              <div class="sub-accordion-body">
+                <ul>
+                  <li>Flutter & Firebase</li>
+                  <li>Play Store Publishing</li>
+                </ul>
+              </div>
+
+              <!-- Graphics Design -->
+              <div class="sub-accordion-header">
+                <span>UI/UX Design</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </div>
+              <div class="sub-accordion-body">
+                <ul>
+                  <li>Figma & Prototyping</li>
+                  <li>Design Systems (Tokens)</li>
+                </ul>
+              </div>
+
+              <!-- Video Editing -->
+              <div class="sub-accordion-header">
+                <span>Video & Reels Editing</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </div>
+              <div class="sub-accordion-body">
+                <ul>
+                  <li>Premiere Pro & After Effects</li>
+                  <li>Social Media Algorithm</li>
+                </ul>
+              </div>
+
+              <!-- Quick Books -->
+              <div class="sub-accordion-header">
+                <span>Graphic Design</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </div>
+              <div class="sub-accordion-body">
+                <ul>
+                  <li>Photoshop & Illustrator</li>
+                  <li>Brand Identity Design</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <div class="accordion-header">
+            <span>Courses</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="accordion-body">
+            <div class="sub-accordion">
+              <!-- SEO -->
+              <div class="sub-accordion-header">
+                <span>Generative AI & Prompt Engineering</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </div>
+              <div class="sub-accordion-body">
+                <ul>
+                  <li>ChatGPT, Claude & Gemini deep dives</li>
+                  <li>Advanced prompt engineering techniques</li>
+                  <li>AI automation with Zapier & Make.com
+                  </li>
+                  <li>AI tools for business & productivity
+                  </li>
+                  <li>Building GPT-powered micro-tools
+                  </li>
+                  <li>Image generation: Midjourney, DALL-E, Stable Diffusion</li>
+                </ul>
+              </div>
+
+              <!-- UI/UX -->
+              <div class="sub-accordion-header">
+                <span>AI Agent & Automation</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </div>
+              <div class="sub-accordion-body">
+                <ul>
+                  <li>WhatsApp automation (Twilio, WATI)</li>
+                  <li>Chatbot development (Dialogflow, Botpress)</li>
+                  <li>n8n & Make.com workflow automation</li>
+                  <li>Agentic AI with LangChain / AutoGPT</li>
+                  <li>RPA (Robotic Process Automation) basics</li>
+                  <li>AI product building for small businesses</li>
+                </ul>
+              </div>
+
+              <!-- PHP Development -->
+              <div class="sub-accordion-header">
+                <span>Cloud & DevOps</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </div>
+              <div class="sub-accordion-body">
+                <ul>
+                  <li>AWS fundamentals (EC2, S3, Lambda, RDS)</li>
+                  <li>Linux server setup & management</li>
+                  <li>Docker & container basics</li>
+                  <li>CI/CD pipelines (GitHub Actions)</li>
+                  <li>Domain, hosting & SSL deployment</li>
+                  <li>Intro to Kubernetes</li>
+                </ul>
+              </div>
+
+              <!-- Digital Marketing -->
+              <div class="sub-accordion-header">
+                <h5>Advanced Cybersecurity</h5>
+                <i class="fa-solid fa-arrow-right"></i>
+              </div>
+              <div class="sub-accordion-body">
+                <ul>
+                  <li>Digital forensics & incident response</li>
+                  <li>Malware analysis basics</li>
+                  <li>Penetration testing (Burp Suite, Metasploit)</li>
+                  <li>Bug bounty fundamentals</li>
+                  <li>CEH / CompTIA Security+ exam prep</li>
+                  <li>Capture the Flag (CTF) practice</li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <div class="accordion-header">
+            <span>Fast-Track Programs</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="accordion-body">
+            <div class="sub-accordion">
+              <!-- SEO -->
+              <div class="sub-accordion-header">
+                <span>SEO Specialist</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </div>
+              <div class="sub-accordion-body">
+                <ul>
+                  <li>On-page & off-page SEO</li>
+                  <li>Keyword research (Ahrefs, Semrush, Ubersuggest)</li>
+                  <li>Technical SEO & Core Web Vitals</li>
+                  <li>Local SEO for Punjab businesses</li>
+                  <li>Google Search Console mastery</li>
+                </ul>
+              </div>
+
+              <!-- UI/UX -->
+              <div class="sub-accordion-header">
+                <span>Google Ads Specialist</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </div>
+              <div class="sub-accordion-body">
+                <ul>
+                  <li>Search, Display & YouTube ad campaigns</li>
+                  <li>Keyword bidding strategies</li>
+                  <li>Conversion tracking & ROAS optimization</li>
+                  <li>Google Ads certification prep</li>
+                </ul>
+              </div>
+
+              <!-- PHP Development -->
+              <div class="sub-accordion-header">
+                <span>Meta Ads & Social Media Marketing</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </div>
+              <div class="sub-accordion-body">
+                <ul>
+                  <li>Facebook & Instagram ad campaigns</li>
+                  <li>Audience targeting & lookalike audiences</li>
+                  <li>Retargeting & funnel strategy</li>
+                  <li>Content calendar & management</li>
+                  <li>Meta Business Suite mastery</li>
+                </ul>
+              </div>
+
+              <!-- Digital Marketing -->
+              <div class="sub-accordion-header">
+                <h5>Content Creation & Reels Marketing</h5>
+                <i class="fa-solid fa-arrow-right"></i>
+              </div>
+              <div class="sub-accordion-body">
+                <ul>
+                  <li>Instagram & YouTube growth strategy</li>
+                  <li>Reels scripting, shooting & editing</li>
+                  <li>Viral hook formulas</li>
+                  <li>Brand storytelling & influencer basics</li>
+                </ul>
+              </div>
+              <!-- Tech Certifications same one having two -->
+              <div class="sub-accordion-header">
+                <h5>Prompt Engineering</h5>
+                <i class="fa-solid fa-arrow-right"></i>
+              </div>
+              <div class="sub-accordion-body">
+                <ul>
+                  <li>ChatGPT, Claude & Gemini mastery</li>
+                  <li>Chain-of-thought & few-shot prompting</li>
+                  <li>Prompt templates for business use cases</li>
+                  <li>AI workflow design</li>
+                </ul>
+              </div>
+              <div class="sub-accordion-header">
+                <h5>ChatGPT for Business</h5>
+                <i class="fa-solid fa-arrow-right"></i>
+              </div>
+              <div class="sub-accordion-body">
+                <ul>
+                  <li>Automate emails, reports & content</li>
+                  <li>ChatGPT plugins & GPT-4o features</li>
+                  <li>AI tools for HR, sales & marketing teams</li>
+                  <li>Business SOP & SOW with AI</li>
+                </ul>
+              </div>
+              <div class="sub-accordion-header">
+                <h5>UI/UX with Figma</h5>
+                <i class="fa-solid fa-arrow-right"></i>
+              </div>
+              <div class="sub-accordion-body">
+                <ul>
+                  <li>Figma basics to advanced</li>
+                  <li>Component libraries & auto-layout</li>
+                  <li>Prototype & user testing</li>
+                  <li>Portfolio project</li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <span>Flagship Programs</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="accordion-body">
+              <div class="sub-accordion">
+                <!-- SEO -->
+                <div class="sub-accordion-header">
+                  <span>Digital Marketing & Performance Ads</span>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </div>
+                <div class="sub-accordion-body">
+                  <ul>
+                    <li>Complete SEO + Google Ads + Meta Ads</li>
+                    <li>Email marketing + WhatsApp Business</li>
+                    <li>E-commerce marketing (Shopify, Amazon)
+                    </li>
+                    <li>Analytics: GA4, Hotjar, Meta Pixel
+                    </li>
+                    <li>Agency-style live projects
+                    </li>
+                    <li>Placement preparation
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- UI/UX -->
+                <div class="sub-accordion-header">
+                  <span>Full Stack Web Development</span>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </div>
+                <div class="sub-accordion-body">
+                  <ul>
+                    <li>HTML, CSS, JavaScript + React.js</li>
+                    <li>Node.js + Express + MongoDB (MERN)</li>
+                    <li>REST API development & integration</li>
+                    <li>DevOps: GitHub, CI/CD, Vercel/AWS</li>
+                    <li>Portfolio of 3+ live projects</li>
+                    <li>Interview preparation & mock tests</li>
+                  </ul>
+                </div>
+
+                <!-- PHP Development -->
+                <div class="sub-accordion-header">
+                  <span>Data Analytics Professional</span>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </div>
+                <div class="sub-accordion-body">
+                  <ul>
+                    <li>Excel + SQL + Power BI + Tableau</li>
+                    <li>Python for data (Pandas, Seaborn)</li>
+                    <li>Statistics & business intelligence</li>
+                    <li>3 dashboard capstone projects</li>
+                    <li>Data storytelling & presentation</li>
+                    <li>Internship + certificate</li>
+                  </ul>
+                </div>
+
+                <!-- Digital Marketing -->
+                <div class="sub-accordion-header">
+                  <h5>AI & Automation Professional Program</h5>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </div>
+                <div class="sub-accordion-body">
+                  <ul>
+                    <li>Generative AI deep dive (ChatGPT, Claude, Gemini)</li>
+                    <li>Prompt engineering + AI agent building</li>
+                    <li>Automation: n8n, Make.com, Zapier</li>
+                    <li>Python + LangChain AI development</li>
+                    <li>AI product building & monetization</li>
+                    <li>Agentic AI & multi-agent systems</li>
+                  </ul>
+                </div>
+                <div class="sub-accordion-header">
+                  <h5>Generative AI + Agentic AI Track</h5>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </div>
+                <div class="sub-accordion-body">
+                  <ul>
+                    <li>Foundation models & LLM understanding</li>
+                    <li>Prompt design + RAG systems</li>
+                    <li>AI agents with AutoGPT & CrewAI</li>
+                    <li>Fine-tuning & custom GPT creation</li>
+                    <li>AI SaaS micro-product development</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
 
 
     <!-- Desktop Sidebar -->
