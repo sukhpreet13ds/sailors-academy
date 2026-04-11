@@ -1218,6 +1218,19 @@ body.offer-closed .hero-section {
 }
 
 /* --- Mobile Menu Panel --- */
+.sidebar-video {
+  width: 100%;
+  margin-top: 15px;
+}
+
+.sidebar-video iframe {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  display: block;
+  border: none;
+  border-radius: 10px;
+}
 .burger-mobile {
   display: none;
   font-size: 24px;
@@ -1537,12 +1550,12 @@ body.offer-closed .hero-section {
   }
 
   .hero-left h1 {
-    font-size: 60px;
+    font-size: 112px;
     margin-bottom: 25px;
   }
 
   .hero-left h1 .lower-h1 {
-    font-size: 45px;
+    font-size: 72px;
   }
 
   .stats-row {
@@ -1575,8 +1588,35 @@ body.offer-closed .hero-section {
       display: none;
     }
   }
-}
 
+.enroll-title
+{
+  font-size: 10rem !important;
+}
+.academics-text{
+  font-size: 3rem !important;
+}
+.course-grid{
+  grid-template-columns: repeat(2, 1fr) !important;
+}
+.rank-section{
+  height: auto !important;
+  margin-bottom: 5rem;
+}
+.shortcut-link{
+  padding: 50px 60px !important;
+}
+.academy-main-title{
+  top: -12rem !important;
+}
+.academy-right-image{
+  right: -10rem !important;
+}
+.academy-yellow-box {
+padding-left: 3rem !important;
+padding-right: 3rem !important;
+}
+}
 @media (max-width: 767px) {
 
   /* .hero-section{
@@ -1601,11 +1641,31 @@ body.offer-closed .hero-section {
   .stat-item .currency {
     font-size: 18px;
   }
-
+  .enroll-title
+{
+  font-size: 3rem !important;
+}
+.academics-text{
+  font-size: 2rem !important;
+}
+.course-grid{
+  grid-template-columns: repeat(1, 1fr) !important;
+}
+.academy-description p{
+  font-size: 1rem !important;
+}
+.about-title{
+  font-size: 2rem !important;
+}
 }
 
 /* --- Small Desktop / Landscape Tablets --- */
 @media (min-width: 1025px) and (max-width: 1400px) {
+  .academy-yellow-box {
+padding-left: 3rem !important;
+padding-right: 3rem !important;
+}
+
   .nav-links li a {
     font-size: 14px;
   }
@@ -1718,7 +1778,9 @@ body.offer-closed .hero-section {
   .cat-details li {
     font-size: 12px !important;
   }
-
+ .shortcut-link{
+  padding: 60px 80px !important;
+ }
 
 }
 
@@ -3939,6 +4001,8 @@ body.offer-closed .hero-section {
     /* Room for title */
     position: relative;
     border-radius: 0 !important;
+    min-height: 0 !important;
+    padding-bottom: 0 !important;
   }
 
   .sl-inner-wrap {
@@ -4007,7 +4071,7 @@ body.offer-closed .hero-section {
   }
 
   .sl-float {
-    position: relative !important;
+    /* position: relative !important;
     left: auto !important;
     right: auto !important;
     bottom: auto !important;
@@ -4020,7 +4084,8 @@ body.offer-closed .hero-section {
     flex-shrink: 0 !important;
     scroll-snap-align: center !important;
     margin: 0 !important;
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1) !important;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1) !important; */
+    display: none;
   }
 
   .sl-more-link::after {
@@ -5360,12 +5425,12 @@ body.offer-closed .hero-section {
   color: transparent !important;
   /* hide normal color */
   font-weight: 800 !important;
-  font-size: 16px;
+  font-size: 18px;
 
   background: linear-gradient(90deg,
-      #2A4D31,
-      #FFC53A,
-      #2A4D31);
+      #41774c,
+      #c7c436,
+      #41774c);
   background-size: 200% auto;
   background-clip: text;
   -webkit-background-clip: text;
@@ -6057,5 +6122,68 @@ body.offer-closed .hero-section {
   0% { opacity: 0; transform: rotate(90deg) translateX(-10px); }
   50% { opacity: 1; transform: rotate(90deg) translateX(0); }
   100% { opacity: 0; transform: rotate(90deg) translateX(10px); }
+}
+}
+
+
+@media (min-width: 1401px) and (max-width: 1775px){
+  .sl-img-1{
+    width: 300px;
+    left: 20%;
+    top: 90%;
+    z-index: 12;
+  }
+  .sl-img-2 {
+    width: 300px;
+    left: 45%;
+    top: 120%;
+    z-index: 12;
+}
+.sl-img-3{
+      width: 330px;
+    right: 12%;
+    top: 70%;
+}
+
+}
+
+@media (min-width: 992px) and (max-width: 1199px){
+  .sl-main-title{
+    letter-spacing: -15px;
+  }
+  .sl-info-text{
+    max-width: 400px;
+  }
+  .sl-img-1{
+    width: 230px;
+    left: 15%;
+    top: 90%;
+    z-index: 12;
+  }
+  .sl-img-2 {
+    width: 200px;
+    left: 45%;
+    top: 120%;
+    z-index: 12;
+}
+.sl-img-3{
+    width: 230px !important;
+    right: 10% !important;
+    top: 70% !important;
+}
+.sl-spinner-img{
+  width: 210px;
+}
+.student-life-section{
+  padding-bottom: 500px !important;
+}
+.news-title{
+  font-size: 1.2rem !important;
+}
+.news-excerpt{
+  font-size: .7rem !important;
+}
+.book-now-section{
+  padding-top: 155px !important;
 }
 }
