@@ -232,18 +232,24 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // --- Course Hover Video Logic ---
+    // --- Course Hover Video & Mobile Autoplay Logic ---
     const courseBoxes = document.querySelectorAll('.course-box');
+    const isMobileTabletWidth = () => window.innerWidth <= 1100;
+
     courseBoxes.forEach(box => {
         const video = box.querySelector('.course-hover-video');
         if (video) {
             box.addEventListener('mouseenter', () => {
-                video.play().catch(e => console.log('Video play error:', e));
+                // Desktop only: play on hover if video is visible
+                if (!isMobileTabletWidth()) {
+                    video.play().catch(e => console.log('Video play error:', e));
+                }
             });
             box.addEventListener('mouseleave', () => {
-                video.pause();
-                // Optionally reset video time to 0
-                // video.currentTime = 0; 
+                // Desktop only: pause on leave
+                if (!isMobileTabletWidth()) {
+                    video.pause();
+                }
             });
         }
     });
@@ -310,23 +316,44 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- Performance Optimization: Video Lazy Loading ---
+    // --- Performance Optimization: Video Lazy Loading & Mobile Autoplay ---
     const lazyVideos = [].slice.call(document.querySelectorAll("video:not(.hero-video)"));
     if ("IntersectionObserver" in window) {
-        const videoObserver = new IntersectionObserver((entries, observer) => {
-            entries.forEach((video) => {
-                if (video.isIntersecting) {
-                    video.target.querySelectorAll("source").forEach((source) => {
-                        if (source.dataset.src) {
-                            source.src = source.dataset.src;
-                        }
-                    });
-                    video.target.load();
-                    video.target.classList.remove("lazy-video");
-                    videoObserver.unobserve(video.target);
+        const videoObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                const video = entry.target;
+                const isCourseVideo = video.classList.contains('course-hover-video');
+
+                if (entry.isIntersecting) {
+                    // Lazy Loading logic
+                    if (video.classList.contains('lazy-video')) {
+                        video.querySelectorAll("source").forEach((source) => {
+                            if (source.dataset.src) {
+                                source.src = source.dataset.src;
+                            }
+                        });
+                        video.load();
+                        video.classList.remove("lazy-video");
+                    }
+
+                    // Mobile/Tablet Autoplay: Only for course videos on small screens
+                    if (isCourseVideo && isMobileTabletWidth()) {
+                        video.play().catch(e => console.log('Autoplay play error:', e));
+                    }
+
+                    // Only unobserve non-course videos
+                    // We need to keep observing course videos to pause them on scroll out
+                    if (!isCourseVideo) {
+                        videoObserver.unobserve(video);
+                    }
+                } else {
+                    // Mobile/Tablet Pause: Pause course videos when they exit viewport
+                    if (isCourseVideo && isMobileTabletWidth()) {
+                        video.pause();
+                    }
                 }
             });
-        });
+        }, { threshold: 0.5 });
 
         lazyVideos.forEach((video) => {
             videoObserver.observe(video);

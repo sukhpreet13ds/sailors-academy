@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Edu+NSW+ACT+Cursive:wght@400..700&family=Saira+Stencil:ital,wght@0,100..900;1,100..900&display=swap');
 body.no-scroll {
   overflow: hidden !important;
 }
@@ -813,8 +812,9 @@ body.mega-menu-active .mega-menu-overlay {
   background: #fff;
   display: flex;
   align-items: center;
-  z-index: 5000;
+  /* z-index: 5000; */
   /* Above nav */
+  z-index: 1000;
   overflow: hidden;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   border-bottom: 2px solid rgba(255, 255, 255, 0.2);
@@ -1616,9 +1616,38 @@ body.offer-closed .hero-section {
 padding-left: 3rem !important;
 padding-right: 3rem !important;
 }
+  .rank-card{
+  height: auto !important;
+  min-height: 800px !important;
+}
+.rank-mid-img-1{
+  width: 70% !important;
+}
+.rank-mid-img-2{
+  width: 70% !important;
+}
+.rank-mid-img-3{
+  width: 70% !important;
+}
+.rank-img-1{
+  width: 50% !important;
+}
+.rank-img-2{
+  width: 60% !important;
+}
+.rank-img-3{
+  width: 70% !important;
+}
+.sl-main-title{
+  padding-top: 15% !important;
+  top: 20% !important;
+}
+
 }
 @media (max-width: 767px) {
-
+.news-title{
+  font-size: 1.3rem !important;
+}
   /* .hero-section{
     padding-top: 0;
   } */
@@ -1657,6 +1686,7 @@ padding-right: 3rem !important;
 .about-title{
   font-size: 2rem !important;
 }
+
 }
 
 /* --- Small Desktop / Landscape Tablets --- */
@@ -1789,6 +1819,7 @@ padding-right: 3rem !important;
   border-radius: 30px !important;
   border: none;
   background: transparent;
+
 }
 
 .modal-form-card {
@@ -1797,6 +1828,7 @@ padding-right: 3rem !important;
   margin: 0 !important;
   animation: none !important;
   /* No zoomIn as the modal has its own fade */
+  
 }
 
 /* Customizing Bootstrap Close Button */
@@ -1816,7 +1848,10 @@ padding-right: 3rem !important;
   overflow: hidden;
   border-radius: 30px;
 }
-
+.modal-content{
+  position: relative;
+  z-index: 100000001;
+}
 @media (max-width: 576px) {
   .modal-form-card {
     padding: 30px 20px;
@@ -1936,6 +1971,7 @@ padding-right: 3rem !important;
   .desktop-sidebar {
     display: none !important;
   }
+
 }
 
 
@@ -2046,17 +2082,19 @@ padding-right: 3rem !important;
   .about-icon {
     width: 50px;
   }
-}
-
-@media (max-width: 576px) {
-  .about-title {
+    .about-title {
     font-size: 24px;
+    text-align: left;
   }
-
-  .about-text {
+   .about-text {
     font-size: 14px;
+    text-align: left;
+  }
+  .launch-about{
+    text-align: left;
   }
 }
+
 
 /* Academy Section Styles */
 .academy-section {
@@ -2714,6 +2752,15 @@ padding-right: 3rem !important;
   }
 }
 
+/* Enroll Section Video Visibility & Autoplay Styles */
+.course-hover-video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
 
 
 /* Student Life Section Styles */
@@ -3252,12 +3299,12 @@ padding-right: 3rem !important;
 .book-now-section {
   text-align: center;
   background: linear-gradient(to bottom, #ffffff 385px, #BFE1F6 385px);
-  padding: 220px 0 100px 0;
+  padding: 270px 0 100px 0;
 }
 
 .book-main-title {
   font-family: 'Outfit', sans-serif;
-  font-size: 11rem;
+  font-size: 8rem;
   font-weight: 900;
   line-height: 0.9;
   color: #222;
@@ -3714,7 +3761,7 @@ padding-right: 3rem !important;
   background-color: #292929;
   padding: 5px 0;
   box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.08);
-  z-index: 10000;
+  z-index: 1000;
   border-top: 1px solid rgba(0, 0, 0, 0.05);
 }
 
@@ -5306,7 +5353,7 @@ padding-right: 3rem !important;
   top: 25px;
   right: 30px;
   font-size: 35px;
-  color: white;
+  color: rgb(0, 0, 0);
   cursor: pointer;
   transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   line-height: 1;
@@ -5314,8 +5361,8 @@ padding-right: 3rem !important;
 }
 
 .quick-modal-close:hover {
-  transform: rotate(90deg) scale(1.2);
-  color: var(--accent-yellow);
+  transform: scale(1.2);
+  color: #d11313;
 }
 
 .quick-modal-body {
@@ -5435,7 +5482,7 @@ padding-right: 3rem !important;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-
+   text-decoration: none;
   animation: gradientFlow 3s linear infinite;
 }
 
@@ -5469,11 +5516,24 @@ padding-right: 3rem !important;
 .quick-ref-link i {
   font-size: 18px;
 }
-
+.demo-link{
+  font-size: 18px;
+  font-weight: 800 !important;
+background: linear-gradient(90deg,
+      #1627be,
+      #36bdc7,
+      #251bad);
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+   text-decoration: none;
+  animation: gradientFlow 3s linear infinite;
+}
 .mobile-side {
   display: flex;
   align-items: flex-end;
-  justify-content: flex-end;
+  justify-content: space-between;
   margin-top: 20px;
   margin-bottom: 0;
 }
@@ -6186,4 +6246,30 @@ body.offer-closed .hero-section {
 .book-now-section{
   padding-top: 155px !important;
 }
+}
+
+
+
+.program-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px 20px;
+  list-style: none;
+  padding: 0;
+  margin-bottom: 15px;
+}
+
+.program-grid li {
+  position: relative;
+  padding-left: 18px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+
+/* Mobile responsive (stack in 1 column) */
+@media (max-width: 576px) {
+  .program-grid {
+    grid-template-columns: 1fr;
+  }
 }
