@@ -34,6 +34,11 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap"
     rel="stylesheet">
@@ -45,7 +50,7 @@
     integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  <link rel="preload" as="video" href="assets/bg-new-v.webm" type="video/webm">
+  <link rel="preload" as="video" href="assets/bg-new-v.webm" type="video/webm" fetchpriority="high">
 
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
@@ -73,7 +78,7 @@
 
     <div class="logo">
       <a href="index.html">
-        <img src="assets/logo.png" alt="Sailor Academy Logo">
+        <img src="assets/logo.png" alt="Sailor Academy Logo" fetchpriority="high" decoding="sync">
       </a>
     </div>
 
@@ -710,7 +715,7 @@
   <main>
     <section class="hero-section">
 
-      <video autoplay muted loop playsinline preload="auto" class="hero-video">
+      <video autoplay muted loop playsinline preload="auto" class="hero-video" fetchpriority="high">
         <source src="assets/bg-new-v.webm" type="video/webm">
       </video>
       <div class="hero-overlay"></div>
@@ -738,7 +743,7 @@
             </div>
 
              <p class="hero-subtext">
-            <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>  4.9  | <span style="color: var(--accent-yellow); font-weight: 600;">500+</span> Students Trained | Placement Assistance 
+            <i class="fa-solid fa-star rotating-star" style="color: rgb(255, 212, 59);"></i>  4.9  | <span style="color: var(--accent-yellow); font-weight: 600;">500+</span> Students Trained | Placement Assistance 
             </p>
           </div>
 
@@ -827,7 +832,7 @@
         <div class="row justify-content-center">
           <div class="col-lg-8 col-md-10 d-flex align-items-start">
 
-            <img src="assets/shield-about.png" class="about-icon" alt="icon" loading="lazy">
+            <img src="assets/shield-about.png" class="about-icon" alt="icon" loading="lazy" decoding="async">
             <div class="about-box">
 
               <!-- Heading + Icon -->
@@ -867,34 +872,34 @@ With expert mentors, small batch sizes, and personalized guidance, you don’t j
             <div class="academy-left-content">
               <h2 class="academy-main-title deep-zoom-anim">ACAD<br>EMY</h2>
               <div class="academy-description">
-                <ul class="academy-list">
+                <ul class="academy-list has-scroll-anim">
   <li>
-    <strong>Industry-Focused Training</strong><br>
+    <strong>Industry-Focused Training</strong>
     <span>Modern, practical skill development designed for real-world digital careers.</span>
   </li>
 
   <li>
-    <strong>High-Demand Courses</strong><br>
+    <strong>High-Demand Courses</strong>
     <span>Learn in-demand skills like Digital Marketing, Web Development, Graphic Design, Video Editing & AI tools.</span>
   </li>
 
   <li>
-    <strong>Practical Learning</strong><br>
+    <strong>Practical Learning</strong>
     <span>Gain hands-on experience through live projects, real campaigns & practical assignments.</span>
   </li>
 
   <li>
-    <strong>Career-Ready Approach</strong><br>
+    <strong>Career-Ready Approach</strong>
     <span>Build job-ready skills for employment, freelancing, or launching your own digital business.</span>
   </li>
 
   <li>
-    <strong>Small Batch Sizes</strong><br>
+    <strong>Small Batch Sizes</strong>
     <span>Enjoy personalized attention for faster learning and better understanding.</span>
   </li>
 
   <li>
-    <strong>Expert Mentor Support</strong><br>
+    <strong>Expert Mentor Support</strong>
     <span>Learn directly from industry professionals with step-by-step guidance at every stage.</span>
   </li>
 </ul>
@@ -943,7 +948,7 @@ With expert mentors, small batch sizes, and personalized guidance, you don’t j
               </div>
             </div>
             <div class="academy-right-image deep-zoom-anim">
-              <img src="assets/academy.png" alt="Sailors Academy Classroom" loading="lazy">
+              <img src="assets/academy.png" alt="Sailors Academy Classroom" loading="lazy" decoding="async">
             </div>
           </div>
         </div>
@@ -973,24 +978,24 @@ With expert mentors, small batch sizes, and personalized guidance, you don’t j
             <h2 class="rank-num"><span class="rank-counter" data-target="87">87</span>%</h2>
             <p class="rank-desc">of Our Graduates Launch Digital Careers</p>
           </div>
-          <img src="assets/rank-1.png" class="rank-img rank-img-1 spin-continuously" alt="rank-1" loading="lazy">
-          <img src="assets/rank-mid-1.png" class="rank-mid-img-1 slide-up-anim" alt="rank-mid-1" loading="lazy">
+          <img src="assets/rank-1.png" class="rank-img rank-img-1 spin-continuously" alt="rank-1" loading="lazy" decoding="async">
+          <img src="assets/rank-mid-1.png" class="rank-mid-img-1 slide-up-anim" alt="rank-mid-1" loading="lazy" decoding="async">
         </div>
         <div class="rank-card rank-card-2">
           <div class="rank-content">
             <h2 class="rank-num"><span class="rank-counter" data-target="50">50</span>+</h2>
             <p class="rank-desc">Hands-On Digital Skill Courses</p>
           </div>
-          <img src="assets/rank-2.png" class="rank-img rank-img-2 slide-right-anim" alt="rank-2" loading="lazy">
-          <img src="assets/rank-mid-2.png" class="rank-mid-img-2 slide-up-anim" alt="rank-mid-2" loading="lazy">
+          <img src="assets/rank-2.png" class="rank-img rank-img-2 slide-right-anim" alt="rank-2" loading="lazy" decoding="async">
+          <img src="assets/rank-mid-2.png" class="rank-mid-img-2 slide-up-anim" alt="rank-mid-2" loading="lazy" decoding="async">
         </div>
         <div class="rank-card rank-card-3">
           <div class="rank-content">
             <h2 class="rank-num">#1</h2>
             <p class="rank-desc">Ludhiana’s Leading Digital Skills Academy</p>
           </div>
-          <img src="assets/rank-3.png" class="rank-img rank-img-3 slide-right-anim" alt="rank-3" loading="lazy">
-          <img src="assets/rank-mid-3.png" class="rank-mid-img-3 slide-up-anim" alt="rank-mid-3" loading="lazy">
+          <img src="assets/rank-3.png" class="rank-img rank-img-3 slide-right-anim" alt="rank-3" loading="lazy" decoding="async">
+          <img src="assets/rank-mid-3.png" class="rank-mid-img-3 slide-up-anim" alt="rank-mid-3" loading="lazy" decoding="async">
         </div>
       </div>
     </section>
@@ -1881,7 +1886,7 @@ Whether you're starting from scratch or looking to level up, our training is des
       </button>
 
       <div class="sidebar-logo">
-        <img src="assets/side-logo.png" alt="Sailor Academy Logo">
+        <img src="assets/side-logo.png" alt="Sailor Academy Logo" loading="lazy" decoding="async">
       </div>
 
       <div class="sidebar-content">
@@ -2182,13 +2187,13 @@ Whether you're starting from scratch or looking to level up, our training is des
     </div>
   </div>
 
-  <script src="script/script.js"></script>
+  <script src="script/script.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
     integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-    crossorigin="anonymous"></script>
+    crossorigin="anonymous" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
     integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
-    crossorigin="anonymous"></script>
+    crossorigin="anonymous" defer></script>
   <a href="https://wa.me/918699388823" class="whatsapp-float" target="_blank">
     <i class="fa-brands fa-whatsapp"></i>
     <span class="whatsapp-tooltip">+91 86993-88823</span>
