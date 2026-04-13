@@ -2,39 +2,34 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thank You - Sailors Academy</title>
-    <meta name="description" content="Thank You - Sailors Academy">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thank You - Sailors Academy</title>
+  <meta name="description" content="Thank You - Sailors Academy">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="style/style.css">
-    <link rel="stylesheet" href="style/button.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style/style.css">
+  <link rel="stylesheet" href="style/button.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 
 <body>
- <div class="offer-bar" id="offerBar">
+  <div class="offer-bar" id="offerBar">
     <div class="marquee-wrapper">
       <div class="marquee-content">
-        <span><i class="fa-solid fa-bolt"></i> Special Offer: Master AI in 7 Days — Free For First 50 Signups!
-          Enroll Now & Save 30% Today! </span>
-        <span><i class="fa-solid fa-bolt"></i> Break into Cyber Security in 10 Days — Free for First 50! Secure Your
-          Future Today!
-          Enroll Now & Save 30% Today! </span>
-        <span><i class="fa-solid fa-bolt"></i> Create with Generative AI in 7 Days — Free for First 50! Build Smarter
-          Today!
-          Enroll Now & Save 30% Today! </span>
+        <span><i class="fa-solid fa-bolt"></i> Crack Cyber Security in 7 Days Free for the First 50 </span>
+        <span><i class="fa-solid fa-bolt"></i> Become AI Ready in 1 Week, Free for Limited Seats </span>
+        <span><i class="fa-solid fa-bolt"></i> Build Generative AI Skills in 7 Days, Free for First 50 Signups </span>
       </div>
     </div>
     <button class="close-offer" id="closeOffer">
@@ -45,11 +40,133 @@
 
     <div class="logo">
       <a href="index.html">
-        <img src="assets/logo.png" alt="Sailor Academy Logo">
+        <img src="assets/logo.png" alt="Sailor Academy Logo" fetchpriority="high" decoding="sync">
       </a>
     </div>
 
     <ul class="nav-links" id="navLinks">
+
+
+      <li class="has-dropdown">
+        <a href="#">Courses <span
+            style="color: var(--accent-yellow); background-color: #000; padding: 2px 5px; border-radius: 50px; font-size: 8px;">New</span><i
+            class="fa-solid fa-chevron-down" style="font-size: 10px;"></i></a>
+        <div class="dropdown-mega luxury-mega">
+          <div class="mega-inner-content">
+            <!-- Top Banner: Gain Attention -->
+            <div class="mega-header-banner">
+              <div class="mega-full-width-content">
+                <div class="track-info">
+                  <h4>Advanced Internships</h4><span class="track-badge">Demanded Programs</span>
+                  <p>Next-gen programs for students who want to stand out in the job market with cutting-edge skills.
+                  </p>
+                </div>
+                <div class="track-right-action" style="display: flex; align-items: center; gap: 20px;">
+                  <a href="javascript:void(0)" class="quick-ref-link" id="openQuickRef1">
+                    Quick Reference
+                  </a>
+                  <div class="track-visual" style="margin: 0; opacity: 0.1;">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Main Categories Grid - Expanded to 100vw -->
+            <div class="mega-grid-wrapper">
+              <div class="mega-full-width-content">
+                <div class="mega-grid-container">
+                  <div class="internship-category-item" data-category="web">
+                    <span class="cat-badge trending">Trending</span>
+                    <div class="cat-icon"><i class="fa-brands fa-openai"></i></div>
+                    <div class="cat-info">
+                      <h5>Generative AI & Prompt Engineering</h5>
+                      <p>FASTEST Growing Demand — 2026 </p>
+                      <ul class="cat-details">
+                        <li>ChatGPT, Claude & Gemini deep dives</li>
+                        <li>Advanced prompt engineering techniques</li>
+                        <li>AI automation with Zapier & Make.com
+                        </li>
+                        <li>AI tools for business & productivity
+                        </li>
+                        <li>Building GPT-powered micro-tools
+                        </li>
+                        <li>Image generation: Midjourney, DALL-E, Stable Diffusion
+
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="internship-category-item" data-category="fullstack">
+                    <span class="cat-badge demanded">Most Demanded</span>
+                    <div class="cat-icon"><i class="fa-solid fa-gears"></i></div>
+                    <div class="cat-info">
+                      <h5>AI Agent & Automation</h5>
+                      <p>Perfect for AI Product & Freelance Business</p>
+                      <ul class="cat-details">
+                        <li>WhatsApp automation (Twilio, WATI)</li>
+                        <li>Chatbot development (Dialogflow, Botpress)</li>
+                        <li>n8n & Make.com workflow automation</li>
+                        <li>Agentic AI with LangChain / AutoGPT</li>
+                        <li>RPA (Robotic Process Automation) basics</li>
+                        <li>AI product building for small businesses</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="internship-category-item" data-category="digital">
+                    <div class="cat-icon"><i class="fa-solid fa-cloud-arrow-down"></i></div>
+                    <div class="cat-info">
+                      <h5>Cloud & DevOps</h5>
+                      <p>Cloud Jobs Booming — AWS Certified Path</p>
+                      <ul class="cat-details">
+                        <li>AWS fundamentals (EC2, S3, Lambda, RDS)</li>
+                        <li>Linux server setup & management</li>
+                        <li>Docker & container basics</li>
+                        <li>CI/CD pipelines (GitHub Actions)</li>
+                        <li>Domain, hosting & SSL deployment</li>
+                        <li>Intro to Kubernetes</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="internship-category-item" data-category="data">
+                    <span class="cat-badge demanded">Most Demanded</span>
+                    <div class="cat-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                    <div class="cat-info">
+                      <h5>Advanced Cybersecurity</h5>
+                      <p>Govt & Corporate Demand Rising</p>
+                      <ul class="cat-details">
+                        <li>Digital forensics & incident response</li>
+                        <li>Malware analysis basics</li>
+                        <li>Penetration testing (Burp Suite, Metasploit)</li>
+                        <li>Bug bounty fundamentals</li>
+                        <li>CEH / CompTIA Security+ exam prep</li>
+                        <li>Capture the Flag (CTF) practice</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+
+            <!-- Footer: Final Punch -->
+            <div class="mega-footer-action">
+              <div class="mega-full-width-content">
+                <div class="mega-footer-container">
+                  <div class="footer-note">
+                    <i class="fa-solid fa-circle-check"></i> 100% Practical Training | Placement Assistance
+                  </div>
+                  <a href="contact-us.html" class="mega-cta-btn">Enroll Now <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
       <li class="has-dropdown">
         <a href="#">Internships & Training<i class="fa-solid fa-chevron-down" style="font-size: 10px;"></i></a>
         <div class="dropdown-mega luxury-mega">
@@ -223,23 +340,21 @@
           </div>
         </div>
       </li>
-
       <li class="has-dropdown">
-        <a href="#">Courses <span
-            style="color: var(--accent-yellow); background-color: #000; padding: 2px 5px; border-radius: 50px; font-size: 8px;">New</span><i
-            class="fa-solid fa-chevron-down" style="font-size: 10px;"></i></a>
+        <a href="#">Flagship Programs <i class="fa-solid fa-chevron-down" style="font-size: 10px;"></i></a>
         <div class="dropdown-mega luxury-mega">
           <div class="mega-inner-content">
             <!-- Top Banner: Gain Attention -->
             <div class="mega-header-banner">
               <div class="mega-full-width-content">
                 <div class="track-info">
-                  <h4>Advanced Internships</h4><span class="track-badge">Demanded Programs</span>
-                  <p>Next-gen programs for students who want to stand out in the job market with cutting-edge skills.
+                  <h4>Flagship Professional Programs</h4><span class="track-badge">Demanded Programs</span>
+                  <p>Comprehensive 3–6 month programs combining multiple skills. Best for serious career changers &
+                    freshers targeting placements.
                   </p>
                 </div>
                 <div class="track-right-action" style="display: flex; align-items: center; gap: 20px;">
-                  <a href="javascript:void(0)" class="quick-ref-link" id="openQuickRef1">
+                  <a href="javascript:void(0)" class="quick-ref-link" id="openQuickRef3">
                     Quick Reference
                   </a>
                   <div class="track-visual" style="margin: 0; opacity: 0.1;">
@@ -255,21 +370,20 @@
                 <div class="mega-grid-container">
                   <div class="internship-category-item" data-category="web">
                     <span class="cat-badge trending">Trending</span>
-                    <div class="cat-icon"><i class="fa-brands fa-openai"></i></div>
+                    <div class="cat-icon"><i class="fa-solid fa-bullhorn"></i></div>
                     <div class="cat-info">
-                      <h5>Generative AI & Prompt Engineering</h5>
-                      <p>FASTEST Growing Demand — 2026 </p>
+                      <h5>Digital Marketing & Performance Ads</h5>
+                      <p>Most Enrolled Flagship — Punjab Market Leader</p>
                       <ul class="cat-details">
-                        <li>ChatGPT, Claude & Gemini deep dives</li>
-                        <li>Advanced prompt engineering techniques</li>
-                        <li>AI automation with Zapier & Make.com
+                        <li>Complete SEO + Google Ads + Meta Ads</li>
+                        <li>Email marketing + WhatsApp Business</li>
+                        <li>E-commerce marketing (Shopify, Amazon)
                         </li>
-                        <li>AI tools for business & productivity
+                        <li>Analytics: GA4, Hotjar, Meta Pixel
                         </li>
-                        <li>Building GPT-powered micro-tools
+                        <li>Agency-style live projects
                         </li>
-                        <li>Image generation: Midjourney, DALL-E, Stable Diffusion
-
+                        <li>Placement preparation
                         </li>
                       </ul>
                     </div>
@@ -277,50 +391,65 @@
 
                   <div class="internship-category-item" data-category="fullstack">
                     <span class="cat-badge demanded">Most Demanded</span>
-                    <div class="cat-icon"><i class="fa-solid fa-gears"></i></div>
+                    <div class="cat-icon"><i class="fa-solid fa-layer-group"></i></div>
                     <div class="cat-info">
-                      <h5>AI Agent & Automation</h5>
-                      <p>Perfect for AI Product & Freelance Business</p>
+                      <h5>Full Stack Web Development</h5>
+                      <p>#1 Placement Track — 80%+ Conversion</p>
                       <ul class="cat-details">
-                        <li>WhatsApp automation (Twilio, WATI)</li>
-                        <li>Chatbot development (Dialogflow, Botpress)</li>
-                        <li>n8n & Make.com workflow automation</li>
-                        <li>Agentic AI with LangChain / AutoGPT</li>
-                        <li>RPA (Robotic Process Automation) basics</li>
-                        <li>AI product building for small businesses</li>
+                        <li>HTML, CSS, JavaScript + React.js</li>
+                        <li>Node.js + Express + MongoDB (MERN)</li>
+                        <li>REST API development & integration</li>
+                        <li>DevOps: GitHub, CI/CD, Vercel/AWS</li>
+                        <li>Portfolio of 3+ live projects</li>
+                        <li>Interview preparation & mock tests</li>
                       </ul>
                     </div>
                   </div>
 
                   <div class="internship-category-item" data-category="digital">
-                    <div class="cat-icon"><i class="fa-solid fa-cloud-arrow-down"></i></div>
+                    <div class="cat-icon"><i class="fa-solid fa-chart-line"></i></div>
                     <div class="cat-info">
-                      <h5>Cloud & DevOps</h5>
-                      <p>Cloud Jobs Booming — AWS Certified Path</p>
+                      <h5>Data Analytics Professional</h5>
+                      <p>Fastest Growing — MNCs & Startups Hiring</p>
                       <ul class="cat-details">
-                        <li>AWS fundamentals (EC2, S3, Lambda, RDS)</li>
-                        <li>Linux server setup & management</li>
-                        <li>Docker & container basics</li>
-                        <li>CI/CD pipelines (GitHub Actions)</li>
-                        <li>Domain, hosting & SSL deployment</li>
-                        <li>Intro to Kubernetes</li>
+                        <li>Excel + SQL + Power BI + Tableau</li>
+                        <li>Python for data (Pandas, Seaborn)</li>
+                        <li>Statistics & business intelligence</li>
+                        <li>3 dashboard capstone projects</li>
+                        <li>Data storytelling & presentation</li>
+                        <li>Internship + certificate</li>
                       </ul>
                     </div>
                   </div>
 
                   <div class="internship-category-item" data-category="data">
                     <span class="cat-badge demanded">Most Demanded</span>
-                    <div class="cat-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                    <div class="cat-icon"><i class="fa-solid fa-gears"></i></div>
                     <div class="cat-info">
-                      <h5>Advanced Cybersecurity</h5>
-                      <p>Govt & Corporate Demand Rising</p>
+                      <h5>AI & Automation Professional Program</h5>
+                      <p>Most Futuristic Program — 2025 Top Pick</p>
                       <ul class="cat-details">
-                        <li>Digital forensics & incident response</li>
-                        <li>Malware analysis basics</li>
-                        <li>Penetration testing (Burp Suite, Metasploit)</li>
-                        <li>Bug bounty fundamentals</li>
-                        <li>CEH / CompTIA Security+ exam prep</li>
-                        <li>Capture the Flag (CTF) practice</li>
+                        <li>Generative AI deep dive (ChatGPT, Claude, Gemini)</li>
+                        <li>Prompt engineering + AI agent building</li>
+                        <li>Automation: n8n, Make.com, Zapier</li>
+                        <li>Python + LangChain AI development</li>
+                        <li>AI product building & monetization</li>
+                        <li>Agentic AI & multi-agent systems</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="internship-category-item" data-category="data">
+                    <span class="cat-badge demanded">Most Demanded</span>
+                    <div class="cat-icon"><i class="fa-brands fa-openai"></i></div>
+                    <div class="cat-info">
+                      <h5>Generative AI + Agentic AI Track</h5>
+                      <p>Elite Track — AI Developer / AI Consultant</p>
+                      <ul class="cat-details">
+                        <li>Foundation models & LLM understanding</li>
+                        <li>Prompt design + RAG systems</li>
+                        <li>AI agents with AutoGPT & CrewAI</li>
+                        <li>Fine-tuning & custom GPT creation</li>
+                        <li>AI SaaS micro-product development</li>
                       </ul>
                     </div>
                   </div>
@@ -514,139 +643,7 @@
 
       </li>
 
-      <li class="has-dropdown">
-        <a href="#">Flagship Programs <i class="fa-solid fa-chevron-down" style="font-size: 10px;"></i></a>
-        <div class="dropdown-mega luxury-mega">
-          <div class="mega-inner-content">
-            <!-- Top Banner: Gain Attention -->
-            <div class="mega-header-banner">
-              <div class="mega-full-width-content">
-                <div class="track-info">
-                  <h4>Flagship Professional Programs</h4><span class="track-badge">Demanded Programs</span>
-                  <p>Comprehensive 3–6 month programs combining multiple skills. Best for serious career changers &
-                    freshers targeting placements.
-                  </p>
-                </div>
-                <div class="track-right-action" style="display: flex; align-items: center; gap: 20px;">
-                  <a href="javascript:void(0)" class="quick-ref-link" id="openQuickRef3">
-                    Quick Reference
-                  </a>
-                  <div class="track-visual" style="margin: 0; opacity: 0.1;">
-                    <i class="fa-solid fa-graduation-cap"></i>
-                  </div>
-                </div>
-              </div>
-            </div>
 
-            <!-- Main Categories Grid - Expanded to 100vw -->
-            <div class="mega-grid-wrapper">
-              <div class="mega-full-width-content">
-                <div class="mega-grid-container">
-                  <div class="internship-category-item" data-category="web">
-                    <span class="cat-badge trending">Trending</span>
-                    <div class="cat-icon"><i class="fa-solid fa-bullhorn"></i></div>
-                    <div class="cat-info">
-                      <h5>Digital Marketing & Performance Ads</h5>
-                      <p>Most Enrolled Flagship — Punjab Market Leader</p>
-                      <ul class="cat-details">
-                        <li>Complete SEO + Google Ads + Meta Ads</li>
-                        <li>Email marketing + WhatsApp Business</li>
-                        <li>E-commerce marketing (Shopify, Amazon)
-                        </li>
-                        <li>Analytics: GA4, Hotjar, Meta Pixel
-                        </li>
-                        <li>Agency-style live projects
-                        </li>
-                        <li>Placement preparation
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-
-                  <div class="internship-category-item" data-category="fullstack">
-                    <span class="cat-badge demanded">Most Demanded</span>
-                    <div class="cat-icon"><i class="fa-solid fa-layer-group"></i></div>
-                    <div class="cat-info">
-                      <h5>Full Stack Web Development</h5>
-                      <p>#1 Placement Track — 80%+ Conversion</p>
-                      <ul class="cat-details">
-                        <li>HTML, CSS, JavaScript + React.js</li>
-                        <li>Node.js + Express + MongoDB (MERN)</li>
-                        <li>REST API development & integration</li>
-                        <li>DevOps: GitHub, CI/CD, Vercel/AWS</li>
-                        <li>Portfolio of 3+ live projects</li>
-                        <li>Interview preparation & mock tests</li>
-                      </ul>
-                    </div>
-                  </div>
-
-                  <div class="internship-category-item" data-category="digital">
-                    <div class="cat-icon"><i class="fa-solid fa-chart-line"></i></div>
-                    <div class="cat-info">
-                      <h5>Data Analytics Professional</h5>
-                      <p>Fastest Growing — MNCs & Startups Hiring</p>
-                      <ul class="cat-details">
-                        <li>Excel + SQL + Power BI + Tableau</li>
-                        <li>Python for data (Pandas, Seaborn)</li>
-                        <li>Statistics & business intelligence</li>
-                        <li>3 dashboard capstone projects</li>
-                        <li>Data storytelling & presentation</li>
-                        <li>Internship + certificate</li>
-                      </ul>
-                    </div>
-                  </div>
-
-                  <div class="internship-category-item" data-category="data">
-                    <span class="cat-badge demanded">Most Demanded</span>
-                    <div class="cat-icon"><i class="fa-solid fa-gears"></i></div>
-                    <div class="cat-info">
-                      <h5>AI & Automation Professional Program</h5>
-                      <p>Most Futuristic Program — 2025 Top Pick</p>
-                      <ul class="cat-details">
-                        <li>Generative AI deep dive (ChatGPT, Claude, Gemini)</li>
-                        <li>Prompt engineering + AI agent building</li>
-                        <li>Automation: n8n, Make.com, Zapier</li>
-                        <li>Python + LangChain AI development</li>
-                        <li>AI product building & monetization</li>
-                        <li>Agentic AI & multi-agent systems</li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="internship-category-item" data-category="data">
-                    <span class="cat-badge demanded">Most Demanded</span>
-                    <div class="cat-icon"><i class="fa-brands fa-openai"></i></div>
-                    <div class="cat-info">
-                      <h5>Generative AI + Agentic AI Track</h5>
-                      <p>Elite Track — AI Developer / AI Consultant</p>
-                      <ul class="cat-details">
-                        <li>Foundation models & LLM understanding</li>
-                        <li>Prompt design + RAG systems</li>
-                        <li>AI agents with AutoGPT & CrewAI</li>
-                        <li>Fine-tuning & custom GPT creation</li>
-                        <li>AI SaaS micro-product development</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-
-            </div>
-
-            <!-- Footer: Final Punch -->
-            <div class="mega-footer-action">
-              <div class="mega-full-width-content">
-                <div class="mega-footer-container">
-                  <div class="footer-note">
-                    <i class="fa-solid fa-circle-check"></i> 100% Practical Training | Placement Assistance
-                  </div>
-                  <a href="contact-us.html" class="mega-cta-btn">Enroll Now <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </li>
     </ul>
 
     <div class="nav-right">
@@ -656,7 +653,7 @@
           <i class="fa-solid fa-magnifying-glass"></i>
         </button>
       </div>
-      <a href="#" class="button-effect btn-application">
+      <a href="#" class="button-effect btn-application" data-bs-toggle="modal" data-bs-target="#enrollFormModal">
         <span class="button-bg">
           <span class="button-bg-layers">
             <span class="button-bg-layer button-bg-layer-1 -purple"></span>
@@ -665,8 +662,8 @@
           </span>
         </span>
         <span class="button-inner">
-          <span class="button-inner-static">Book Now <i class="fa-solid fa-arrow-right"></i></span>
-          <span class="button-inner-hover">Book Now <i class="fa-solid fa-arrow-right"></i></span>
+          <span class="button-inner-static">Book Free Demo<i class="fa-solid fa-arrow-right"></i></span>
+          <span class="button-inner-hover">Book Free Demo <i class="fa-solid fa-arrow-right"></i></span>
         </span>
       </a>
       <div class="burger-menu">
@@ -678,58 +675,142 @@
     </div>
   </nav>
 
+  <main>
+    <div class="certificate-banner">
+      <div class="banner-content">
+        <p>Attended our Industry Visit? Download your e-Certificate now.</p>
+        <a href="e-certificate.html" class="button-effect btn-certificate">
+          <span class="button-bg">
+            <span class="button-bg-layers">
+              <span class="button-bg-layer button-bg-layer-1 -purple"></span>
+              <span class="button-bg-layer button-bg-layer-2 -turquoise"></span>
+              <span class="button-bg-layer button-bg-layer-3 -yellow"></span>
+            </span>
+          </span>
+          <span class="button-inner">
+            <span class="button-inner-static">Get Your e-Certificate</span>
+            <span class="button-inner-hover">Get Your e-Certificate</span>
+          </span>
+        </a>
+      </div>
+    </div>
 
-    <main>
-        <div class="certificate-banner">
-            <div class="banner-content">
-                <p>Attended our Industry Visit? Download your e-Certificate now.</p>
-                <a href="e-certificate.html" class="button-effect btn-certificate">
-                    <span class="button-bg">
-                        <span class="button-bg-layers">
-                            <span class="button-bg-layer button-bg-layer-1 -purple"></span>
-                            <span class="button-bg-layer button-bg-layer-2 -turquoise"></span>
-                            <span class="button-bg-layer button-bg-layer-3 -yellow"></span>
-                        </span>
-                    </span>
-                    <span class="button-inner">
-                        <span class="button-inner-static">Get Your e-Certificate</span>
-                        <span class="button-inner-hover">Get Your e-Certificate</span>
-                    </span>
-                </a>
+
+
+
+    <section class="thankyou-page-section">
+      <div class="container text-center">
+        <div class="success-animation">
+          <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+            <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
+            <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+          </svg>
+        </div>
+        <h2 class="thankyou-title">Successfully Submitted!</h2>
+        <p class="thankyou-text">Thank you for contacting Sailors Academy. Our career counselor will connect
+          with you shortly.</p>
+        <div class="thankyou-actions">
+          <a href="index.html" class="button-effect btn-thankyou-home">
+            <span class="button-bg">
+              <span class="button-bg-layers">
+                <span class="button-bg-layer button-bg-layer-1 -purple"></span>
+                <span class="button-bg-layer button-bg-layer-2 -turquoise"></span>
+                <span class="button-bg-layer button-bg-layer-3 -yellow"></span>
+              </span>
+            </span>
+            <span class="button-inner">
+              <span class="button-inner-static">Explore More Courses</span>
+              <span class="button-inner-hover">Explore More Courses</span>
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <footer class="main-footer">
+      <div class="container footer-content">
+        <div class="footer-flex">
+          <!-- Brand Info -->
+          <div class="footer-info-col">
+            <img src="assets/logo.png" class="footer-brand-logo" alt="Sailors Academy">
+            <address class="footer-addr">Ground Floor, 28-G, SBS Nagar,<br>Pakhowal Road, Ludhiana</address>
+            <p class="footer-phone">+91 86993-88823</p>
+          </div>
+
+          <!-- Navigation Columns -->
+          <div class="footer-links-grid">
+            <div class="footer-nav-col">
+              <h5>MAIN NAVIGATION</h5>
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Courses</a></li>
+                <li><a href="#">Admission</a></li>
+                <li><a href="#">Student</a></li>
+              </ul>
             </div>
+            <div class="footer-nav-col">
+              <h5>INFORMATION FOR</h5>
+              <ul>
+                <li><a href="#">How To Apply</a></li>
+                <li><a href="#">Dates & Deadlines</a></li>
+                <li><a href="#">Student Activities</a></li>
+                <li><a href="#">Support & Guidance</a></li>
+                <li><a href="#">Schedule A Tour</a></li>
+              </ul>
+            </div>
+            <div class="footer-nav-col">
+              <h5>QUICK LINKS</h5>
+              <ul>
+                <li><a href="#">Apply Now</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Teachers</a></li>
+              </ul>
+            </div>
+          </div>
         </div>
 
+        <!-- Social Icons -->
+        <div class="footer-social-row">
+          <a href="https://www.facebook.com/profile.php?id=61570286233699"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://x.com/sailrosacademy"><i class="fa-brands fa-twitter"></i></a>
+          <a href="https://www.linkedin.com/company/sailors-academy-ludhiana/"><i
+              class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://www.youtube.com/@SailorsAcademy"><i class="fa-brands fa-youtube"></i></a>
+          <a href="https://www.instagram.com/sailorsacademy13"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
 
+      <!-- Legal Info -->
+      <div class="footer-bottom-bar">
+        <div class="container legal-flex">
+          <p class="footer-copy">Copyright © 2026 Sailors Academy. All rights reserved.</p>
+          <div class="footer-legal-links">
+            <a href="#">Cookies</a>
+            <a href="privacy-policy.html">Privacy Policy</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </main>
 
 
-        <section class="thankyou-page-section">
-            <div class="container text-center">
-                <div class="success-animation">
-                    <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
-                        <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
-                        <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
-                    </svg>
-                </div>
-                <h2 class="thankyou-title">Successfully Submitted!</h2>
-                <p class="thankyou-text">Thank you for contacting Sailors Academy. Our career counselor will connect
-                    with you shortly.</p>
-                <div class="thankyou-actions">
-                    <a href="index.html" class="button-effect btn-thankyou-home">
-                        <span class="button-bg">
-                            <span class="button-bg-layers">
-                                <span class="button-bg-layer button-bg-layer-1 -purple"></span>
-                                <span class="button-bg-layer button-bg-layer-2 -turquoise"></span>
-                                <span class="button-bg-layer button-bg-layer-3 -yellow"></span>
-                            </span>
-                        </span>
-                        <span class="button-inner">
-                            <span class="button-inner-static">Explore More Courses</span>
-                            <span class="button-inner-hover">Explore More Courses</span>
-                        </span>
-                    </a>
-                </div>
-            </div>
-        </section>
 
 
 
@@ -747,73 +828,9 @@
 
 
 
-        <footer class="main-footer">
-            <div class="container footer-content">
-                <div class="footer-flex">
-                    <!-- Brand Info -->
-                    <div class="footer-info-col">
-                        <img src="assets/logo.png" class="footer-brand-logo" alt="Sailors Academy">
-                        <address class="footer-addr">Ground floor, 28-G, SBS Nagar,<br>Pakhowal Road, Ludhiana</address>
-                        <p class="footer-phone">+91 86993-88823</p>
-                    </div>
 
-                    <!-- Navigation Columns -->
-                    <div class="footer-links-grid">
-                        <div class="footer-nav-col">
-                            <h5>MAIN NAVIGATION</h5>
-                            <ul>
-                                <li><a href="index.html" class="footer-active">Home</a></li>
-                                <li><a href="#">About</a></li>
-                                <li><a href="#">Courses</a></li>
-                                <li><a href="#">Admission</a></li>
-                                <li><a href="#">Student</a></li>
-                            </ul>
-                        </div>
-                        <div class="footer-nav-col">
-                            <h5>INFORMATION FOR</h5>
-                            <ul>
-                                <li><a href="#">How To Apply</a></li>
-                                <li><a href="#">Dates & Deadlines</a></li>
-                                <li><a href="#">Student Activities</a></li>
-                                <li><a href="#">Support & Guidance</a></li>
-                                <li><a href="#">Schedule A Tour</a></li>
-                            </ul>
-                        </div>
-                        <div class="footer-nav-col">
-                            <h5>QUICK LINKS</h5>
-                            <ul>
-                                <li><a href="#">Apply Now</a></li>
-                                <li><a href="#">Blog</a></li>
-                                <li><a href="#">Teachers</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
 
-                <!-- Social Icons -->
-                <div class="footer-social-row">
-                    <a href="https://www.facebook.com/profile.php?id=61570286233699"><i
-                            class="fa-brands fa-facebook-f"></i></a>
-                    <a href="https://x.com/sailrosacademy"><i class="fa-brands fa-twitter"></i></a>
-                    <a href="https://www.linkedin.com/company/sailors-academy-ludhiana/"><i
-                            class="fa-brands fa-linkedin-in"></i></a>
-                    <a href="https://www.youtube.com/@SailorsAcademy"><i class="fa-brands fa-youtube"></i></a>
-                    <a href="https://www.instagram.com/sailorsacademy13"><i class="fa-brands fa-instagram"></i></a>
-                </div>
-            </div>
 
-            <!-- Legal Info -->
-            <div class="footer-bottom-bar">
-                <div class="container legal-flex">
-                    <p class="footer-copy">Copyright © 2026 Sailors Academy. All rights reserved.</p>
-                    <div class="footer-legal-links">
-                        <a href="#">Cookies</a>
-                        <a href="privacy-policy.html">Privacy Policy</a>
-                    </div>
-                </div>
-            </div>
-        </footer>
-    </main>
 
 
 
@@ -833,29 +850,7 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <div class="mobile-menu-panel" id="mobileMenu">
+  <div class="mobile-menu-panel" id="mobileMenu">
     <div class="panel-header">
       <div class="panel-logo">
         <a href="index.html">
@@ -872,13 +867,97 @@
         <input type="text" placeholder="Search for courses...">
         <i class="fa-solid fa-magnifying-glass"></i>
       </div>
-      <a href="javascript:void(0)" class="quick-ref-link mobile-side" id="openQuickRef">
-        Quick Reference
-      </a>
+      <div class="mobile-side">
+
+        <a href="javascript:void(0)" class="demo-link" data-bs-toggle="modal" data-bs-target="#enrollFormModal">
+          Book Class Demo
+        </a>
+        <a href="javascript:void(0)" class="quick-ref-link " id="openQuickRef">
+          Quick Reference
+        </a>
+      </div>
     </div>
 
     <div class="panel-content">
       <div class="mobile-accordion">
+
+        <div class="accordion-item">
+          <div class="accordion-header">
+            <span>Courses</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="accordion-body">
+            <div class="sub-accordion">
+              <!-- SEO -->
+              <div class="sub-accordion-header">
+                <span>Generative AI & Prompt Engineering</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </div>
+              <div class="sub-accordion-body">
+                <ul>
+                  <li>ChatGPT, Claude & Gemini deep dives</li>
+                  <li>Advanced prompt engineering techniques</li>
+                  <li>AI automation with Zapier & Make.com
+                  </li>
+                  <li>AI tools for business & productivity
+                  </li>
+                  <li>Building GPT-powered micro-tools
+                  </li>
+                  <li>Image generation: Midjourney, DALL-E, Stable Diffusion</li>
+                </ul>
+              </div>
+
+              <!-- UI/UX -->
+              <div class="sub-accordion-header">
+                <span>AI Agent & Automation</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </div>
+              <div class="sub-accordion-body">
+                <ul>
+                  <li>WhatsApp automation (Twilio, WATI)</li>
+                  <li>Chatbot development (Dialogflow, Botpress)</li>
+                  <li>n8n & Make.com workflow automation</li>
+                  <li>Agentic AI with LangChain / AutoGPT</li>
+                  <li>RPA (Robotic Process Automation) basics</li>
+                  <li>AI product building for small businesses</li>
+                </ul>
+              </div>
+
+              <!-- PHP Development -->
+              <div class="sub-accordion-header">
+                <span>Cloud & DevOps</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </div>
+              <div class="sub-accordion-body">
+                <ul>
+                  <li>AWS fundamentals (EC2, S3, Lambda, RDS)</li>
+                  <li>Linux server setup & management</li>
+                  <li>Docker & container basics</li>
+                  <li>CI/CD pipelines (GitHub Actions)</li>
+                  <li>Domain, hosting & SSL deployment</li>
+                  <li>Intro to Kubernetes</li>
+                </ul>
+              </div>
+
+              <!-- Digital Marketing -->
+              <div class="sub-accordion-header">
+                <h5>Advanced Cybersecurity</h5>
+                <i class="fa-solid fa-arrow-right"></i>
+              </div>
+              <div class="sub-accordion-body">
+                <ul>
+                  <li>Digital forensics & incident response</li>
+                  <li>Malware analysis basics</li>
+                  <li>Penetration testing (Burp Suite, Metasploit)</li>
+                  <li>Bug bounty fundamentals</li>
+                  <li>CEH / CompTIA Security+ exam prep</li>
+                  <li>Capture the Flag (CTF) practice</li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+        </div>
         <div class="accordion-item">
           <div class="accordion-header">
             <span>Internship & Training</span>
@@ -1010,78 +1089,91 @@
         </div>
         <div class="accordion-item">
           <div class="accordion-header">
-            <span>Courses</span>
+            <span>Flagship Programs</span>
             <i class="fa-solid fa-chevron-down"></i>
           </div>
           <div class="accordion-body">
             <div class="sub-accordion">
               <!-- SEO -->
               <div class="sub-accordion-header">
-                <span>Generative AI & Prompt Engineering</span>
+                <span>Digital Marketing & Performance Ads</span>
                 <i class="fa-solid fa-arrow-right"></i>
               </div>
               <div class="sub-accordion-body">
                 <ul>
-                  <li>ChatGPT, Claude & Gemini deep dives</li>
-                  <li>Advanced prompt engineering techniques</li>
-                  <li>AI automation with Zapier & Make.com
+                  <li>Complete SEO + Google Ads + Meta Ads</li>
+                  <li>Email marketing + WhatsApp Business</li>
+                  <li>E-commerce marketing (Shopify, Amazon)
                   </li>
-                  <li>AI tools for business & productivity
+                  <li>Analytics: GA4, Hotjar, Meta Pixel
                   </li>
-                  <li>Building GPT-powered micro-tools
+                  <li>Agency-style live projects
                   </li>
-                  <li>Image generation: Midjourney, DALL-E, Stable Diffusion</li>
+                  <li>Placement preparation
+                  </li>
                 </ul>
               </div>
 
               <!-- UI/UX -->
               <div class="sub-accordion-header">
-                <span>AI Agent & Automation</span>
+                <span>Full Stack Web Development</span>
                 <i class="fa-solid fa-arrow-right"></i>
               </div>
               <div class="sub-accordion-body">
                 <ul>
-                  <li>WhatsApp automation (Twilio, WATI)</li>
-                  <li>Chatbot development (Dialogflow, Botpress)</li>
-                  <li>n8n & Make.com workflow automation</li>
-                  <li>Agentic AI with LangChain / AutoGPT</li>
-                  <li>RPA (Robotic Process Automation) basics</li>
-                  <li>AI product building for small businesses</li>
+                  <li>HTML, CSS, JavaScript + React.js</li>
+                  <li>Node.js + Express + MongoDB (MERN)</li>
+                  <li>REST API development & integration</li>
+                  <li>DevOps: GitHub, CI/CD, Vercel/AWS</li>
+                  <li>Portfolio of 3+ live projects</li>
+                  <li>Interview preparation & mock tests</li>
                 </ul>
               </div>
 
               <!-- PHP Development -->
               <div class="sub-accordion-header">
-                <span>Cloud & DevOps</span>
+                <span>Data Analytics Professional</span>
                 <i class="fa-solid fa-arrow-right"></i>
               </div>
               <div class="sub-accordion-body">
                 <ul>
-                  <li>AWS fundamentals (EC2, S3, Lambda, RDS)</li>
-                  <li>Linux server setup & management</li>
-                  <li>Docker & container basics</li>
-                  <li>CI/CD pipelines (GitHub Actions)</li>
-                  <li>Domain, hosting & SSL deployment</li>
-                  <li>Intro to Kubernetes</li>
+                  <li>Excel + SQL + Power BI + Tableau</li>
+                  <li>Python for data (Pandas, Seaborn)</li>
+                  <li>Statistics & business intelligence</li>
+                  <li>3 dashboard capstone projects</li>
+                  <li>Data storytelling & presentation</li>
+                  <li>Internship + certificate</li>
                 </ul>
               </div>
 
               <!-- Digital Marketing -->
               <div class="sub-accordion-header">
-                <h5>Advanced Cybersecurity</h5>
+                <h5>AI & Automation Professional Program</h5>
                 <i class="fa-solid fa-arrow-right"></i>
               </div>
               <div class="sub-accordion-body">
                 <ul>
-                  <li>Digital forensics & incident response</li>
-                  <li>Malware analysis basics</li>
-                  <li>Penetration testing (Burp Suite, Metasploit)</li>
-                  <li>Bug bounty fundamentals</li>
-                  <li>CEH / CompTIA Security+ exam prep</li>
-                  <li>Capture the Flag (CTF) practice</li>
+                  <li>Generative AI deep dive (ChatGPT, Claude, Gemini)</li>
+                  <li>Prompt engineering + AI agent building</li>
+                  <li>Automation: n8n, Make.com, Zapier</li>
+                  <li>Python + LangChain AI development</li>
+                  <li>AI product building & monetization</li>
+                  <li>Agentic AI & multi-agent systems</li>
                 </ul>
               </div>
-
+              <div class="sub-accordion-header">
+                <h5>Generative AI + Agentic AI Track</h5>
+                <i class="fa-solid fa-arrow-right"></i>
+              </div>
+              <div class="sub-accordion-body">
+                <ul>
+                  <li>Foundation models & LLM understanding</li>
+                  <li>Prompt design + RAG systems</li>
+                  <li>AI agents with AutoGPT & CrewAI</li>
+                  <li>Fine-tuning & custom GPT creation</li>
+                  <li>AI SaaS micro-product development</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
@@ -1189,474 +1281,432 @@
             </div>
 
           </div>
+        </div>
 
-          <div class="accordion-item">
-            <div class="accordion-header">
-              <span>Flagship Programs</span>
-              <i class="fa-solid fa-chevron-down"></i>
-            </div>
-            <div class="accordion-body">
-              <div class="sub-accordion">
-                <!-- SEO -->
-                <div class="sub-accordion-header">
-                  <span>Digital Marketing & Performance Ads</span>
-                  <i class="fa-solid fa-arrow-right"></i>
-                </div>
-                <div class="sub-accordion-body">
-                  <ul>
-                    <li>Complete SEO + Google Ads + Meta Ads</li>
-                    <li>Email marketing + WhatsApp Business</li>
-                    <li>E-commerce marketing (Shopify, Amazon)
-                    </li>
-                    <li>Analytics: GA4, Hotjar, Meta Pixel
-                    </li>
-                    <li>Agency-style live projects
-                    </li>
-                    <li>Placement preparation
-                    </li>
-                  </ul>
+      </div>
+    </div>
+    <div class="sidebar-video">
+      <iframe src="https://www.youtube.com/embed/wgywr5W88D0" title="YouTube video" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+
+  <!-- Enrollment Form Modal (Hero Section Design) -->
+  <div class="modal fade" id="enrollFormModal" tabindex="-1" aria-labelledby="enrollFormModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content enroll-modal-content">
+        <div class="modal-header border-0">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-0">
+          <div class="enroll-form-container">
+            <div class="form-card-1 enroll-modal-card">
+              <h3 class="new-modal-h3">Book a Free Demo Class</h3>
+              <form id="enrollModalForm">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="input-group">
+                      <input type="text" placeholder="Full Name" required>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="input-group">
+                      <input type="email" placeholder="Email Address" required>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="input-group">
+                      <input type="tel" placeholder="Phone Number" required>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="input-group">
+                      <select required>
+                        <option value="" disabled selected>Select Course</option>
+                        <option value="Generative AI & Prompt Engineering">Generative AI & Prompt Engineering</option>
+                    <option value="AI Agent & Automation">AI Agent & Automation</option>
+                    <option value="PHP Development">PHP Development</option>
+                    <option value="Cloud & DevOps">Cloud & DevOps</option>
+                    <option value="Advanced Cybersecurity">Advanced Cybersecurity</option>
+                    <option value="Web Development">Web Development</option>
+                    <option value="Full Stack Development">Full Stack Development</option>
+                    <option value="Digital Marketing">Digital Marketing</option>
+                    <option value="Data Analytics">Data Analytics</option>
+                    <option value="Python + AI">Python + AI</option>
+                    <option value="Cybersecurity">Cybersecurity</option>
+                    <option value="Mobile App Development">Mobile App Development</option>
+                    <option value="UI/UX Design">UI/UX Design</option>
+                    <option value="Video & Reels Editing">Video & Reels Editing</option>
+                    <option value="Graphic Design">Graphic Design</option>
+                    <option value="Digital Marketing & Performance Ads">Digital Marketing & Performance Ads</option>
+                    <option value="Full Stack Web Development">Full Stack Web Development</option>
+                    <option value="Data Analytics Professional">Data Analytics Professional</option>
+                    <option value="AI & Automation Professional">AI & Automation Professional</option>
+                    <option value="AI & Automation Professional Program">AI & Automation Professional Program</option>
+                    <option value="Generative AI + Agentic AI Track">Generative AI + Agentic AI Track</option>
+                    <option value="SEO Specialist">SEO Specialist</option>
+                    <option value="Google Ads Specialist">Google Ads Specialist</option>
+                    <option value="Meta Ads & Social Media Marketing">Meta Ads & Social Media Marketing</option>
+                    <option value="Content Creation & Reels Marketing">Content Creation & Reels Marketing</option>
+                    <option value="Prompt Engineering">Prompt Engineering</option>
+                    <option value="ChatGPT for Business">ChatGPT for Business</option>
+                    <option value="UI/UX with Figma">UI/UX with Figma</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="input-group">
+                      <select required>
+                        <option value="" disabled selected>Student Type</option>
+                        <option value="School">School</option>
+                        <option value="College">College</option>
+                        <option value="Working Professional">Working Professional</option>
+                      </select>
+                    </div>
+                  </div>
                 </div>
 
-                <!-- UI/UX -->
-                <div class="sub-accordion-header">
-                  <span>Full Stack Web Development</span>
-                  <i class="fa-solid fa-arrow-right"></i>
-                </div>
-                <div class="sub-accordion-body">
-                  <ul>
-                    <li>HTML, CSS, JavaScript + React.js</li>
-                    <li>Node.js + Express + MongoDB (MERN)</li>
-                    <li>REST API development & integration</li>
-                    <li>DevOps: GitHub, CI/CD, Vercel/AWS</li>
-                    <li>Portfolio of 3+ live projects</li>
-                    <li>Interview preparation & mock tests</li>
-                  </ul>
+                <div class="recaptcha-box" style="padding: 0;">
+                  <div class="recaptcha-mock">
+                    <div class="g-recaptcha" data-sitekey="6LeFKaksAAAAAOL7YoOb9mdxqG4XkPVzEgimnByK"></div>
+                  </div>
                 </div>
 
-                <!-- PHP Development -->
-                <div class="sub-accordion-header">
-                  <span>Data Analytics Professional</span>
-                  <i class="fa-solid fa-arrow-right"></i>
-                </div>
-                <div class="sub-accordion-body">
-                  <ul>
-                    <li>Excel + SQL + Power BI + Tableau</li>
-                    <li>Python for data (Pandas, Seaborn)</li>
-                    <li>Statistics & business intelligence</li>
-                    <li>3 dashboard capstone projects</li>
-                    <li>Data storytelling & presentation</li>
-                    <li>Internship + certificate</li>
-                  </ul>
-                </div>
+                <button type="submit" class="button-effect btn-book-demo">
+                  Book Free Demo Class <i class="fa-solid fa-chevron-right"></i>
+                </button>
 
-                <!-- Digital Marketing -->
-                <div class="sub-accordion-header">
-                  <h5>AI & Automation Professional Program</h5>
-                  <i class="fa-solid fa-arrow-right"></i>
+                <div style="text-align: center; margin-top: 15px;">
+                  <small>We respect your <a href="privacy-policy.html">privacy</a>. Your information is safe with
+                    us.</small>
                 </div>
-                <div class="sub-accordion-body">
-                  <ul>
-                    <li>Generative AI deep dive (ChatGPT, Claude, Gemini)</li>
-                    <li>Prompt engineering + AI agent building</li>
-                    <li>Automation: n8n, Make.com, Zapier</li>
-                    <li>Python + LangChain AI development</li>
-                    <li>AI product building & monetization</li>
-                    <li>Agentic AI & multi-agent systems</li>
-                  </ul>
-                </div>
-                <div class="sub-accordion-header">
-                  <h5>Generative AI + Agentic AI Track</h5>
-                  <i class="fa-solid fa-arrow-right"></i>
-                </div>
-                <div class="sub-accordion-body">
-                  <ul>
-                    <li>Foundation models & LLM understanding</li>
-                    <li>Prompt design + RAG systems</li>
-                    <li>AI agents with AutoGPT & CrewAI</li>
-                    <li>Fine-tuning & custom GPT creation</li>
-                    <li>AI SaaS micro-product development</li>
-                  </ul>
-                </div>
-              </div>
+              </form>
             </div>
           </div>
         </div>
       </div>
     </div>
-
-
   </div>
 
+  <!-- Desktop Sidebar -->
+  <div class="desktop-sidebar" id="desktopSidebar">
+    <div class="sidebar-inner">
+      <button class="close-sidebar" id="closeSidebar">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
 
-    <!-- Desktop Sidebar -->
-    <div class="desktop-sidebar" id="desktopSidebar">
-        <div class="sidebar-inner">
-            <button class="close-sidebar" id="closeSidebar">
-                <i class="fa-solid fa-xmark"></i>
-            </button>
+      <div class="sidebar-logo">
+        <img src="assets/side-logo.png" alt="Sailor Academy Logo">
+      </div>
 
-            <div class="sidebar-logo">
-                <img src="assets/side-logo.png" alt="Sailor Academy Logo">
+      <div class="sidebar-content">
+        <div class="contact-info-block">
+          <h3>Get In Touch</h3>
+
+          <div class="info-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <div>
+              <p>Ground Floor, 28-G, SBS Nagar</p>
+              <p>Pakhowal Road, Ludhiana Landmark: City Center</p>
             </div>
+          </div>
 
-            <div class="sidebar-content">
-                <div class="contact-info-block">
-                    <h3>Get In Touch</h3>
-
-                    <div class="info-item">
-                        <i class="fa-solid fa-location-dot"></i>
-                        <div>
-                            <p>Ground floor, 28-G, SBS Nagar</p>
-                            <p>Pakhowal Road, Ludhiana Landmark: City Center</p>
-                        </div>
-                    </div>
-
-                    <div class="info-item">
-                        <i class="fa-solid fa-envelope"></i>
-                        <div>
-                            <p>director@sailorsacademy.ca</p>
-                        </div>
-                    </div>
-
-                    <div class="info-item">
-                        <i class="fa-solid fa-phone-volume"></i>
-                        <div>
-                            <a href="tel:+918699388823" style="text-decoration: none; color: #555555;">+91
-                                86993-88823</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="sidebar-social">
-                    <h4>Follow Us</h4>
-                    <div class="social-links">
-                        <a href="https://www.facebook.com/profile.php?id=61570286233699"><i
-                                class="fa-brands fa-facebook-f"></i></a>
-                        <a href="https://www.instagram.com/sailorsacademy13"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="https://www.linkedin.com/company/sailors-academy-ludhiana/"><i
-                                class="fa-brands fa-linkedin-in"></i></a>
-                        <a href="https://x.com/sailrosacademy"><i class="fa-brands fa-x-twitter"></i></a>
-                        <a href="https://www.youtube.com/@SailorsAcademy"><i class="fa-brands fa-youtube"></i></a>
-                        <a href="https://pinterest.com/sailorsacademy13/"><i class="fa-brands fa-pinterest-p"></i></a>
-                    </div>
-                </div>
+          <div class="info-item">
+            <i class="fa-solid fa-envelope"></i>
+            <div>
+              <p>director@sailorsacademy.ca</p>
             </div>
+          </div>
+
+          <div class="info-item">
+            <i class="fa-solid fa-phone-volume"></i>
+            <div>
+              <a href="tel:+918699388823" style="text-decoration: none; color: #555555;">+91
+                86993-88823</a>
+            </div>
+          </div>
         </div>
-    </div>
-    <!-- Quick Reference Table Modal -->
-    <div id="quickReferenceModal" class="quick-modal">
-        <div class="quick-modal-content">
-            <span class="quick-modal-close" id="closeQuickRef">&times;</span>
-            <div class="quick-modal-header">
-                <h2>QUICK REFERENCE — ALL PROGRAMS AT A GLANCE</h2>
-            </div>
-            <div class="quick-modal-body">
-                <div class="table-responsive">
-                    <table class="quick-ref-table">
-                        <thead>
-                            <tr>
-                                <th>Program / Course</th>
-                                <th>Duration</th>
-                                <th>Type</th>
-                                <th>Demand Level</th>
-                                <th>Action</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Web Development</td>
-                                <td>45 / 60 Days</td>
-                                <td>Internship & Training</td>
-                                <td><i class="fa-solid fa-bolt demand-bolt"></i><i
-                                        class="fa-solid fa-bolt demand-bolt"></i><i
-                                        class="fa-solid fa-bolt demand-bolt"></i><i
-                                        class="fa-solid fa-bolt demand-bolt"></i><i
-                                        class="fa-solid fa-bolt demand-bolt"></i></td>
-                                <td><a href="contact-us.html" class="enroll-btn">Enroll Now</a></td>
-                            </tr>
-                            <tr>
-                                <td>Full Stack Development</td>
-                                <td>45 / 60 Days</td>
-                                <td>Internship & Training</td>
-                                <td><i class="fa-solid fa-bolt demand-bolt"></i><i
-                                        class="fa-solid fa-bolt demand-bolt"></i><i
-                                        class="fa-solid fa-bolt demand-bolt"></i><i
-                                        class="fa-solid fa-bolt demand-bolt"></i><i
-                                        class="fa-solid fa-bolt demand-bolt"></i></td>
-                                <td><a href="contact-us.html" class="enroll-btn">Enroll Now</a></td>
-                            </tr>
-                            <tr>
-                                <td>Digital Marketing</td>
-                                <td>45 / 60 Days</td>
-                                <td>Internship & Training</td>
-                                <td><i class="fa-solid fa-bolt demand-bolt"></i><i
-                                        class="fa-solid fa-bolt demand-bolt"></i><i
-                                        class="fa-solid fa-bolt demand-bolt"></i><i
-                                        class="fa-solid fa-bolt demand-bolt"></i></td>
-                                <td><a href="contact-us.html" class="enroll-btn">Enroll Now</a></td>
-                            </tr>
-                            <tr>
-                                <td>Data Analytics</td>
-                                <td>45 / 60 Days</td>
-                                <td>Internship & Training</td>
-                                <td><i class="fa-solid fa-bolt demand-bolt"></i><i
-                                        class="fa-solid fa-bolt demand-bolt"></i><i
-                                        class="fa-solid fa-bolt demand-bolt"></i><i
-                                        class="fa-solid fa-bolt demand-bolt"></i><i
-                                        class="fa-solid fa-bolt demand-bolt"></i></td>
-                                <td><a href="contact-us.html" class="enroll-btn">Enroll Now</a></td>
-                            </tr>
-                            <tr>
-                                <td>Python + AI</td>
-                                <td>45 / 60 Days</td>
-                                <td>Internship & Training</td>
-                                <td><i class="fa-solid fa-bolt demand-bolt"></i><i
-                                        class="fa-solid fa-bolt demand-bolt"></i><i
-                                        class="fa-solid fa-bolt demand-bolt"></i></td>
-                                <td><a href="contact-us.html" class="enroll-btn">Enroll Now</a></td>
-                            </tr>
-                            <tr>
-                                <td>Cybersecurity</td>
-                                <td>45 / 60 Days</td>
-                                <td>Internship & Training</td>
-                                <td><i class="fa-solid fa-bolt demand-bolt"></i><i
-                                        class="fa-solid fa-bolt demand-bolt"></i><i
-                                        class="fa-solid fa-bolt demand-bolt"></i><i
-                                        class="fa-solid fa-bolt demand-bolt"></i><i
-                                        class="fa-solid fa-bolt demand-bolt"></i></td>
-                                <td><a href="contact-us.html" class="enroll-btn">Enroll Now</a></td>
-                            </tr>
-                            <tr>
-                                <td>Mobile App Development</td>
-                                <td>45 / 60 Days</td>
-                                <td>Internship & Training</td>
-                                <td><i class="fa-solid fa-bolt demand-bolt"></i><i
-                                        class="fa-solid fa-bolt demand-bolt"></i><i
-                                        class="fa-solid fa-bolt demand-bolt"></i><i
-                                        class="fa-solid fa-bolt demand-bolt"></i></td>
-                                <td><a href="contact-us.html" class="enroll-btn">Enroll Now</a></td>
-                            </tr>
-                            <tr>
-                                <td>UI/UX Design</td>
-                                <td>45 / 60 Days</td>
-                                <td>Internship & Training</td>
-                                <td><i class="fa-solid fa-bolt demand-bolt"></i><i
-                                        class="fa-solid fa-bolt demand-bolt"></i><i
-                                        class="fa-solid fa-bolt demand-bolt"></i><i
-                                        class="fa-solid fa-bolt demand-bolt"></i></td>
-                                <td><a href="contact-us.html" class="enroll-btn">Enroll Now</a></td>
-                            </tr>
-                            <tr>
-                                <td>Video & Reels Editing</td>
-                                <td>45 / 60 Days</td>
-                                <td>Internship & Training</td>
-                                <td><i class="fa-solid fa-bolt demand-bolt"></i><i
-                                        class="fa-solid fa-bolt demand-bolt"></i><i
-                                        class="fa-solid fa-bolt demand-bolt"></i><i
-                                        class="fa-solid fa-bolt demand-bolt"></i><i
-                                        class="fa-solid fa-bolt demand-bolt"></i></td>
-                                <td><a href="contact-us.html" class="enroll-btn">Enroll Now</a></td>
-                            </tr>
-                            <tr>
-                                <td>Graphic Design</td>
-                                <td>45 / 60 Days</td>
-                                <td>Internship & Training</td>
-                                <td><i class="fa-solid fa-bolt demand-bolt"></i><i
-                                        class="fa-solid fa-bolt demand-bolt"></i><i
-                                        class="fa-solid fa-bolt demand-bolt"></i><i
-                                        class="fa-solid fa-bolt demand-bolt"></i><i
-                                        class="fa-solid fa-bolt demand-bolt"></i></td>
-                                <td><a href="contact-us.html" class="enroll-btn">Enroll Now</a></td>
-                            </tr>
-                            <tr>
-                                <td>Generative AI & Prompt Eng.</td>
-                                <td>60 Days</td>
-                                <td>Advanced</td>
-                                <td><i class="fa-solid fa-bolt demand-bolt"></i><i
-                                        class="fa-solid fa-bolt demand-bolt"></i><i
-                                        class="fa-solid fa-bolt demand-bolt"></i><i
-                                        class="fa-solid fa-bolt demand-bolt"></i><i
-                                        class="fa-solid fa-bolt demand-bolt"></i></td>
-                                <td><a href="contact-us.html" class="enroll-btn">Enroll Now</a></td>
-                            </tr>
-                            <tr>
-                                <td>AI Agent & Automation</td>
-                                <td>60 Days</td>
-                                <td>Advanced</td>
-                                <td><i class="fa-solid fa-bolt demand-bolt"></i><i
-                                        class="fa-solid fa-bolt demand-bolt"></i><i
-                                        class="fa-solid fa-bolt demand-bolt"></i></td>
-                                <td><a href="contact-us.html" class="enroll-btn">Enroll Now</a></td>
-                            </tr>
-                            <tr>
-                                <td>Cloud & DevOps (AWS)</td>
-                                <td>60 Days</td>
-                                <td>Advanced</td>
-                                <td><i class="fa-solid fa-bolt demand-bolt"></i><i
-                                        class="fa-solid fa-bolt demand-bolt"></i><i
-                                        class="fa-solid fa-bolt demand-bolt"></i><i
-                                        class="fa-solid fa-bolt demand-bolt"></i><i
-                                        class="fa-solid fa-bolt demand-bolt"></i></td>
-                                <td><a href="contact-us.html" class="enroll-btn">Enroll Now</a></td>
-                            </tr>
-                            <tr>
-                                <td>Advanced Cybersecurity</td>
-                                <td>60 Days</td>
-                                <td>Advanced</td>
-                                <td><i class="fa-solid fa-bolt demand-bolt"></i><i
-                                        class="fa-solid fa-bolt demand-bolt"></i><i
-                                        class="fa-solid fa-bolt demand-bolt"></i><i
-                                        class="fa-solid fa-bolt demand-bolt"></i><i
-                                        class="fa-solid fa-bolt demand-bolt"></i></td>
-                                <td><a href="contact-us.html" class="enroll-btn">Enroll Now</a></td>
-                            </tr>
-                            <tr>
-                                <td>SEO Specialist</td>
-                                <td>4 Weeks</td>
-                                <td>Certification</td>
-                                <td><i class="fa-solid fa-bolt demand-bolt"></i><i
-                                        class="fa-solid fa-bolt demand-bolt"></i><i
-                                        class="fa-solid fa-bolt demand-bolt"></i><i
-                                        class="fa-solid fa-bolt demand-bolt"></i><i
-                                        class="fa-solid fa-bolt demand-bolt"></i></td>
-                                <td><a href="contact-us.html" class="enroll-btn">Enroll Now</a></td>
-                            </tr>
-                            <tr>
-                                <td>Google Ads Specialist</td>
-                                <td>4 Weeks</td>
-                                <td>Certification</td>
-                                <td><i class="fa-solid fa-bolt demand-bolt"></i><i
-                                        class="fa-solid fa-bolt demand-bolt"></i><i
-                                        class="fa-solid fa-bolt demand-bolt"></i><i
-                                        class="fa-solid fa-bolt demand-bolt"></i><i
-                                        class="fa-solid fa-bolt demand-bolt"></i></td>
-                                <td><a href="contact-us.html" class="enroll-btn">Enroll Now</a></td>
-                            </tr>
-                            <tr>
-                                <td>Meta Ads & Social Media Mktg</td>
-                                <td>4 Weeks</td>
-                                <td>Certification</td>
-                                <td><i class="fa-solid fa-bolt demand-bolt"></i><i
-                                        class="fa-solid fa-bolt demand-bolt"></i><i
-                                        class="fa-solid fa-bolt demand-bolt"></i><i
-                                        class="fa-solid fa-bolt demand-bolt"></i></td>
-                                <td><a href="contact-us.html" class="enroll-btn">Enroll Now</a></td>
-                            </tr>
-                            <tr>
-                                <td>Prompt Engineering</td>
-                                <td>3 Weeks</td>
-                                <td>Certification</td>
-                                <td><i class="fa-solid fa-bolt demand-bolt"></i><i
-                                        class="fa-solid fa-bolt demand-bolt"></i><i
-                                        class="fa-solid fa-bolt demand-bolt"></i><i
-                                        class="fa-solid fa-bolt demand-bolt"></i><i
-                                        class="fa-solid fa-bolt demand-bolt"></i></td>
-                                <td><a href="contact-us.html" class="enroll-btn">Enroll Now</a></td>
-                            </tr>
-                            <tr>
-                                <td>ChatGPT for Business</td>
-                                <td>2 Weeks</td>
-                                <td>Certification</td>
-                                <td><i class="fa-solid fa-bolt demand-bolt"></i><i
-                                        class="fa-solid fa-bolt demand-bolt"></i><i
-                                        class="fa-solid fa-bolt demand-bolt"></i><i
-                                        class="fa-solid fa-bolt demand-bolt"></i></td>
-                                <td><a href="contact-us.html" class="enroll-btn">Enroll Now</a></td>
-                            </tr>
-                            <tr>
-                                <td>UI/UX with Figma</td>
-                                <td>4 Weeks</td>
-                                <td>Certification</td>
-                                <td><i class="fa-solid fa-bolt demand-bolt"></i><i
-                                        class="fa-solid fa-bolt demand-bolt"></i><i
-                                        class="fa-solid fa-bolt demand-bolt"></i><i
-                                        class="fa-solid fa-bolt demand-bolt"></i><i
-                                        class="fa-solid fa-bolt demand-bolt"></i></td>
-                                <td><a href="contact-us.html" class="enroll-btn">Enroll Now</a></td>
-                            </tr>
-                            <tr>
-                                <td>Content Creation & Reels Mktg</td>
-                                <td>3 Weeks</td>
-                                <td>Certification</td>
-                                <td><i class="fa-solid fa-bolt demand-bolt"></i><i
-                                        class="fa-solid fa-bolt demand-bolt"></i><i
-                                        class="fa-solid fa-bolt demand-bolt"></i><i
-                                        class="fa-solid fa-bolt demand-bolt"></i><i
-                                        class="fa-solid fa-bolt demand-bolt"></i></td>
-                                <td><a href="contact-us.html" class="enroll-btn">Enroll Now</a></td>
-                            </tr>
-                            <tr>
-                                <td>Digital Mktg & Performance Ads</td>
-                                <td>3-4 Months</td>
-                                <td>Flagship</td>
-                                <td><i class="fa-solid fa-bolt demand-bolt"></i><i
-                                        class="fa-solid fa-bolt demand-bolt"></i><i
-                                        class="fa-solid fa-bolt demand-bolt"></i><i
-                                        class="fa-solid fa-bolt demand-bolt"></i><i
-                                        class="fa-solid fa-bolt demand-bolt"></i></td>
-                                <td><a href="contact-us.html" class="enroll-btn">Enroll Now</a></td>
-                            </tr>
-                            <tr>
-                                <td>Full Stack Web Development</td>
-                                <td>4-5 Months</td>
-                                <td>Flagship</td>
-                                <td><i class="fa-solid fa-bolt demand-bolt"></i><i
-                                        class="fa-solid fa-bolt demand-bolt"></i><i
-                                        class="fa-solid fa-bolt demand-bolt"></i><i
-                                        class="fa-solid fa-bolt demand-bolt"></i><i
-                                        class="fa-solid fa-bolt demand-bolt"></i></td>
-                                <td><a href="contact-us.html" class="enroll-btn">Enroll Now</a></td>
-                            </tr>
-                            <tr>
-                                <td>Data Analytics Professional</td>
-                                <td>3-4 Months</td>
-                                <td>Flagship</td>
-                                <td><i class="fa-solid fa-bolt demand-bolt"></i><i
-                                        class="fa-solid fa-bolt demand-bolt"></i><i
-                                        class="fa-solid fa-bolt demand-bolt"></i><i
-                                        class="fa-solid fa-bolt demand-bolt"></i><i
-                                        class="fa-solid fa-bolt demand-bolt"></i></td>
-                                <td><a href="contact-us.html" class="enroll-btn">Enroll Now</a></td>
-                            </tr>
-                            <tr>
-                                <td>AI & Automation Professional</td>
-                                <td>4-5 Months</td>
-                                <td>Flagship</td>
-                                <td><i class="fa-solid fa-bolt demand-bolt"></i><i
-                                        class="fa-solid fa-bolt demand-bolt"></i><i
-                                        class="fa-solid fa-bolt demand-bolt"></i><i
-                                        class="fa-solid fa-bolt demand-bolt"></i><i
-                                        class="fa-solid fa-bolt demand-bolt"></i></td>
-                                <td><a href="contact-us.html" class="enroll-btn">Enroll Now</a></td>
-                            </tr>
-                            <tr>
-                                <td>Generative AI + Agentic AI Track</td>
-                                <td>5-6 Months</td>
-                                <td>Flagship</td>
-                                <td><i class="fa-solid fa-bolt demand-bolt"></i><i
-                                        class="fa-solid fa-bolt demand-bolt"></i><i
-                                        class="fa-solid fa-bolt demand-bolt"></i><i
-                                        class="fa-solid fa-bolt demand-bolt"></i><i
-                                        class="fa-solid fa-bolt demand-bolt"></i></td>
-                                <td><a href="contact-us.html" class="enroll-btn">Enroll Now</a></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
+
+        <div class="sidebar-social">
+          <h4>Follow Us</h4>
+          <div class="social-links">
+            <a href="https://www.facebook.com/profile.php?id=61570286233699"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/sailorsacademy13"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/company/sailors-academy-ludhiana/"><i
+                class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://x.com/sailrosacademy"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://www.youtube.com/@SailorsAcademy"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://pinterest.com/sailorsacademy13/"><i class="fa-brands fa-pinterest-p"></i></a>
+          </div>
         </div>
+      </div>
     </div>
-    <script src="script/script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
-        integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
-        crossorigin="anonymous"></script>
-    <a href="https://wa.me/918699388823" class="whatsapp-float" target="_blank">
-        <i class="fa-brands fa-whatsapp"></i>
-        <span class="whatsapp-tooltip">+91 86993-88823</span>
-    </a>
+  </div>
+  <!-- Quick Reference Table Modal -->
+  <div id="quickReferenceModal" class="quick-modal">
+    <div class="quick-modal-content">
+      <span class="quick-modal-close" id="closeQuickRef">&times;</span>
+      <div class="quick-modal-header">
+        <h2>QUICK REFERENCE — ALL PROGRAMS AT A GLANCE</h2>
+      </div>
+      <div class="quick-modal-body">
+        <div class="table-responsive">
+          <table class="quick-ref-table">
+            <thead>
+              <tr>
+                <th>Program / Course</th>
+                <th>Duration</th>
+                <th>Type</th>
+                <th>Demand Level</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Web Development</td>
+                <td>45 / 60 Days</td>
+                <td>Internship & Training</td>
+                <td><i class="fa-solid fa-bolt demand-bolt"></i><i class="fa-solid fa-bolt demand-bolt"></i><i
+                    class="fa-solid fa-bolt demand-bolt"></i><i class="fa-solid fa-bolt demand-bolt"></i><i
+                    class="fa-solid fa-bolt demand-bolt"></i></td>
+                <td><a href="contact-us.html" class="enroll-btn">Enroll Now</a></td>
+              </tr>
+              <tr>
+                <td>Full Stack Development</td>
+                <td>45 / 60 Days</td>
+                <td>Internship & Training</td>
+                <td><i class="fa-solid fa-bolt demand-bolt"></i><i class="fa-solid fa-bolt demand-bolt"></i><i
+                    class="fa-solid fa-bolt demand-bolt"></i><i class="fa-solid fa-bolt demand-bolt"></i><i
+                    class="fa-solid fa-bolt demand-bolt"></i></td>
+                <td><a href="contact-us.html" class="enroll-btn">Enroll Now</a></td>
+              </tr>
+              <tr>
+                <td>Digital Marketing</td>
+                <td>45 / 60 Days</td>
+                <td>Internship & Training</td>
+                <td><i class="fa-solid fa-bolt demand-bolt"></i><i class="fa-solid fa-bolt demand-bolt"></i><i
+                    class="fa-solid fa-bolt demand-bolt"></i><i class="fa-solid fa-bolt demand-bolt"></i></td>
+                <td><a href="contact-us.html" class="enroll-btn">Enroll Now</a></td>
+              </tr>
+              <tr>
+                <td>Data Analytics</td>
+                <td>45 / 60 Days</td>
+                <td>Internship & Training</td>
+                <td><i class="fa-solid fa-bolt demand-bolt"></i><i class="fa-solid fa-bolt demand-bolt"></i><i
+                    class="fa-solid fa-bolt demand-bolt"></i><i class="fa-solid fa-bolt demand-bolt"></i><i
+                    class="fa-solid fa-bolt demand-bolt"></i></td>
+                <td><a href="contact-us.html" class="enroll-btn">Enroll Now</a></td>
+              </tr>
+              <tr>
+                <td>Python + AI</td>
+                <td>45 / 60 Days</td>
+                <td>Internship & Training</td>
+                <td><i class="fa-solid fa-bolt demand-bolt"></i><i class="fa-solid fa-bolt demand-bolt"></i><i
+                    class="fa-solid fa-bolt demand-bolt"></i></td>
+                <td><a href="contact-us.html" class="enroll-btn">Enroll Now</a></td>
+              </tr>
+              <tr>
+                <td>Cybersecurity</td>
+                <td>45 / 60 Days</td>
+                <td>Internship & Training</td>
+                <td><i class="fa-solid fa-bolt demand-bolt"></i><i class="fa-solid fa-bolt demand-bolt"></i><i
+                    class="fa-solid fa-bolt demand-bolt"></i><i class="fa-solid fa-bolt demand-bolt"></i><i
+                    class="fa-solid fa-bolt demand-bolt"></i></td>
+                <td><a href="contact-us.html" class="enroll-btn">Enroll Now</a></td>
+              </tr>
+              <tr>
+                <td>Mobile App Development</td>
+                <td>45 / 60 Days</td>
+                <td>Internship & Training</td>
+                <td><i class="fa-solid fa-bolt demand-bolt"></i><i class="fa-solid fa-bolt demand-bolt"></i><i
+                    class="fa-solid fa-bolt demand-bolt"></i><i class="fa-solid fa-bolt demand-bolt"></i></td>
+                <td><a href="contact-us.html" class="enroll-btn">Enroll Now</a></td>
+              </tr>
+              <tr>
+                <td>UI/UX Design</td>
+                <td>45 / 60 Days</td>
+                <td>Internship & Training</td>
+                <td><i class="fa-solid fa-bolt demand-bolt"></i><i class="fa-solid fa-bolt demand-bolt"></i><i
+                    class="fa-solid fa-bolt demand-bolt"></i><i class="fa-solid fa-bolt demand-bolt"></i></td>
+                <td><a href="contact-us.html" class="enroll-btn">Enroll Now</a></td>
+              </tr>
+              <tr>
+                <td>Video & Reels Editing</td>
+                <td>45 / 60 Days</td>
+                <td>Internship & Training</td>
+                <td><i class="fa-solid fa-bolt demand-bolt"></i><i class="fa-solid fa-bolt demand-bolt"></i><i
+                    class="fa-solid fa-bolt demand-bolt"></i><i class="fa-solid fa-bolt demand-bolt"></i><i
+                    class="fa-solid fa-bolt demand-bolt"></i></td>
+                <td><a href="contact-us.html" class="enroll-btn">Enroll Now</a></td>
+              </tr>
+              <tr>
+                <td>Graphic Design</td>
+                <td>45 / 60 Days</td>
+                <td>Internship & Training</td>
+                <td><i class="fa-solid fa-bolt demand-bolt"></i><i class="fa-solid fa-bolt demand-bolt"></i><i
+                    class="fa-solid fa-bolt demand-bolt"></i><i class="fa-solid fa-bolt demand-bolt"></i><i
+                    class="fa-solid fa-bolt demand-bolt"></i></td>
+                <td><a href="contact-us.html" class="enroll-btn">Enroll Now</a></td>
+              </tr>
+              <tr>
+                <td>Generative AI & Prompt Eng.</td>
+                <td>60 Days</td>
+                <td>Advanced</td>
+                <td><i class="fa-solid fa-bolt demand-bolt"></i><i class="fa-solid fa-bolt demand-bolt"></i><i
+                    class="fa-solid fa-bolt demand-bolt"></i><i class="fa-solid fa-bolt demand-bolt"></i><i
+                    class="fa-solid fa-bolt demand-bolt"></i></td>
+                <td><a href="contact-us.html" class="enroll-btn">Enroll Now</a></td>
+              </tr>
+              <tr>
+                <td>AI Agent & Automation</td>
+                <td>60 Days</td>
+                <td>Advanced</td>
+                <td><i class="fa-solid fa-bolt demand-bolt"></i><i class="fa-solid fa-bolt demand-bolt"></i><i
+                    class="fa-solid fa-bolt demand-bolt"></i></td>
+                <td><a href="contact-us.html" class="enroll-btn">Enroll Now</a></td>
+              </tr>
+              <tr>
+                <td>Cloud & DevOps (AWS)</td>
+                <td>60 Days</td>
+                <td>Advanced</td>
+                <td><i class="fa-solid fa-bolt demand-bolt"></i><i class="fa-solid fa-bolt demand-bolt"></i><i
+                    class="fa-solid fa-bolt demand-bolt"></i><i class="fa-solid fa-bolt demand-bolt"></i><i
+                    class="fa-solid fa-bolt demand-bolt"></i></td>
+                <td><a href="contact-us.html" class="enroll-btn">Enroll Now</a></td>
+              </tr>
+              <tr>
+                <td>Advanced Cybersecurity</td>
+                <td>60 Days</td>
+                <td>Advanced</td>
+                <td><i class="fa-solid fa-bolt demand-bolt"></i><i class="fa-solid fa-bolt demand-bolt"></i><i
+                    class="fa-solid fa-bolt demand-bolt"></i><i class="fa-solid fa-bolt demand-bolt"></i><i
+                    class="fa-solid fa-bolt demand-bolt"></i></td>
+                <td><a href="contact-us.html" class="enroll-btn">Enroll Now</a></td>
+              </tr>
+              <tr>
+                <td>SEO Specialist</td>
+                <td>4 Weeks</td>
+                <td>Certification</td>
+                <td><i class="fa-solid fa-bolt demand-bolt"></i><i class="fa-solid fa-bolt demand-bolt"></i><i
+                    class="fa-solid fa-bolt demand-bolt"></i><i class="fa-solid fa-bolt demand-bolt"></i><i
+                    class="fa-solid fa-bolt demand-bolt"></i></td>
+                <td><a href="contact-us.html" class="enroll-btn">Enroll Now</a></td>
+              </tr>
+              <tr>
+                <td>Google Ads Specialist</td>
+                <td>4 Weeks</td>
+                <td>Certification</td>
+                <td><i class="fa-solid fa-bolt demand-bolt"></i><i class="fa-solid fa-bolt demand-bolt"></i><i
+                    class="fa-solid fa-bolt demand-bolt"></i><i class="fa-solid fa-bolt demand-bolt"></i><i
+                    class="fa-solid fa-bolt demand-bolt"></i></td>
+                <td><a href="contact-us.html" class="enroll-btn">Enroll Now</a></td>
+              </tr>
+              <tr>
+                <td>Meta Ads & Social Media Mktg</td>
+                <td>4 Weeks</td>
+                <td>Certification</td>
+                <td><i class="fa-solid fa-bolt demand-bolt"></i><i class="fa-solid fa-bolt demand-bolt"></i><i
+                    class="fa-solid fa-bolt demand-bolt"></i><i class="fa-solid fa-bolt demand-bolt"></i></td>
+                <td><a href="contact-us.html" class="enroll-btn">Enroll Now</a></td>
+              </tr>
+              <tr>
+                <td>Prompt Engineering</td>
+                <td>3 Weeks</td>
+                <td>Certification</td>
+                <td><i class="fa-solid fa-bolt demand-bolt"></i><i class="fa-solid fa-bolt demand-bolt"></i><i
+                    class="fa-solid fa-bolt demand-bolt"></i><i class="fa-solid fa-bolt demand-bolt"></i><i
+                    class="fa-solid fa-bolt demand-bolt"></i></td>
+                <td><a href="contact-us.html" class="enroll-btn">Enroll Now</a></td>
+              </tr>
+              <tr>
+                <td>ChatGPT for Business</td>
+                <td>2 Weeks</td>
+                <td>Certification</td>
+                <td><i class="fa-solid fa-bolt demand-bolt"></i><i class="fa-solid fa-bolt demand-bolt"></i><i
+                    class="fa-solid fa-bolt demand-bolt"></i><i class="fa-solid fa-bolt demand-bolt"></i></td>
+                <td><a href="contact-us.html" class="enroll-btn">Enroll Now</a></td>
+              </tr>
+              <tr>
+                <td>UI/UX with Figma</td>
+                <td>4 Weeks</td>
+                <td>Certification</td>
+                <td><i class="fa-solid fa-bolt demand-bolt"></i><i class="fa-solid fa-bolt demand-bolt"></i><i
+                    class="fa-solid fa-bolt demand-bolt"></i><i class="fa-solid fa-bolt demand-bolt"></i><i
+                    class="fa-solid fa-bolt demand-bolt"></i></td>
+                <td><a href="contact-us.html" class="enroll-btn">Enroll Now</a></td>
+              </tr>
+              <tr>
+                <td>Content Creation & Reels Mktg</td>
+                <td>3 Weeks</td>
+                <td>Certification</td>
+                <td><i class="fa-solid fa-bolt demand-bolt"></i><i class="fa-solid fa-bolt demand-bolt"></i><i
+                    class="fa-solid fa-bolt demand-bolt"></i><i class="fa-solid fa-bolt demand-bolt"></i><i
+                    class="fa-solid fa-bolt demand-bolt"></i></td>
+                <td><a href="contact-us.html" class="enroll-btn">Enroll Now</a></td>
+              </tr>
+              <tr>
+                <td>Digital Mktg & Performance Ads</td>
+                <td>3-4 Months</td>
+                <td>Flagship</td>
+                <td><i class="fa-solid fa-bolt demand-bolt"></i><i class="fa-solid fa-bolt demand-bolt"></i><i
+                    class="fa-solid fa-bolt demand-bolt"></i><i class="fa-solid fa-bolt demand-bolt"></i><i
+                    class="fa-solid fa-bolt demand-bolt"></i></td>
+                <td><a href="contact-us.html" class="enroll-btn">Enroll Now</a></td>
+              </tr>
+              <tr>
+                <td>Full Stack Web Development</td>
+                <td>4-5 Months</td>
+                <td>Flagship</td>
+                <td><i class="fa-solid fa-bolt demand-bolt"></i><i class="fa-solid fa-bolt demand-bolt"></i><i
+                    class="fa-solid fa-bolt demand-bolt"></i><i class="fa-solid fa-bolt demand-bolt"></i><i
+                    class="fa-solid fa-bolt demand-bolt"></i></td>
+                <td><a href="contact-us.html" class="enroll-btn">Enroll Now</a></td>
+              </tr>
+              <tr>
+                <td>Data Analytics Professional</td>
+                <td>3-4 Months</td>
+                <td>Flagship</td>
+                <td><i class="fa-solid fa-bolt demand-bolt"></i><i class="fa-solid fa-bolt demand-bolt"></i><i
+                    class="fa-solid fa-bolt demand-bolt"></i><i class="fa-solid fa-bolt demand-bolt"></i><i
+                    class="fa-solid fa-bolt demand-bolt"></i></td>
+                <td><a href="contact-us.html" class="enroll-btn">Enroll Now</a></td>
+              </tr>
+              <tr>
+                <td>AI & Automation Professional</td>
+                <td>4-5 Months</td>
+                <td>Flagship</td>
+                <td><i class="fa-solid fa-bolt demand-bolt"></i><i class="fa-solid fa-bolt demand-bolt"></i><i
+                    class="fa-solid fa-bolt demand-bolt"></i><i class="fa-solid fa-bolt demand-bolt"></i><i
+                    class="fa-solid fa-bolt demand-bolt"></i></td>
+                <td><a href="contact-us.html" class="enroll-btn">Enroll Now</a></td>
+              </tr>
+              <tr>
+                <td>Generative AI + Agentic AI Track</td>
+                <td>5-6 Months</td>
+                <td>Flagship</td>
+                <td><i class="fa-solid fa-bolt demand-bolt"></i><i class="fa-solid fa-bolt demand-bolt"></i><i
+                    class="fa-solid fa-bolt demand-bolt"></i><i class="fa-solid fa-bolt demand-bolt"></i><i
+                    class="fa-solid fa-bolt demand-bolt"></i></td>
+                <td><a href="contact-us.html" class="enroll-btn">Enroll Now</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="script/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+    integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+    crossorigin="anonymous"></script>
+  <a href="https://wa.me/918699388823" class="whatsapp-float" target="_blank">
+    <i class="fa-brands fa-whatsapp"></i>
+    <span class="whatsapp-tooltip">+91 86993-88823</span>
+  </a>
 </body>
 
 </html>

@@ -161,6 +161,15 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Close mobile menu when a modal trigger or quick reference link is clicked inside it
+    const sidebarCloseTriggers = mobileMenu ? mobileMenu.querySelectorAll('[data-bs-toggle="modal"], .quick-ref-link') : [];
+    sidebarCloseTriggers.forEach(trigger => {
+        trigger.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+    });
+
     // --- Mobile Accordion Logic ---
     const accordionHeaders = document.querySelectorAll('.accordion-header:not(.no-chevron)');
     accordionHeaders.forEach(header => {
@@ -539,3 +548,23 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+/* Enrollment Modal Form Submission Logic */
+document.addEventListener('DOMContentLoaded', () => {
+    const enrollModalForm = document.getElementById('enrollModalForm');
+    if (enrollModalForm) {
+        enrollModalForm.addEventListener('submit', (e) => {
+            // e.preventDefault(); // Let it submit or handle via AJAX as needed
+            
+            const submitBtn = enrollModalForm.querySelector('.btn-book-demo');
+            if (submitBtn) {
+                const innerStatic = submitBtn.querySelector('.button-inner-static');
+                const innerHover = submitBtn.querySelector('.button-inner-hover');
+                
+                const loadingHtml = '<i class="fa-solid fa-spinner fa-spin"></i> Submitting...';
+                if (innerStatic) innerStatic.innerHTML = loadingHtml;
+                if (innerHover) innerHover.innerHTML = loadingHtml;
+            }
+        });
+    }
+});
+

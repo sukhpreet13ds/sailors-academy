@@ -830,7 +830,7 @@ body.mega-menu-active .mega-menu-overlay {
 .marquee-content {
   display: flex;
   white-space: nowrap;
-  animation: marquee 30s linear infinite;
+  animation: marquee 20s linear infinite;
 }
 
 .marquee-content span {
@@ -1076,6 +1076,27 @@ body.offer-closed .hero-section {
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
   color: var(--text-dark);
   animation: zoomIn 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+.form-card-1 {
+  background: white;
+  padding: 40px 30px;
+  border-radius: 30px;
+  width: 100%;
+  /* max-width: 500px; */
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+  color: var(--text-dark);
+  animation: zoomIn 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  text-align: center;
+}
+
+.new-modal-h3 {
+  font-family: 'Outfit', sans-serif;
+  text-align: center;
+  font-size: 28px;
+  color: #3e264f;
+  font-weight: 700;
+  margin-bottom: 25px;
 }
 
 @keyframes zoomIn {
@@ -1852,8 +1873,29 @@ padding-right: 3rem !important;
   position: relative;
   z-index: 100000001;
 }
+
+/* Enrollment Modal Styles */
+.enroll-modal-content {
+  border-radius: 30px !important;
+  border: none;
+  background: transparent;
+}
+
+.enroll-modal-form-card {
+  box-shadow: none !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  animation: none !important;
+}
+
+.enroll-form-container {
+  overflow: hidden;
+  border-radius: 30px;
+}
+
 @media (max-width: 576px) {
-  .modal-form-card {
+  .modal-form-card, 
+  .enroll-modal-form-card {
     padding: 30px 20px;
   }
 }
@@ -4782,13 +4824,11 @@ padding-right: 3rem !important;
 
   .whatsapp-tooltip {
     display: none;
-    /* Hide tooltip on small screens to avoid overlap */
   }
 }
 
 
 
-/* ========= ABOUT US PAGE SECTION ========= */
 .about-us-page-section-classname {
   max-width: 1400px;
   margin: 0 auto;
@@ -4797,7 +4837,6 @@ padding-right: 3rem !important;
   overflow-x: hidden;
 }
 
-/* ========= hero / intro ========= */
 .about-us-hero {
   text-align: center;
   margin-bottom: 5rem;
@@ -4912,7 +4951,7 @@ padding-right: 3rem !important;
 .value-item h4 {
   font-family: var(--font-family);
   font-weight: 700;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   color: var(--primary-green);
   margin-bottom: 0.5rem;
 }
@@ -5250,6 +5289,7 @@ padding-right: 3rem !important;
 
   .cta-block h3 {
     text-align: left;
+    font-size: 1.6rem;
   }
 }
 
@@ -5350,7 +5390,7 @@ padding-right: 3rem !important;
 
 .quick-modal-close {
   position: absolute;
-  top: 25px;
+  top: 12px;
   right: 30px;
   font-size: 35px;
   color: rgb(0, 0, 0);
@@ -5560,7 +5600,8 @@ background: linear-gradient(90deg,
   }
 
   .quick-modal-header h2 {
-    font-size: 18px;
+    font-size: 14px;
+    max-width: 200px;
   }
 
   .quick-ref-link::after {
@@ -6489,4 +6530,49 @@ body.offer-closed .hero-section {
     color: #ffffff;
     line-height: 1.6;
   }
+}
+
+
+.menu-link {
+  position: relative;
+  font-weight: 500;
+}
+
+.new-badge {
+  background: var(--accent-yellow);
+  color: #fff;
+  padding: 2px 5px;
+  border-radius: 20px;
+  font-size: 8px;
+  margin-left: 5px;
+  position: relative;
+  animation: pulse 1s infinite;
+  font-weight: 600;
+}
+
+/* Pulse animation */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgb(255, 255, 255);
+  }
+  70% {
+    transform: scale(1.1);
+    box-shadow: 0 0 6px 6px rgba(255, 0, 0, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(255, 0, 0, 0);
+  }
+}
+
+/* Optional: slight bounce for arrow */
+.menu-link i {
+  font-size: 10px;
+  margin-left: 4px;
+  transition: transform 0.3s;
+}
+
+.menu-link:hover i {
+  transform: translateY(2px);
 }
