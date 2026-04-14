@@ -568,3 +568,68 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
+/* ============================================================
+   MOBILE HERO SLIDER - Auto-advance + Dot controls + Touch swipe
+   ============================================================ */
+document.addEventListener('DOMContentLoaded', () => {
+    const slider = document.getElementById('mheroSlider');
+    const dotsContainer = document.getElementById('mheroDots');
+    const pills = document.querySelectorAll('.mhero-pill');
+
+    if (!slider || !dotsContainer) return;
+
+    const slides = slider.querySelectorAll('.mhero-slide');
+    const dots = dotsContainer.querySelectorAll('.mhero-dot');
+    const totalSlides = slides.length;
+    let currentSlide = 0;
+    let autoTimer = null;
+
+    /* Move slider to given index */
+    const goTo = (index) => {
+        currentSlide = (index + totalSlides) % totalSlides;
+        slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+        dots.forEach((dot, i) => {
+            dot.classList.toggle('active', i === currentSlide);
+        });
+    };
+
+    const stopAuto = () => { if (autoTimer) clearInterval(autoTimer); };
+
+    const startAuto = () => {
+        stopAuto();
+        autoTimer = setInterval(() => goTo(currentSlide + 1), 3500);
+    };
+
+    /* Dot click handlers */
+    dots.forEach((dot) => {
+        dot.addEventListener('click', () => {
+            goTo(parseInt(dot.getAttribute('data-index'), 10));
+            startAuto();
+        });
+    });
+
+    /* Touch swipe support */
+    let touchStartX = 0;
+    slider.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].clientX;
+        stopAuto();
+    }, { passive: true });
+
+    slider.addEventListener('touchend', (e) => {
+        const diff = touchStartX - e.changedTouches[0].clientX;
+        if (Math.abs(diff) > 40) goTo(diff > 0 ? currentSlide + 1 : currentSlide - 1);
+        startAuto();
+    }, { passive: true });
+
+    /* Pill active toggle */
+    pills.forEach((pill) => {
+        pill.addEventListener('click', () => {
+            pills.forEach(p => p.classList.remove('active'));
+            pill.classList.add('active');
+        });
+    });
+
+    /* Init */
+    goTo(0);
+    startAuto();
+});

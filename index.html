@@ -827,6 +827,71 @@
           </div>
         </div>
       </div>
+
+      <!-- ===== MOBILE / PORTRAIT TABLET HERO (hidden on desktop) ===== -->
+      <div class="mobile-hero-wrapper" id="mobileHeroWrapper">
+
+        <!-- 1. Image Slider -->
+        <div class="mhero-slider-wrap">
+          <div class="mhero-slider" id="mheroSlider">
+            <div class="mhero-slide"><img src="assets/slide1.jpg" alt="Sailors Academy - Slide 1" loading="eager"></div>
+            <div class="mhero-slide"><img src="assets/slide2.jpg" alt="Sailors Academy - Slide 2" loading="lazy"></div>
+            <div class="mhero-slide"><img src="assets/slide3.jpg" alt="Sailors Academy - Slide 3" loading="lazy"></div>
+            <div class="mhero-slide"><img src="assets/slide4.jpg" alt="Sailors Academy - Slide 4" loading="lazy"></div>
+          </div>
+          <!-- Dot indicators -->
+          <div class="mhero-dots" id="mheroDots">
+            <button class="mhero-dot active" data-index="0" aria-label="Slide 1"></button>
+            <button class="mhero-dot" data-index="1" aria-label="Slide 2"></button>
+            <button class="mhero-dot" data-index="2" aria-label="Slide 3"></button>
+            <button class="mhero-dot" data-index="3" aria-label="Slide 4"></button>
+          </div>
+        </div>
+
+        <!-- 2. Category Pill Buttons (horizontal scroll) -->
+        <div class="mhero-pills-wrap">
+          <div class="mhero-pills" id="mheroPills">
+            <button class="mhero-pill">Web Dev</button>
+            <button class="mhero-pill">DevOps</button>
+            <button class="mhero-pill">AI Automation</button>
+            <button class="mhero-pill">Generative AI</button>
+            <button class="mhero-pill">Digital Marketing</button>
+            <button class="mhero-pill">Full Stack</button>
+            <button class="mhero-pill">Cyber Security</button>
+            <button class="mhero-pill">UI/UX</button>
+            <button class="mhero-pill">Content Creation</button>
+            <button class="mhero-pill">Python + AI</button>
+          </div>
+        </div>
+
+        <!-- 3. Title + Stats -->
+        <div class="mhero-text-block">
+          <h1 class="mhero-title" style="font-weight: 400;">Your Career, <br>Our Mission <br>
+            <span class="mhero-lower-h1"><span style="font-weight: 400;">Real</span> <span class="dynamic-word" style="font-family: Cormorant Garamond, serif;">Skills.</span></span>
+          </h1>
+
+          <div class="stats-row mhero-stats">
+            <div class="stat-item">
+              <span class="currency">₹</span>
+              <span class="count" data-target="4.5">4.5</span>
+              <div class="stat-label">LAKH <br> PACKAGE</div>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="currency">₹</span>
+              <span class="count" data-target="6">6</span>
+              <div class="stat-label">LAKH <br> PACKAGE</div>
+            </div>
+          </div>
+
+          <p class="hero-subtext mhero-subtext">
+            <i class="fa-solid fa-star rotating-star" style="color: rgb(255, 212, 59);"></i> 4.9 | <span style="color: var(--accent-yellow); font-weight: 600;">500+</span> Students Trained | Placement Assistance
+          </p>
+        </div>
+
+      </div>
+      <!-- ===== END MOBILE HERO ===== -->
+
     </section>
 
     <div class="certificate-banner">
@@ -975,7 +1040,8 @@
                     <span class="node-text">Faster Results</span>
                   </div>
                 </div> -->
-                <a href="#" class="academy-tour-link" data-bs-toggle="modal" data-bs-target="#enrollFormModal">Schedule A Tour</a>
+                <a href="#" class="academy-tour-link" data-bs-toggle="modal" data-bs-target="#enrollFormModal">Schedule
+                  A Tour</a>
               </div>
             </div>
             <div class="academy-right-image deep-zoom-anim">
@@ -1287,7 +1353,8 @@
 
           </p>
           <div class="book-actions">
-            <a href="#" class="app-btn button-effect" data-bs-toggle="modal" data-bs-target="#enrollFormModal">Book Free Demo Class
+            <a href="#" class="app-btn button-effect" data-bs-toggle="modal" data-bs-target="#enrollFormModal">Get Free
+              Career Consultation
 
               <i class="fa-solid fa-arrow-right"></i></a>
             <div class="book-small-links">
@@ -1426,9 +1493,7 @@
       </div>
       <div class="mobile-side">
 
-        <a href="javascript:void(0)" class="demo-link" data-bs-toggle="modal" data-bs-target="#enrollFormModal">
-          Book Class Demo
-        </a>
+
         <a href="javascript:void(0)" class="quick-ref-link " id="openQuickRef">
           Quick Reference
         </a>
@@ -1844,13 +1909,14 @@
     </div>
     <div class="sidebar-video">
       <iframe src="https://www.youtube.com/embed/wgywr5W88D0" title="YouTube video" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
       </iframe>
     </div>
   </div>
 
 
- 
+
 
 
   <div class="modal fade" id="autoDemoModal" tabindex="-1" aria-labelledby="autoDemoModalLabel" aria-hidden="true">
@@ -1884,34 +1950,35 @@
                     <div class="input-group">
                       <select required>
                         <option value="" disabled selected>Select Course</option>
-                    <option value="Generative AI & Prompt Engineering">Generative AI & Prompt Engineering</option>
-                    <option value="AI Agent & Automation">AI Agent & Automation</option>
-                    <option value="PHP Development">PHP Development</option>
-                    <option value="Cloud & DevOps">Cloud & DevOps</option>
-                    <option value="Advanced Cybersecurity">Advanced Cybersecurity</option>
-                    <option value="Web Development">Web Development</option>
-                    <option value="Full Stack Development">Full Stack Development</option>
-                    <option value="Digital Marketing">Digital Marketing</option>
-                    <option value="Data Analytics">Data Analytics</option>
-                    <option value="Python + AI">Python + AI</option>
-                    <option value="Cybersecurity">Cybersecurity</option>
-                    <option value="Mobile App Development">Mobile App Development</option>
-                    <option value="UI/UX Design">UI/UX Design</option>
-                    <option value="Video & Reels Editing">Video & Reels Editing</option>
-                    <option value="Graphic Design">Graphic Design</option>
-                    <option value="Digital Marketing & Performance Ads">Digital Marketing & Performance Ads</option>
-                    <option value="Full Stack Web Development">Full Stack Web Development</option>
-                    <option value="Data Analytics Professional">Data Analytics Professional</option>
-                    <option value="AI & Automation Professional">AI & Automation Professional</option>
-                    <option value="AI & Automation Professional Program">AI & Automation Professional Program</option>
-                    <option value="Generative AI + Agentic AI Track">Generative AI + Agentic AI Track</option>
-                    <option value="SEO Specialist">SEO Specialist</option>
-                    <option value="Google Ads Specialist">Google Ads Specialist</option>
-                    <option value="Meta Ads & Social Media Marketing">Meta Ads & Social Media Marketing</option>
-                    <option value="Content Creation & Reels Marketing">Content Creation & Reels Marketing</option>
-                    <option value="Prompt Engineering">Prompt Engineering</option>
-                    <option value="ChatGPT for Business">ChatGPT for Business</option>
-                    <option value="UI/UX with Figma">UI/UX with Figma</option>
+                        <option value="Generative AI & Prompt Engineering">Generative AI & Prompt Engineering</option>
+                        <option value="AI Agent & Automation">AI Agent & Automation</option>
+                        <option value="PHP Development">PHP Development</option>
+                        <option value="Cloud & DevOps">Cloud & DevOps</option>
+                        <option value="Advanced Cybersecurity">Advanced Cybersecurity</option>
+                        <option value="Web Development">Web Development</option>
+                        <option value="Full Stack Development">Full Stack Development</option>
+                        <option value="Digital Marketing">Digital Marketing</option>
+                        <option value="Data Analytics">Data Analytics</option>
+                        <option value="Python + AI">Python + AI</option>
+                        <option value="Cybersecurity">Cybersecurity</option>
+                        <option value="Mobile App Development">Mobile App Development</option>
+                        <option value="UI/UX Design">UI/UX Design</option>
+                        <option value="Video & Reels Editing">Video & Reels Editing</option>
+                        <option value="Graphic Design">Graphic Design</option>
+                        <option value="Digital Marketing & Performance Ads">Digital Marketing & Performance Ads</option>
+                        <option value="Full Stack Web Development">Full Stack Web Development</option>
+                        <option value="Data Analytics Professional">Data Analytics Professional</option>
+                        <option value="AI & Automation Professional">AI & Automation Professional</option>
+                        <option value="AI & Automation Professional Program">AI & Automation Professional Program
+                        </option>
+                        <option value="Generative AI + Agentic AI Track">Generative AI + Agentic AI Track</option>
+                        <option value="SEO Specialist">SEO Specialist</option>
+                        <option value="Google Ads Specialist">Google Ads Specialist</option>
+                        <option value="Meta Ads & Social Media Marketing">Meta Ads & Social Media Marketing</option>
+                        <option value="Content Creation & Reels Marketing">Content Creation & Reels Marketing</option>
+                        <option value="Prompt Engineering">Prompt Engineering</option>
+                        <option value="ChatGPT for Business">ChatGPT for Business</option>
+                        <option value="UI/UX with Figma">UI/UX with Figma</option>
                       </select>
                     </div>
                   </div>
@@ -1934,7 +2001,7 @@
                 </div>
 
                 <button type="submit" class="button-effect btn-book-demo">
-                  Book Free Demo Class <i class="fa-solid fa-chevron-right"></i>
+                  Get Free Career Consultation <i class="fa-solid fa-chevron-right"></i>
                 </button>
               </form>
             </div>
@@ -1976,34 +2043,35 @@
                     <div class="input-group">
                       <select required>
                         <option value="" disabled selected>Select Course</option>
-                    <option value="Generative AI & Prompt Engineering">Generative AI & Prompt Engineering</option>
-                    <option value="AI Agent & Automation">AI Agent & Automation</option>
-                    <option value="PHP Development">PHP Development</option>
-                    <option value="Cloud & DevOps">Cloud & DevOps</option>
-                    <option value="Advanced Cybersecurity">Advanced Cybersecurity</option>
-                    <option value="Web Development">Web Development</option>
-                    <option value="Full Stack Development">Full Stack Development</option>
-                    <option value="Digital Marketing">Digital Marketing</option>
-                    <option value="Data Analytics">Data Analytics</option>
-                    <option value="Python + AI">Python + AI</option>
-                    <option value="Cybersecurity">Cybersecurity</option>
-                    <option value="Mobile App Development">Mobile App Development</option>
-                    <option value="UI/UX Design">UI/UX Design</option>
-                    <option value="Video & Reels Editing">Video & Reels Editing</option>
-                    <option value="Graphic Design">Graphic Design</option>
-                    <option value="Digital Marketing & Performance Ads">Digital Marketing & Performance Ads</option>
-                    <option value="Full Stack Web Development">Full Stack Web Development</option>
-                    <option value="Data Analytics Professional">Data Analytics Professional</option>
-                    <option value="AI & Automation Professional">AI & Automation Professional</option>
-                    <option value="AI & Automation Professional Program">AI & Automation Professional Program</option>
-                    <option value="Generative AI + Agentic AI Track">Generative AI + Agentic AI Track</option>
-                    <option value="SEO Specialist">SEO Specialist</option>
-                    <option value="Google Ads Specialist">Google Ads Specialist</option>
-                    <option value="Meta Ads & Social Media Marketing">Meta Ads & Social Media Marketing</option>
-                    <option value="Content Creation & Reels Marketing">Content Creation & Reels Marketing</option>
-                    <option value="Prompt Engineering">Prompt Engineering</option>
-                    <option value="ChatGPT for Business">ChatGPT for Business</option>
-                    <option value="UI/UX with Figma">UI/UX with Figma</option>
+                        <option value="Generative AI & Prompt Engineering">Generative AI & Prompt Engineering</option>
+                        <option value="AI Agent & Automation">AI Agent & Automation</option>
+                        <option value="PHP Development">PHP Development</option>
+                        <option value="Cloud & DevOps">Cloud & DevOps</option>
+                        <option value="Advanced Cybersecurity">Advanced Cybersecurity</option>
+                        <option value="Web Development">Web Development</option>
+                        <option value="Full Stack Development">Full Stack Development</option>
+                        <option value="Digital Marketing">Digital Marketing</option>
+                        <option value="Data Analytics">Data Analytics</option>
+                        <option value="Python + AI">Python + AI</option>
+                        <option value="Cybersecurity">Cybersecurity</option>
+                        <option value="Mobile App Development">Mobile App Development</option>
+                        <option value="UI/UX Design">UI/UX Design</option>
+                        <option value="Video & Reels Editing">Video & Reels Editing</option>
+                        <option value="Graphic Design">Graphic Design</option>
+                        <option value="Digital Marketing & Performance Ads">Digital Marketing & Performance Ads</option>
+                        <option value="Full Stack Web Development">Full Stack Web Development</option>
+                        <option value="Data Analytics Professional">Data Analytics Professional</option>
+                        <option value="AI & Automation Professional">AI & Automation Professional</option>
+                        <option value="AI & Automation Professional Program">AI & Automation Professional Program
+                        </option>
+                        <option value="Generative AI + Agentic AI Track">Generative AI + Agentic AI Track</option>
+                        <option value="SEO Specialist">SEO Specialist</option>
+                        <option value="Google Ads Specialist">Google Ads Specialist</option>
+                        <option value="Meta Ads & Social Media Marketing">Meta Ads & Social Media Marketing</option>
+                        <option value="Content Creation & Reels Marketing">Content Creation & Reels Marketing</option>
+                        <option value="Prompt Engineering">Prompt Engineering</option>
+                        <option value="ChatGPT for Business">ChatGPT for Business</option>
+                        <option value="UI/UX with Figma">UI/UX with Figma</option>
                       </select>
                     </div>
                   </div>
@@ -2026,7 +2094,7 @@
                 </div>
 
                 <button type="submit" class="button-effect btn-book-demo">
-                  Book Free Demo Class <i class="fa-solid fa-chevron-right"></i>
+                  Get Free Career Consultation <i class="fa-solid fa-chevron-right"></i>
                 </button>
 
                 <div style="text-align: center; margin-top: 15px;">
