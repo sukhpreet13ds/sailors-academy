@@ -432,7 +432,7 @@ body.mega-menu-active .mega-menu-overlay {
 .track-info p {
   font-size: 13px;
   opacity: 0.9;
-  max-width: 800px;
+  max-width: 900px;
   line-height: 1.5;
   margin: 0;
 }
@@ -2070,7 +2070,7 @@ padding-right: 3rem !important;
 .about-text-extra.is-expanded {
   max-height: 1000px;
   opacity: 1;
-  margin-top: 10px;
+  /* margin-top: 10px; */
 }
 
 .read-more-btn {
