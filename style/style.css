@@ -524,7 +524,13 @@ body.mega-menu-active .mega-menu-overlay {
   color: #fff;
   box-shadow: 0 4px 10px rgba(30, 144, 255, 0.3);
 }
-
+.mdemanded{
+    background: #1e90ff !important;
+    font-size: 8px !important;
+}
+.mtrending{
+     font-size: 8px !important;
+}
 .cat-icon {
   font-size: 24px;
   color: var(--primary-green);
@@ -2125,6 +2131,7 @@ padding-right: 3rem !important;
 
   .about-box {
     padding: 20px;
+    top: -40px;
   }
 
   .about-icon {
@@ -2133,6 +2140,8 @@ padding-right: 3rem !important;
     .about-title {
     font-size: 24px;
     text-align: left;
+    /* position: relative;
+    top: -70px; */
   }
    .about-text {
     font-size: 14px;
@@ -3966,6 +3975,7 @@ padding-right: 3rem !important;
     position: relative;
     z-index: 2;
     text-align: center;
+    padding-top: 0 !important;
   }
 
   /* 2. Academy Section */
@@ -6583,9 +6593,6 @@ body.offer-closed .hero-section {
   transform: translateY(2px);
 }
 
-/* ============================================================
-   MOBILE HERO WRAPPER - Base (hidden by default on desktop)
-   ============================================================ */
 .mobile-hero-wrapper {
   display: none;
   flex-direction: column;
@@ -6715,8 +6722,9 @@ body.offer-closed .hero-section {
 .mhero-lower-h1 {
   display: block;
   font-weight: 700;
-  font-size: 30px;
+  font-size: 45px;
   line-height: 1.3;
+  
 }
 
 .mhero-stats {
@@ -6874,5 +6882,177 @@ body.offer-closed .hero-section {
 
   .mhero-subtext {
     font-size: 16px;
+  }
+}
+
+/* ============================================================
+   MOBILE HERO COURSE CARDS CAROUSEL
+   ============================================================ */
+.mhero-cards-section {
+  width: 100%;
+  padding: 18px 16px 28px;
+  box-sizing: border-box;
+}
+
+.mhero-cards-viewport {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.mhero-cards-track {
+  display: flex;
+  gap: 12px;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+  cursor: grab;
+  user-select: none;
+}
+
+.mhero-cards-track.is-dragging {
+  cursor: grabbing;
+  transition: none;
+}
+
+/* Individual card */
+.mhero-card {
+  background: #ffffff;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.13);
+  flex-shrink: 0;
+}
+
+/* Left image block */
+.mhero-card-img-wrap {
+  flex-shrink: 0;
+  width: 68px;
+  height: 68px;
+  margin: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.mhero-card-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Right content */
+.mhero-card-body {
+  flex: 1;
+  padding: 12px 14px 12px 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+/* Trending badge */
+.mhero-card-tag {
+   position: absolute;
+    top: 10px;
+    right: 10px;
+  display: inline-block;
+  background: #ff4757;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 3px 9px;
+  border-radius: 4px;
+  width: fit-content;
+}
+
+.mhero-card-tag.demanded {
+  background: #1e90ff;
+}
+.mhero-card {
+    position: relative; /* IMPORTANT: parent must be relative */
+}
+
+.mhero-card-tag {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 2;
+
+    /* optional styling improvements */
+    padding: 4px 10px;
+    font-size: 12px;
+    border-radius: 20px;
+}
+/* Course title */
+.mhero-card-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #111;
+  line-height: 1.3;
+  margin: 0;
+}
+
+/* Enroll Now link */
+.mhero-card-enroll {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--primary-green);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: color 0.2s ease, gap 0.2s ease;
+}
+
+.mhero-card-enroll:hover {
+  color: var(--accent-yellow);
+  gap: 8px;
+}
+
+.mhero-card-enroll i {
+  font-size: 10px;
+}
+
+/* -------------------------------------------------------
+   MOBILE (<=767px): 1 card fills the full viewport width
+   ------------------------------------------------------- */
+@media (max-width: 767px) {
+  .mhero-cards-section {
+    padding: 14px 14px 22px;
+  }
+
+  .mhero-card {
+    width: calc(100vw - 28px);
+    min-width: calc(100vw - 28px);
+  }
+}
+
+/* -------------------------------------------------------
+   PORTRAIT TABLET (768px–1100px): 3 cards visible per group
+   ------------------------------------------------------- */
+@media (min-width: 768px) and (max-width: 1100px) {
+  .mhero-cards-section {
+    padding: 20px 24px 30px;
+  }
+
+  /* card width = (viewport - 2×24px padding - 2×12px gap) / 3 */
+  .mhero-card {
+    width: calc((100vw - 48px - 24px) / 3);
+    min-width: calc((100vw - 48px - 24px) / 3);
+  }
+
+  .mhero-card-img-wrap {
+    width: 78px;
+    height: 78px;
+  }
+
+  .mhero-card-title {
+    font-size: 13px;
   }
 }

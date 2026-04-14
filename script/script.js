@@ -486,32 +486,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
 /* Dynamic Hero Word Cycler */
 document.addEventListener('DOMContentLoaded', () => {
-    const dynamicWord = document.querySelector('.dynamic-word');
-    if (dynamicWord) {
+    const dynamicWords = document.querySelectorAll('.dynamic-word');
+
+    if (dynamicWords.length > 0) {
         const words = ["Skills.", "Jobs.", "Income."];
-        let currentIndex = 0;
 
-        const cycleWords = () => {
-            // Start fade out
-            dynamicWord.classList.add('fade-out');
-            dynamicWord.classList.remove('fade-in');
+        dynamicWords.forEach((dynamicWord) => {
+            let currentIndex = 0;
 
-            setTimeout(() => {
-                // Change word
-                currentIndex = (currentIndex + 1) % words.length;
-                dynamicWord.textContent = words[currentIndex];
+            const cycleWords = () => {
+                dynamicWord.classList.add('fade-out');
+                dynamicWord.classList.remove('fade-in');
 
-                // Start fade in
-                dynamicWord.classList.remove('fade-out');
-                dynamicWord.classList.add('fade-in');
-            }, 250); // Matches CSS transition duration
-        };
+                setTimeout(() => {
+                    currentIndex = (currentIndex + 1) % words.length;
+                    dynamicWord.textContent = words[currentIndex];
 
-        // Initialize first state
-        dynamicWord.classList.add('fade-in');
-        
-        // Start interval
-        setInterval(cycleWords, 3000); // Change every 3 seconds
+                    dynamicWord.classList.remove('fade-out');
+                    dynamicWord.classList.add('fade-in');
+                }, 250);
+            };
+
+            dynamicWord.classList.add('fade-in');
+
+            setInterval(cycleWords, 3000);
+        });
     }
 
     // --- About Section Read More Toggle ---
@@ -521,7 +520,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (toggleBtn && extraContent) {
         toggleBtn.addEventListener('click', () => {
             const isExpanded = extraContent.classList.contains('is-expanded');
-            
+
             if (isExpanded) {
                 extraContent.classList.remove('is-expanded');
                 toggleBtn.textContent = 'Read more';
@@ -633,3 +632,84 @@ document.addEventListener('DOMContentLoaded', () => {
     goTo(0);
     startAuto();
 });
+
+/* ============================================================
+   MOBILE HERO COURSE CARDS CAROUSEL
+   Auto-advance + touch swipe + mouse drag
+   Mobile  : 1 card per step
+   Tablet  : 3 cards per step (all three advance together)
+   ============================================================ */
+document.addEventListener('DOMContentLoaded', () => {
+    const track = document.getElementById('mheroCardsTrack');
+    if (!track) return;
+
+    const cards = Array.from(track.querySelectorAll('.mhero-card'));
+    const total = cards.length;
+    let currentIndex = 0;
+    let cardAutoTimer = null;
+
+    const isTablet = () => window.innerWidth >= 768 && window.innerWidth <= 1100;
+    const perStep  = () => isTablet() ? 3 : 1;
+    const maxIdx   = () => Math.max(0, total - perStep());
+
+    /* Width of one card + gap */
+    const cardW = () => {
+        if (!cards[0]) return 0;
+        const style = window.getComputedStyle(track);
+        const gap = parseFloat(style.gap) || 12;
+        return cards[0].getBoundingClientRect().width + gap;
+    };
+
+    const moveTo = (idx) => {
+        currentIndex = Math.max(0, Math.min(idx, maxIdx()));
+        track.style.transform = `translateX(-${currentIndex * cardW()}px)`;
+    };
+
+    const stopCardAuto  = () => { if (cardAutoTimer) clearInterval(cardAutoTimer); };
+    const startCardAuto = () => {
+        stopCardAuto();
+        cardAutoTimer = setInterval(() => {
+            const next = currentIndex + perStep() > maxIdx() ? 0 : currentIndex + perStep();
+            moveTo(next);
+        }, 4000);
+    };
+
+    /* ---- Touch swipe ---- */
+    let tStartX = 0;
+    track.addEventListener('touchstart', (e) => {
+        tStartX = e.changedTouches[0].clientX;
+        stopCardAuto();
+    }, { passive: true });
+
+    track.addEventListener('touchend', (e) => {
+        const diff = tStartX - e.changedTouches[0].clientX;
+        if (Math.abs(diff) > 40) moveTo(diff > 0 ? currentIndex + perStep() : currentIndex - perStep());
+        startCardAuto();
+    }, { passive: true });
+
+    /* ---- Mouse drag ---- */
+    let mStartX = 0, dragging = false;
+    track.addEventListener('mousedown', (e) => {
+        mStartX = e.clientX;
+        dragging = true;
+        track.classList.add('is-dragging');
+        stopCardAuto();
+        e.preventDefault();
+    });
+    window.addEventListener('mouseup', (e) => {
+        if (!dragging) return;
+        dragging = false;
+        track.classList.remove('is-dragging');
+        const diff = mStartX - e.clientX;
+        if (Math.abs(diff) > 40) moveTo(diff > 0 ? currentIndex + perStep() : currentIndex - perStep());
+        startCardAuto();
+    });
+
+    /* Recalculate position on resize */
+    window.addEventListener('resize', () => moveTo(currentIndex));
+
+    /* Init */
+    moveTo(0);
+    startCardAuto();
+});
+
