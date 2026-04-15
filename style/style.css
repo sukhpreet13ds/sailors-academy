@@ -1318,22 +1318,24 @@ body.offer-closed .hero-section {
 }
 
 .search-box-mobile {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  border-bottom: 1px solid #ffffff41;
   border-radius: 12px;
-  padding: 12px 15px;
+  padding: 8px 10px;
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
 .search-box-mobile input {
-  background: transparent;
-  border: none;
+  background: transparent !important;
+  border: none !important;
   color: white;
   flex: 1;
   outline: none;
   font-size: 16px;
+  outline: none !important;
+  font-size: small;
 }
 
 .search-box-mobile i {
@@ -1359,9 +1361,9 @@ body.offer-closed .hero-section {
   justify-content: space-between;
   align-items: center;
   padding: 15px 0;
-  font-size: 32px;
+  font-size: 22px;
   /* Large font as per screenshot */
-  font-weight: 700;
+  font-weight: 600;
   cursor: pointer;
   transition: color 0.3s;
 }
@@ -1371,7 +1373,7 @@ body.offer-closed .hero-section {
 }
 
 .accordion-header i {
-  font-size: 18px;
+  font-size: 16px;
   transition: transform 0.3s;
   color: rgba(255, 255, 255, 0.4);
 }
@@ -1406,7 +1408,7 @@ body.offer-closed .hero-section {
 }
 
 .sub-accordion-header span {
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 600;
 }
 
@@ -1445,12 +1447,12 @@ body.offer-closed .hero-section {
 .sub-accordion-body ul li {
   margin-bottom: 8px;
   color: rgba(255, 255, 255, 0.8);
+  font-size: 13px !important;
 }
 
 .accordion-body ul li a {
   color: rgba(255, 255, 255, 0.7);
   text-decoration: none;
-  font-size: 18px;
 }
 
 .panel-footer {
@@ -2781,7 +2783,7 @@ padding-right: 3rem !important;
 
 @media (max-width: 768px) {
   .enroll-section {
-    padding: 130px 0 !important;
+    padding: 90px 0 !important;
   }
 
   .enroll-title {
@@ -3727,14 +3729,11 @@ padding-right: 3rem !important;
   }
 
   .book-main-title {
-    font-size: 5rem;
+    font-size: 3rem;
   }
 }
 
 @media (max-width: 576px) {
-  .book-main-title {
-    font-size: 3.5rem;
-  }
 
   .book-subtext {
     font-size: 1rem;
@@ -3991,7 +3990,7 @@ padding-right: 3rem !important;
     min-height: 0 !important;
     flex-direction: column !important;
     padding: 60px 20px 30px 20px !important;
-    margin-top: 60px !important;
+    margin-top: -90px !important;
     /* Space for the title to overflow */
     position: relative;
   }
@@ -4030,7 +4029,8 @@ padding-right: 3rem !important;
     grid-template-columns: 1fr 1fr;
     gap: 15px;
     flex-direction: unset !important;
-    padding: 0 15px;
+    padding: -1px 15px;
+    margin-top: -50px;
   }
 
   .shortcut-top,
@@ -4215,7 +4215,7 @@ padding-right: 3rem !important;
   }
 
   .book-now-section {
-    padding: 75px 15px 28px 15px;
+    padding: 90px 15px 28px 15px;
   }
 }
 
